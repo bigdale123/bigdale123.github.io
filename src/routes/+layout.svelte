@@ -1,5 +1,5 @@
 <script>
-    import "../app.pcss";
+    import '../app.pcss'
     import {page} from '$app/stores';
 </script>
 
@@ -20,7 +20,7 @@
     <slot></slot>
 </div>
 
-<style>
+<style global>
     .icon-rules {
         width: 25px;
         height: 25px;
