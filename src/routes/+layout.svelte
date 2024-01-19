@@ -13,16 +13,9 @@
         </div>
         <i class="flex-auto"> </i>
         <div class="flex">
-            <a class="px-1" href="https://github.com/bigdale123"><img class="icon-rules" src="github.png" alt="Github"></a>
-            <a class="px-1" href="https://www.linkedin.com/in/dylancalvin/"><img class="icon-rules" src="linkedin.png" alt="LinkedIn"></a>
+            <a class="px-1" href="https://github.com/bigdale123"><img class="size-7" src="github.png" alt="Github"></a>
+            <a class="px-1" href="https://www.linkedin.com/in/dylancalvin/"><img class="size-7" src="linkedin.png" alt="LinkedIn"></a>
         </div>
     </div>
     <slot></slot>
 </div>
-
-<style global>
-    .icon-rules {
-        width: 25px;
-        height: 25px;
-    }
-</style>
