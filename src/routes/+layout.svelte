@@ -1,6 +1,7 @@
 <script>
   import "../app.css";
   import {page} from '$app/stores';
+  import { browser } from "$app/environment";
 </script>
 
 <div class="p-1 bg-cover bg-[url('/UAB_Blazer_Hall-3738225094.jpg')]">
@@ -17,7 +18,9 @@
             <a class="px-1" href="https://www.linkedin.com/in/dylancalvin/"><img class="icon-rules" src="linkedin.png" alt="LinkedIn"></a>
         </div>
     </div>
-    <slot />
+    {#if browser}
+        <slot />
+    {/if}
 </div>
 
 <style>
