@@ -1,6 +1,3 @@
-
-
-
 <div class="flex justify-center flex-col m-auto h-lvh">
     <!-- Headline -->
     <div class="w-1/3 mx-auto p-8 md:p-12 backdrop-blur-sm bg-white/50 rounded-lg">
