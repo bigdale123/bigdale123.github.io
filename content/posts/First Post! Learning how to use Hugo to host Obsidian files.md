@@ -1,6 +1,7 @@
 ---
 title: First Post! Learning how to use Hugo to host Obsidian files
 date: 2025-02-19
+lastmod: 2025-02-20
 draft: false
 tags:
   - Hugo
