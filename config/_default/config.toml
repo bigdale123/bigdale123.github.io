@@ -5,6 +5,8 @@
 baseURL = "/"
 defaultContentLanguage = "en"
 
+theme = "congo"
+
 enableRobotsTXT = true
 summaryLength = 0
 
