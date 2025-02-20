@@ -4,7 +4,7 @@
   
     
       <url>
-            <loc>//localhost:1313/</loc>
+            <loc>/</loc>
             <lastmod>2025-02-19T00:00:00+00:00</lastmod>
           </url>
     
@@ -13,7 +13,7 @@
   
     
       <url>
-            <loc>//localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</loc>
+            <loc>/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</loc>
             <lastmod>2025-02-19T00:00:00+00:00</lastmod>
           </url>
     
@@ -30,7 +30,7 @@
   
     
       <url>
-            <loc>//localhost:1313/posts/</loc>
+            <loc>/posts/</loc>
             <lastmod>2025-02-19T00:00:00+00:00</lastmod>
           </url>
     
@@ -39,7 +39,7 @@
   
     
       <url>
-            <loc>//localhost:1313/about/</loc>
+            <loc>/about/</loc>
           </url>
     
   

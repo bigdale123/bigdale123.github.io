@@ -139,7 +139,7 @@ Turns out I forgot to set `them = "congo"` in `config.toml`, but once I did that
 ![Pasted image 20250220121602.png](/attachments/Pasted%20image%2020250220121602.png)
 WOOP! Github Pages built and deployed the site using the action that I definitely did not copy word for word from the Hugo site 🙂. The important thing is, the site is up. We can polish all the other stuff later.
 
-# Conclusion
+# Conclusion 🎉
 ***
 Steps 5 and 6 are already done, since I picked my theme at the outset and that theme ended up already implementing categories. Call me lucky.
 This might not have been harder than I thought it would be, but it definitely took me longer than I though it would. Maybe i'm getting slower? Whatever, the site is done. It's up. I can move on to the next thing. Maybe I should brush up on Github Actions?

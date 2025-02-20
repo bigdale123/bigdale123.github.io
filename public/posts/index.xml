@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on bigdale123&#39;s Blog</title>
-    <link>//localhost:1313/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Post! Learning how to use Hugo to host Obsidian files</title>
-      <link>//localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
+      <link>/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
+      <guid>/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
       <description></description>
     </item>
   </channel>

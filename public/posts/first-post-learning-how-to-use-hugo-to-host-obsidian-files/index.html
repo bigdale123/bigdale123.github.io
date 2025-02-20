@@ -12,7 +12,7 @@
   class="scroll-smooth"
   data-default-appearance="dark"
   data-auto-appearance="true"
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
@@ -82,7 +82,7 @@
   
   
   
-  <link rel="canonical" href="//localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/" />
+  <link rel="canonical" href="/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -97,7 +97,7 @@
   
   
   
-  <meta property="og:url" content="//localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/">
+  <meta property="og:url" content="/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/">
   <meta property="og:site_name" content="bigdale123&#39;s Blog">
   <meta property="og:title" content="First Post! Learning how to use Hugo to host Obsidian files">
   <meta property="og:locale" content="en">
@@ -124,7 +124,7 @@
     
     
     "inLanguage": "en",
-    "url" : "\/\/localhost:1313\/posts\/first-post-learning-how-to-use-hugo-to-host-obsidian-files\/",
+    "url" : "\/posts\/first-post-learning-how-to-use-hugo-to-host-obsidian-files\/",
     "author" : {
       "@type": "Person",
       "name": "Dylan Calvin"
@@ -138,7 +138,7 @@
     "keywords": ["Hugo","Obsidian","Homelab"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1171"
+    "wordCount": "1485"
   }
   </script>
     
@@ -149,19 +149,19 @@
    "itemListElement": [
      {
        "@type": "ListItem",
-       "item": "//localhost:1313/",
+       "item": "/",
        "name": "Bigdale123's Blog",
        "position": 1
      },
      {
        "@type": "ListItem",
-       "item": "//localhost:1313/posts/",
+       "item": "/posts/",
        "name": "Posts",
        "position": 2
      },
      {
        "@type": "ListItem",
-       "item": "//localhost:1313/categories/homelab/",
+       "item": "/categories/homelab/",
        "name": "Homelab",
        "position": 3
      },
@@ -193,6 +193,11 @@
 
   
   
+  
+  
+  
+  
+
 
   
   
@@ -456,7 +461,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-02-19 00:00:00 &#43;0000 UTC">February 19, 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+      <time datetime="2025-02-19 00:00:00 &#43;0000 UTC">February 19, 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
     
 
     
@@ -602,7 +607,8 @@ There will be more steps in the script, but for now this is all we need. I&rsquo
 <h1 id="step-3-workflowing-the-pipeline" class="relative group">Step 3: Workflowing the pipeline <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-workflowing-the-pipeline" aria-label="Anchor">#</a></span></h1><hr>
 <p>A&rsquo;ight, that&rsquo;s the real heavy work the python script should do. Now I need to write some other stuff that will build the static site and push it upto the github repo.</p>
 <p>Actually, I think i&rsquo;ll keep this script separate from the whole publishing part. That way I can port over the obsidian files, test the server first to make sure everything renders OK, then do the publishing. Or at least a separate function, that way I can ask if somebody wants to build and push.</p>
-<p>Just to make it easier on myself, I have set the publish dir in my <code>config.toml</code> to <code>docs</code>, since Github Pages natively supports using this directory as the build directory. Honestly, it&rsquo;s kinda dissapointing that GitHub won&rsquo;t let you pick any folder in your branch, you&rsquo;re stuck between /docs or /. Here&rsquo;s the config.toml section:</p>
+<p>Just to make it easier on myself, I have set the publish dir in my <code>config.toml</code> to <code>docs</code>, since Github Pages natively supports using this directory as the build directory. Honestly, it&rsquo;s kinda dissapointing that GitHub won&rsquo;t let you pick any folder in your branch, you&rsquo;re stuck between /docs or /. Here&rsquo;s the config.toml section:
+<em>EDIT:</em> I ended up undoing this for a custom github action, see next step.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># -- Site Configuration --</span>
 </span></span><span class="line"><span class="cl"><span class="c"># Refer to the theme docs for more details about each of these parameters.</span>
 </span></span><span class="line"><span class="cl"><span class="c"># https://jpanther.github.io/congo/docs/getting-started/</span>
@@ -613,7 +619,34 @@ There will be more steps in the script, but for now this is all we need. I&rsquo
 </span></span><span class="line"><span class="cl"><span class="nx">publishDir</span> <span class="p">=</span> <span class="s2">&#34;docs&#34;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">...</span>
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>And here&rsquo;s what I wrote for the publishing function, honestly I probably won&rsquo;t use it since it&rsquo;s just <code>hugo</code> then a push to the repo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">publish</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;hugo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">commit_message</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&#34;Automated Publish on </span><span class="si">{</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&#34;%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S&#34;</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;git add *&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;git commit -am &#34;</span><span class="si">{</span><span class="n">commit_message</span><span class="si">}</span><span class="s1">&#34;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">&#34;git push&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h1 id="step-4-see-if-the-static-site-works" class="relative group">Step 4: See if the static site works <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-see-if-the-static-site-works" aria-label="Anchor">#</a></span></h1><hr>
+<p>Well, if <em>you&rsquo;re</em> reading this you know it works. I had some trouble getting github pages to work with it. I got an error the first time I tried to have the pages action build the site, <code>Liquid Exception: Invalid Date: '&quot;{{ .Date }}&quot;' is not a valid datetime. in /_layouts/default.html</code>. To fix this, i added a .nojekyll file inside the docs directory, which should make pages serve the site as is. And&hellip;
+It didn&rsquo;t work. I guess that just don&rsquo;t work no more 😮‍💨. I looked up what to do on the hugo docs, and they recommend a custom github action that will build the hugo site up on github.
+Turns out I forgot to set <code>them = &quot;congo&quot;</code> in <code>config.toml</code>, but once I did that&hellip;
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Pasted%20image%2020250220121602.png" alt="Pasted image 20250220121602.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+WOOP! Github Pages built and deployed the site using the action that I definitely did not copy word for word from the Hugo site 🙂. The important thing is, the site is up. We can polish all the other stuff later.</p>
+<h1 id="conclusion-" class="relative group">Conclusion 🎉 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion-" aria-label="Anchor">#</a></span></h1><hr>
+<p>Steps 5 and 6 are already done, since I picked my theme at the outset and that theme ended up already implementing categories. Call me lucky.
+This might not have been harder than I thought it would be, but it definitely took me longer than I though it would. Maybe i&rsquo;m getting slower? Whatever, the site is done. It&rsquo;s up. I can move on to the next thing. Maybe I should brush up on Github Actions?</p>
+
       </div>
     </section>
     <footer class="max-w-prose pt-8 print:hidden">
@@ -769,7 +802,7 @@ There will be more steps in the script, but for now this is all we need. I&rsquo
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="//localhost:1313/"
+  data-url="/"
 >
   <div
     id="search-modal"

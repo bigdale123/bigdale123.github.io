@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on bigdale123&#39;s Blog</title>
-    <link>//localhost:1313/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 19 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homelab</title>
-      <link>//localhost:1313/categories/homelab/</link>
+      <link>/categories/homelab/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/homelab/</guid>
+      <guid>/categories/homelab/</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>//localhost:1313/categories/obsidian/</link>
+      <link>/categories/obsidian/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/obsidian/</guid>
+      <guid>/categories/obsidian/</guid>
       <description></description>
     </item>
   </channel>
