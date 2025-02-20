@@ -107,6 +107,7 @@ A'ight, that's the real heavy work the python script should do. Now I need to wr
 Actually, I think i'll keep this script separate from the whole publishing part. That way I can port over the obsidian files, test the server first to make sure everything renders OK, then do the publishing. Or at least a separate function, that way I can ask if somebody wants to build and push.
 
 Just to make it easier on myself, I have set the publish dir in my `config.toml` to `docs`, since Github Pages natively supports using this directory as the build directory. Honestly, it's kinda dissapointing that GitHub won't let you pick any folder in your branch, you're stuck between /docs or /. Here's the config.toml section:
+*EDIT:* I ended up undoing this for a custom github action, see next step.
 ```toml
 # -- Site Configuration --
 # Refer to the theme docs for more details about each of these parameters.
@@ -119,6 +120,29 @@ publishDir = "docs"
 
 ...
 ```
+
+And here's what I wrote for the publishing function, honestly I probably won't use it since it's just `hugo` then a push to the repo.
+```python
+def publish():
+    os.system("hugo")
+    commit_message = f"Automated Publish on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}"
+    os.system("git add *")
+    os.system(f'git commit -am "{commit_message}"')
+    os.system("git push")
+```
+
+# Step 4: See if the static site works
+***
+Well, if *you're* reading this you know it works. I had some trouble getting github pages to work with it. I got an error the first time I tried to have the pages action build the site, `Liquid Exception: Invalid Date: '"{{ .Date }}"' is not a valid datetime. in /_layouts/default.html`. To fix this, i added a .nojekyll file inside the docs directory, which should make pages serve the site as is. And...
+It didn't work. I guess that just don't work no more 😮‍💨. I looked up what to do on the hugo docs, and they recommend a custom github action that will build the hugo site up on github.
+Turns out I forgot to set `them = "congo"` in `config.toml`, but once I did that...
+![Pasted image 20250220121602.png](/attachments/Pasted%20image%2020250220121602.png)
+WOOP! Github Pages built and deployed the site using the action that I definitely did not copy word for word from the Hugo site 🙂. The important thing is, the site is up. We can polish all the other stuff later.
+
+# Conclusion
+***
+Steps 5 and 6 are already done, since I picked my theme at the outset and that theme ended up already implementing categories. Call me lucky.
+This might not have been harder than I thought it would be, but it definitely took me longer than I though it would. Maybe i'm getting slower? Whatever, the site is done. It's up. I can move on to the next thing. Maybe I should brush up on Github Actions?
 
 
 
