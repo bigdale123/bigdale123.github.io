@@ -87,7 +87,7 @@ Any sub channels that are pink and say "ENCRYPTED" can't be played, but any blue
 
 You can setup recording each snippet that comes in for any given alias, just go to the alias and set it to record audio. Whenever a call occurs with the alias being part of that call, the audio segment will get saved to disk.
 
-That's about all I know, SDRTrunk is a neat program to run every once in a while. I'll put a link to my playlist [here]() once I get it uploaded in the blog repo.
+That's about all I know, SDRTrunk is a neat program to run every once in a while. I'll put a link to my playlist [here]() once I get it uploaded in the blog repo, in case anybody in 'Bama wants to give this a try. Other states, you're on your own 😉
 
 Speaking of blog, This post is the first post to contain a gif! Which I thought was previously not going to work, but I forgot I already implemented that when I wrote my import script.
 ![think-smart-meme-945257677 1.gif](/attachments/think-smart-meme-945257677%201.gif)
