@@ -5,6 +5,8 @@
 baseURL = "/"
 defaultContentLanguage = "en"
 
+publishDir = "docs"
+
 enableRobotsTXT = true
 summaryLength = 0
 

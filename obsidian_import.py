@@ -2,6 +2,7 @@ import os
 import re
 import shutil
 import sys
+from datetime import datetime
 
 def copy_vault_files(path_to_vault_folder):
     # Check that folder contains posts folder (validity check)
@@ -49,7 +50,12 @@ def copy_vault_files(path_to_vault_folder):
                     file.write(content)    
 
 def publish():
-    os.system("hugo")    
+    os.system("hugo")
+    commit_message = f"Automated Publish on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}"
+    os.system("git add *")
+    os.system(f'git commit -am "{commit_message}"')
+    os.system("git push")
+
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
@@ -57,3 +63,7 @@ if __name__ == "__main__":
         quit()
     path_to_vault_folder = sys.argv[1]
     copy_vault_files(path_to_vault_folder)
+    choice = input("Do you want to go ahead and publish these changes? (yes/no): ").strip()
+
+    if choice in ("yes,", "y"):
+        publish()

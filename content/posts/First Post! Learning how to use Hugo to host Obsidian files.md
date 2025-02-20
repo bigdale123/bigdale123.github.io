@@ -104,7 +104,21 @@ A tad ugly, but it gets the job done. And now we have images showing up in Hugo!
 ***
 A'ight, that's the real heavy work the python script should do. Now I need to write some other stuff that will build the static site and push it upto the github repo.
 
-Actually, I think i'll keep this script separate from the whole publishing part. That way I can port over the obsidian files, test the server first to make sure everything renders OK, then do the publishing.
+Actually, I think i'll keep this script separate from the whole publishing part. That way I can port over the obsidian files, test the server first to make sure everything renders OK, then do the publishing. Or at least a separate function, that way I can ask if somebody wants to build and push.
+
+Just to make it easier on myself, I have set the publish dir in my `config.toml` to `docs`, since Github Pages natively supports using this directory as the build directory. Honestly, it's kinda dissapointing that GitHub won't let you pick any folder in your branch, you're stuck between /docs or /. Here's the config.toml section:
+```toml
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+baseURL = "/"
+defaultContentLanguage = "en"
+
+publishDir = "docs"
+
+...
+```
 
 
 
