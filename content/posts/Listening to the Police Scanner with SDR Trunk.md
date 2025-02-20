@@ -2,7 +2,7 @@
 title: Listening to the Police Scanner with SDR Trunk
 date: 2025-02-20
 lastmod: 2025-02-20
-draft: true
+draft: false
 tags:
   - RTL-SDR
   - Software
