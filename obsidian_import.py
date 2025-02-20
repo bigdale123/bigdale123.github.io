@@ -63,7 +63,7 @@ if __name__ == "__main__":
         quit()
     path_to_vault_folder = sys.argv[1]
     copy_vault_files(path_to_vault_folder)
-    choice = input("Do you want to go ahead and publish these changes? (yes/no): ").strip()
+    # choice = input("Do you want to go ahead and publish these changes? (yes/no): ").strip()
 
-    if choice in ("yes,", "y"):
-        publish()
+    # if choice in ("yes,", "y"):
+    #     publish()
