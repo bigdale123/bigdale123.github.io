@@ -1,0 +1,25 @@
+.prose :where(code):not(:where([class~="not-prose"] *))::before {
+	content: unset !important;
+}
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+	content: unset !important;
+}
+
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border-radius: 0.200rem;
+    background-color: #fafafa; /* Neutral-50 */
+    color: var(--tw-prose-code);
+	padding: 0.1rem;
+    font-weight: 600;
+    font-size: 0.875em;
+}
+
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    background-color: #fafafa !important; /* Force light mode */
+}
+
+.dark .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    background-color: #404040 !important; /* Force dark mode */
+}
