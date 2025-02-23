@@ -7,9 +7,6 @@ tags:
   - Hugo
   - Obsidian
   - Homelab
-categories:
-  - Homelab
-  - Obsidian
 ---
 # Introduction
 ***

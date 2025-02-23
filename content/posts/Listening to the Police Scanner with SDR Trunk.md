@@ -7,9 +7,6 @@ tags:
   - RTL-SDR
   - Software
   - Miscellaneous
-categories:
-  - RTL-SDR
-  - Miscellaneous
 ---
 Now that I have a blog, I wanted to document how to do this because it's a niche-r hobby. I had, not a difficult time, but *a* time getting this working properly, and finding out how to setup playlists. All told though, it's fun to get setup.
 # What is trunking?

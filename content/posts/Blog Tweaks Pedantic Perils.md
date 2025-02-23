@@ -6,9 +6,6 @@ draft: false
 tags:
   - Hugo
   - Obsidian
-categories:
-  - Homelab
-  - Obsidian
 ---
 I'm really digging my Hugo blog since I put it together in [This Post](https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/), but I wanted to make some tweaks to match some of the appearance in Obsidian, as well as some little tweaks like enabling theme switching. 
 

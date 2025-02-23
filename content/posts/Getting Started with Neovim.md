@@ -8,8 +8,6 @@ tags:
   - Linux
   - Vim
   - Neovim
-categories:
-  - Linux
 ---
 ![Pasted image 20250223112239.png](/attachments/Pasted%20image%2020250223112239.png)
 I've been a VSCode user for basically all the time I've been writing code, I've tried Neovim and Vim before and couldn't get used to the keyboard shortcuts. Now that my preferred Desktop environment is i3wm, keyboard shortcuts have become more common. Basically what i'm saying is, it's time to at least branch out and try vim based editing for real. I do plan on using some plugins, which I will cover after I learn basic navigation and such.
