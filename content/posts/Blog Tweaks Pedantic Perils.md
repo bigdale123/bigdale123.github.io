@@ -76,5 +76,7 @@ I ended up putting an appearance toggle in the footer, and the menu.
   [main.params]
     action = "appearance"
 ```
+After adding the toggles, the toggles worked locally but not after being pushed to github pages. [An issue](https://github.com/jpanther/congo/issues/266) on the Congo github page pointed me in the right direction, my cloudflare had Rocket Loader setup. This was messing with the appearance loader in some way, the guy that solved the issue said it had something to do with how the content was being loaded. TBH, I think i've had Rocket Loader cause problems in the past before, I don't remember why I enabled it. Anyways, that got turned off and the appearance switcher works just fine now.
+
 That's about it. See ya.
 

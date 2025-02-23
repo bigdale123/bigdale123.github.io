@@ -139,7 +139,7 @@
     "keywords": ["Hugo","Obsidian"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "593"
+    "wordCount": "690"
   }
   </script>
     
@@ -532,7 +532,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-02-23 00:00:00 &#43;0000 UTC">February 23, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>593 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+      <time datetime="2025-02-23 00:00:00 &#43;0000 UTC">February 23, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>690 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -682,7 +682,8 @@ I ended up putting an appearance toggle in the footer, and the menu.</p>
 </span></span><span class="line"><span class="cl">  <span class="nx">weight</span> <span class="p">=</span> <span class="mi">95</span>
 </span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">main</span><span class="p">.</span><span class="nx">params</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">action</span> <span class="p">=</span> <span class="s2">&#34;appearance&#34;</span>
-</span></span></code></pre></div><p>That&rsquo;s about it. See ya.</p>
+</span></span></code></pre></div><p>After adding the toggles, the toggles worked locally but not after being pushed to github pages. <a href="https://github.com/jpanther/congo/issues/266" target="_blank" rel="noreferrer">An issue</a> on the Congo github page pointed me in the right direction, my cloudflare had Rocket Loader setup. This was messing with the appearance loader in some way, the guy that solved the issue said it had something to do with how the content was being loaded. TBH, I think i&rsquo;ve had Rocket Loader cause problems in the past before, I don&rsquo;t remember why I enabled it. Anyways, that got turned off and the appearance switcher works just fine now.</p>
+<p>That&rsquo;s about it. See ya.</p>
 
       </div>
     </section>
