@@ -6,8 +6,15 @@
     <description>Recent content in Obsidian on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/categories/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog Tweaks: Pedantic Perils</title>
+      <link>/posts/blog-tweaks-pedantic-perils/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/blog-tweaks-pedantic-perils/</guid>
+      <description></description>
+    </item>
     <item>
       <title>First Post! Learning how to use Hugo to host Obsidian files</title>
       <link>/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>

@@ -10,6 +10,7 @@
 # overridden by providing a weight value. The menu will then be
 # ordered by weight from lowest to highest.
 
+
 [[main]]
   name = "Posts"
   pageRef = "posts"
@@ -27,9 +28,15 @@
 
 [[main]]
   identifier = "search"
-  weight = 99
+  weight = 90
   [main.params]
     action = "search"
+
+[[main]]
+  identifier = "appearance"
+  weight = 95
+  [main.params]
+    action = "appearance"
 
 [[main]]
   identifier = "locale"
