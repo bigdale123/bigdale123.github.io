@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on bigdale123&#39;s Blog</title>
-    <link>/categories/</link>
+    <link>https://blog.coeus.icu/categories/</link>
     <description>Recent content in Categories on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.coeus.icu/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Homelab</title>
-      <link>/categories/homelab/</link>
+      <link>https://blog.coeus.icu/categories/homelab/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/categories/homelab/</guid>
+      <guid>https://blog.coeus.icu/categories/homelab/</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>/categories/obsidian/</link>
+      <link>https://blog.coeus.icu/categories/obsidian/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/categories/obsidian/</guid>
+      <guid>https://blog.coeus.icu/categories/obsidian/</guid>
       <description></description>
     </item>
     <item>
       <title>Miscellaneous</title>
-      <link>/categories/miscellaneous/</link>
+      <link>https://blog.coeus.icu/categories/miscellaneous/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/categories/miscellaneous/</guid>
+      <guid>https://blog.coeus.icu/categories/miscellaneous/</guid>
       <description></description>
     </item>
     <item>
       <title>RTL-SDR</title>
-      <link>/categories/rtl-sdr/</link>
+      <link>https://blog.coeus.icu/categories/rtl-sdr/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/categories/rtl-sdr/</guid>
+      <guid>https://blog.coeus.icu/categories/rtl-sdr/</guid>
       <description></description>
     </item>
   </channel>

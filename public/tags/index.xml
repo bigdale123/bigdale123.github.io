@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on bigdale123&#39;s Blog</title>
-    <link>/tags/</link>
+    <link>https://blog.coeus.icu/tags/</link>
     <description>Recent content in Tags on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.coeus.icu/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://blog.coeus.icu/tags/hugo/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/hugo/</guid>
+      <guid>https://blog.coeus.icu/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>/tags/obsidian/</link>
+      <link>https://blog.coeus.icu/tags/obsidian/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/obsidian/</guid>
+      <guid>https://blog.coeus.icu/tags/obsidian/</guid>
       <description></description>
     </item>
     <item>
       <title>Miscellaneous</title>
-      <link>/tags/miscellaneous/</link>
+      <link>https://blog.coeus.icu/tags/miscellaneous/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/miscellaneous/</guid>
+      <guid>https://blog.coeus.icu/tags/miscellaneous/</guid>
       <description></description>
     </item>
     <item>
       <title>RTL-SDR</title>
-      <link>/tags/rtl-sdr/</link>
+      <link>https://blog.coeus.icu/tags/rtl-sdr/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/rtl-sdr/</guid>
+      <guid>https://blog.coeus.icu/tags/rtl-sdr/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>/tags/software/</link>
+      <link>https://blog.coeus.icu/tags/software/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/software/</guid>
+      <guid>https://blog.coeus.icu/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>Homelab</title>
-      <link>/tags/homelab/</link>
+      <link>https://blog.coeus.icu/tags/homelab/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>/tags/homelab/</guid>
+      <guid>https://blog.coeus.icu/tags/homelab/</guid>
       <description></description>
     </item>
   </channel>
