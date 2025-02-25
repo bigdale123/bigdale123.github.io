@@ -2,6 +2,7 @@ import os
 import re
 import shutil
 import sys
+import subprocess
 from datetime import datetime
 
 def copy_vault_files(path_to_vault_folder):
@@ -70,3 +71,7 @@ if __name__ == "__main__":
         if "y" in choice:
             commit_message = input("Enter Commit Message: ")
         publish(commit_message)
+    else:
+        choice = input("Do you want to test out with `hugo serve`? (yes/no): ").strip()
+        if "y" in choice:
+            subprocess.run(["hugo", "serve"])

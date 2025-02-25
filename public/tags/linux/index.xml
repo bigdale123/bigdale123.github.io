@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on bigdale123&#39;s Blog</title>
-    <link>//localhost:1313/tags/linux/</link>
+    <link>https://blog.coeus.icu/tags/linux/</link>
     <description>Recent content in Linux on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blog.coeus.icu/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Getting Started with Neovim</title>
-      <link>//localhost:1313/posts/getting-started-with-neovim/</link>
-      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/getting-started-with-neovim/</guid>
+      <title>A (Mostly) Exhaustive List of Keybinds and Commands for Vim</title>
+      <link>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
       <description></description>
     </item>
   </channel>
