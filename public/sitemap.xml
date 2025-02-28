@@ -4,16 +4,20 @@
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
-            <lastmod>2025-02-25T00:00:00+00:00</lastmod>
+            <loc>https://blog.coeus.icu/</loc>
+            <lastmod>2025-02-27T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://blog.coeus.icu/</loc>
-            <lastmod>2025-02-25T00:00:00+00:00</lastmod>
+            <loc>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</loc>
+            <lastmod>2025-02-27T00:00:00+00:00</lastmod>
           </url>
+    
+  
+    
+  
     
   
     
@@ -21,10 +25,17 @@
     
       <url>
             <loc>https://blog.coeus.icu/posts/</loc>
-            <lastmod>2025-02-25T00:00:00+00:00</lastmod>
+            <lastmod>2025-02-27T00:00:00+00:00</lastmod>
           </url>
     
   
+    
+  
+    
+      <url>
+            <loc>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
+            <lastmod>2025-02-25T00:00:00+00:00</lastmod>
+          </url>
     
   
     
@@ -47,8 +58,6 @@
             <loc>https://blog.coeus.icu/posts/listening-to-the-police-scanner-with-sdr-trunk/</loc>
             <lastmod>2025-02-20T00:00:00+00:00</lastmod>
           </url>
-    
-  
     
   
     
