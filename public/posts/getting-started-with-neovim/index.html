@@ -12,7 +12,7 @@
   class="scroll-smooth"
   data-default-appearance="dark"
   data-auto-appearance="true"
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
@@ -84,7 +84,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/getting-started-with-neovim/" />
+  <link rel="canonical" href="https://blog.coeus.icu/posts/getting-started-with-neovim/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -99,14 +99,14 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/posts/getting-started-with-neovim/">
+  <meta property="og:url" content="https://blog.coeus.icu/posts/getting-started-with-neovim/">
   <meta property="og:site_name" content="bigdale123&#39;s Blog">
   <meta property="og:title" content="Getting Started with Neovim">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-02-24T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-02-24T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-03-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-05T00:00:00+00:00">
     <meta property="article:tag" content="Software">
     <meta property="article:tag" content="Linux">
     <meta property="article:tag" content="Vim">
@@ -127,21 +127,21 @@
     
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/posts\/getting-started-with-neovim\/",
+    "url" : "https:\/\/blog.coeus.icu\/posts\/getting-started-with-neovim\/",
     "author" : {
       "@type": "Person",
       "name": "Dylan Calvin"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-02-24T00:00:00\u002b00:00",
-    "datePublished": "2025-02-24T00:00:00\u002b00:00",
+    "dateCreated": "2025-03-05T00:00:00\u002b00:00",
+    "datePublished": "2025-03-05T00:00:00\u002b00:00",
     
-    "dateModified": "2025-02-24T00:00:00\u002b00:00",
+    "dateModified": "2025-03-05T00:00:00\u002b00:00",
     
     "keywords": ["Software","Linux","Vim","Neovim"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2019"
+    "wordCount": "2643"
   }
   </script>
     
@@ -152,13 +152,13 @@
    "itemListElement": [
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/",
+       "item": "https://blog.coeus.icu/",
        "name": "Bigdale123's Blog",
        "position": 1
      },
      {
        "@type": "ListItem",
-       "item": "http://localhost:1313/posts/",
+       "item": "https://blog.coeus.icu/posts/",
        "name": "Posts",
        "position": 2
      },
@@ -190,6 +190,11 @@
 
   
   
+  
+  
+  
+  
+
 
   
   
@@ -529,7 +534,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-02-24 00:00:00 &#43;0000 UTC">February 24, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2019 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">10 mins</span>
+      <time datetime="2025-03-05 00:00:00 &#43;0000 UTC">March 5, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2643 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
     
 
     
@@ -592,11 +597,12 @@
   
 <figure><img src="/attachments/Pasted%20image%2020250223112239.png" alt="Pasted image 20250223112239.png" class="mx-auto my-0 rounded-md" />
 </figure>
+</p>
+<p>Finally, I can do the part of the original post I planned on! If you&rsquo;re unaware, <a href="https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/" target="_blank" rel="noreferrer">I made a post before this one about vim keybinds</a>. This post was originally intended to be a complete article detailing what key binds I was going to learn <em>and</em> getting neovim setup with some plugins and settings to help out anybody else that got intimidated by the learning curve. And as you can see, the key binds and commands became a really long list. This post will be about configuring Neovim and setting it up with plugins.</p>
+<p>My hope is that mainly, I can document my setup so that I can understand it later when I forget what things do.</p>
+<h1 id="neovim-settings" class="relative group">Neovim Settings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#neovim-settings" aria-label="Anchor">#</a></span></h1><hr>
+<p>By default, Neovim looks like this:
 
-I&rsquo;ve been a VSCode user for basically all the time I&rsquo;ve been writing code, I&rsquo;ve tried Neovim and Vim before and couldn&rsquo;t get used to the keyboard shortcuts. Now that my preferred Desktop environment is i3wm, keyboard shortcuts have become more common. Basically what i&rsquo;m saying is, it&rsquo;s time to at least branch out and try vim based editing for real. I do plan on using some plugins, which I will cover after I learn basic navigation and such.</p>
-<p>Lastly, before I jump into this, you don&rsquo;t have to use vim or neovim to take advantage of the vim style keybindings. There exists many plugins for many editors that replicate this functionality.</p>
-<h1 id="vim-modes" class="relative group">Vim Modes <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-modes" aria-label="Anchor">#</a></span></h1><hr>
-<p>
 
 
 
@@ -605,293 +611,397 @@ I&rsquo;ve been a VSCode user for basically all the time I&rsquo;ve been writing
 
   
   
-<figure><img src="/attachments/Pasted%20image%2020250223112457.png" alt="Pasted image 20250223112457.png" class="mx-auto my-0 rounded-md" />
+<figure><img src="/attachments/Pasted%20image%2020250225124857.png" alt="Pasted image 20250225124857.png" class="mx-auto my-0 rounded-md" />
 </figure>
 
-Yes, yes, back to back memes. Gotta have fun with it, y&rsquo;know?</p>
-<p>Vim has different modes for accomplishing different tasks. They are:</p>
+It might change a little for you, but this is pretty much how it looks out of the box. And if you open up a file&hellip;
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Pasted%20image%2020250225124940.png" alt="Pasted image 20250225124940.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+This is what it should look like. You&rsquo;ll notice it&rsquo;s missing some features that we might have in other editors like VSCode, like line numbers, syntax highlighting, etc. And this isn&rsquo;t because it can&rsquo;t do those things, it&rsquo;s just that they are not enabled by default. Vim and other vim-like editors (Neovim) are built to be incredibly lightweight while still being a powerful editor. Things that might cause the editor to take longer to draw get disabled, in favor for faster draw times which make the editor feel and behave faster. Another reason for this is it makes the editor <em>much</em> faster to launch. You may notice when you open VSCode, it takes a couple of seconds to load <em>everything</em>. It takes about a second to load enough to the point where you can start using it, opening files and editing them. With vim editors, it&rsquo;s near instant. It loads up, file open, ready to edit in almost no time at all.</p>
+<p>So now that we know why these features are turned off, lets turn them back on. Unless you are running Neovim on a potato, enabling these really shouldn&rsquo;t affect the speed of the editor at all, only marginally. The real speed killer will be plugins, but there&rsquo;s something we&rsquo;ll cover later to help remedy that in the plugins section. I will be using <a href="https://builtin.com/software-engineering-perspectives/neovim-configuration" target="_blank" rel="noreferrer">This Site&rsquo;s start config</a> to start my vim config (which for Neovim is located at `~/.config/nvim/init.vim):</p>
+<pre tabindex="0"><code class="language-vimscript" data-lang="vimscript">&#34; Basic Settings
+&#34; **************
+set nocompatible            &#34; disable compatibility to old-time vi
+
+
+&#34; Selection Behavior
+&#34; ******************
+set showmatch               &#34; highlights matching brackets (),[],{}
+set ignorecase              &#34; makes search patterns case insensitive
+set hlsearch                &#34; highlight all search matches
+set incsearch               &#34; show matches as search pattern is typed
+
+
+&#34; Mouse and Cursor Behavior
+&#34; *************************
+set mouse=a                 &#34; enable mouse support
+set cursorline              &#34; highlights the line where the cursor is
+
+
+&#34; Tab and Indentation Settings
+&#34; ****************************
+set tabstop=4               &#34; number of columns occupied by a tab 
+set softtabstop=4           &#34; see multiple spaces as tabstops so &lt;BS&gt; does the right thing
+set expandtab               &#34; converts tabs to white space
+set shiftwidth=4            &#34; width for autoindents
+set autoindent              &#34; indent a new line the same amount as the line just typed
+
+
+&#34; UI Enhancements
+&#34; ***************
+set number                  &#34; adds line numbers
+set wildmode=longest,list   &#34; adds command line autocomplete
+							&#34;     longest = longest unambiguous match
+							&#34;     list = displays all possible matches
+set cc=80                   &#34; set an 80 column border for recommended line length
+set ttyfast                 &#34; Scrolls as fast as the terminal supports
+
+
+&#34; File Type and Syntax Highlighting
+&#34; *********************************
+filetype plugin on          &#34; turn on file-type-specific plugins
+filetype plugin indent on   &#34; allow auto-indenting depending on file type
+syntax on                   &#34; syntax highlighting
+
+
+&#34; Clipboard
+&#34; *********
+set clipboard=unnamedplus    &#34; use system clipboard for copy/paste
+&#34; set backupdir=~/.cache/vim &#34; Directory to store backup files.
+</code></pre><p>This is already a pretty good start! I tried out the <code>set cc=80</code>, thinking it would just be a line and not highlight the whole column. It wasn&rsquo;t so I disabled it, but maybe I will revisit later if I can find a solution that&rsquo;s not too invasive. Here&rsquo;s what Neovim looks like now:
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Pasted%20image%2020250225195802.png" alt="Pasted image 20250225195802.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+It&rsquo;s already a lot nicer to work with, being able to use the mouse (even though I should be using the keyboard) is a nice addition. The mouse is still pretty limited on it&rsquo;s own, which I think will wean me off of using the mouse. It&rsquo;s mainly just nice to be able to move the cursor with the mouse.</p>
+<h1 id="appearance" class="relative group">Appearance <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#appearance" aria-label="Anchor">#</a></span></h1><hr>
+<p>Right now I think I am happy with the way it looks, but I also want to go ahead and lay out some groundwork for myself in the future. I am also going to setup background transparency, I just like being able to see stuff behind my terminal.</p>
+<h4 id="transparency" class="relative group">Transparency <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#transparency" aria-label="Anchor">#</a></span></h4><p>I&rsquo;ve done this in the past, but after not realizing that I didn&rsquo;t back up my dotfiles correctly I lost that configuration 😭. I remember that I did it without a plugin, so it <em>should</em> be possible to write it in vimscript. I&rsquo;m just at a loss trying to find it in other storage, so I guess i&rsquo;ll have to find in on <em>The Internet</em>. Thankfully, you can throw a rock and hit vim/neovim configs. <a href="https://blog.chaitanyashahare.com/posts/how-to-make-nvim-backround-transparent/" target="_blank" rel="noreferrer">Here&rsquo;s a site</a> that had a &ldquo;vanilla&rdquo; (plugin independent) method to get transparency working. Just add the following to your config:</p>
+<pre tabindex="0"><code class="language-vimscript" data-lang="vimscript">highlight Normal guibg=none
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+</code></pre><p>And you&rsquo;re good to go:
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Pasted%20image%2020250225204310.png" alt="Pasted image 20250225204310.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+Can you tell I&rsquo;ve been watching Severance?</p>
+<h3 id="color-schemes" class="relative group">Color Schemes <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#color-schemes" aria-label="Anchor">#</a></span></h3><p>Even though I don&rsquo;t intend on installing a color scheme right now, I would like to already have all the groundwork laid out so that in the future all I have to do is swap out one theme for another. Vim and Neovim actually already come with some preinstalled color schemes, accessible through the <code>:colorscheme</code> command. Some color schemes require 24 bit color, though, and this wont make it a persistent change. Here&rsquo;s what i&rsquo;ve added to my config:</p>
+<pre tabindex="0"><code>set termguicolors
+colorscheme default
+</code></pre><p>And that should be about it. If I install a colorscheme in the future, it&rsquo;ll be as a plugin, and still be accessible through <code>:colorscheme</code>.</p>
+<h1 id="plugins" class="relative group">Plugins <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#plugins" aria-label="Anchor">#</a></span></h1><hr>
+<p>It&rsquo;s time. The moment that <em>i&rsquo;ve</em> been looking forward to. <strong>Plugins</strong>.</p>
+<p>This is where the cool stuff happens, and (can) add a <em>ton</em> of functionality to vim. They can add syntax highlighting, autocompletion, Git integration, and more. You can find most of all the plugins available at <a href="https://vimawesome.com" target="_blank" rel="noreferrer">vim-awesome</a>. But, these can make vim load slower, so let me introduce you to what will be the most important plugin for me: <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noreferrer">Lazy.nvim</a>. This plugin manager <em>Lazily</em> loads plugins, meaning that plugins get loaded when they try to get used. This keeps it fast, while still being able to handle a lot of plugins. It&rsquo;s kind of like a library: when you want to read a book you don&rsquo;t have to pull every book off the shelf first, you just grab the book you want. In fact, <a href="https://www.lazyvim.org/" target="_blank" rel="noreferrer">LazyVim</a> is a neovim setup that is powered by lazy.nvim. It comes with a bunch of plugins installed and pre configured. I&rsquo;ve also used this in the past, and while it&rsquo;s nice, I think it is a little overkill for me. So, i&rsquo;ll be selecting my plugins myself.</p>
+<p>There&rsquo;s one more order of business before we start installing plugins, and that&rsquo;s because i&rsquo;m using lazy.nvim. The documentation specifies you need to setup lazy in <code>init.lua</code>, and not <code>init.vim</code> like i&rsquo;m using now. So, I need to translate my <code>init.vim</code> to an equivalent <code>init.lua</code> 😞</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Appearance</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">termguicolors</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[colorscheme default]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[highlight Normal guibg=none]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[highlight NonText guibg=none]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[highlight Normal ctermbg=none]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[highlight NonText ctermbg=none]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Basic Settings</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-----------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">compatible</span> <span class="o">=</span> <span class="kc">false</span>  <span class="c1">-- Disable compatibility to old-time vi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Selection Behavior</span>
+</span></span><span class="line"><span class="cl"><span class="c1">---------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">showmatch</span> <span class="o">=</span> <span class="kc">true</span>    <span class="c1">-- Highlight matching brackets</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">ignorecase</span> <span class="o">=</span> <span class="kc">true</span>   <span class="c1">-- Case-insensitive searching</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">hlsearch</span> <span class="o">=</span> <span class="kc">true</span>     <span class="c1">-- Highlight all search matches</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">incsearch</span> <span class="o">=</span> <span class="kc">true</span>    <span class="c1">-- Show matches as search pattern is typed</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Mouse and Cursor Behavior</span>
+</span></span><span class="line"><span class="cl"><span class="c1">----------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">mouse</span> <span class="o">=</span> <span class="s2">&#34;a&#34;</span>         <span class="c1">-- Enable mouse support</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">cursorline</span> <span class="o">=</span> <span class="kc">true</span>   <span class="c1">-- Highlight the current line</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Tab and Indentation Settings</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">tabstop</span> <span class="o">=</span> <span class="mi">4</span>         <span class="c1">-- Number of columns occupied by a tab</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">softtabstop</span> <span class="o">=</span> <span class="mi">4</span>     <span class="c1">-- See multiple spaces as tabstops</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">expandtab</span> <span class="o">=</span> <span class="kc">true</span>    <span class="c1">-- Convert tabs to spaces</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">shiftwidth</span> <span class="o">=</span> <span class="mi">4</span>      <span class="c1">-- Width for auto-indents</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">autoindent</span> <span class="o">=</span> <span class="kc">true</span>   <span class="c1">-- Maintain indent of current line</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- UI Enhancements</span>
+</span></span><span class="line"><span class="cl"><span class="c1">------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">number</span> <span class="o">=</span> <span class="kc">true</span>       <span class="c1">-- Show line numbers</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">wildmode</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;longest&#34;</span><span class="p">,</span> <span class="s2">&#34;list&#34;</span> <span class="p">}</span> <span class="c1">-- Command-line autocomplete</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- vim.opt.colorcolumn = &#34;80&#34; -- Set an 80 column border for recommended line length</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">ttyfast</span> <span class="o">=</span> <span class="kc">true</span>      <span class="c1">-- Enable fast terminal scrolling</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- File Type and Syntax Highlighting</span>
+</span></span><span class="line"><span class="cl"><span class="c1">------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[filetype plugin on]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[filetype plugin indent on]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[syntax on]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Clipboard</span>
+</span></span><span class="line"><span class="cl"><span class="c1">------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">clipboard</span> <span class="o">=</span> <span class="s2">&#34;unnamedplus&#34;</span> <span class="c1">-- Use system clipboard for copy/paste</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- vim.opt.backupdir = os.getenv(&#34;HOME&#34;) .. &#34;/.cache/vim&#34; -- Directory for backup files</span>
+</span></span></code></pre></div><p>On the plus side, now that it&rsquo;s lua the code block highlights the syntax. That&rsquo;s nice.</p>
+<h3 id="lazynvim" class="relative group">Lazy.nvim <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lazynvim" aria-label="Anchor">#</a></span></h3><p>If you&rsquo;re following along, please read the <a href="https://lazy.folke.io/" target="_blank" rel="noreferrer">Official lazy.nvim documentation</a> to install it since it might change overtime. At the time of install, following the structured setup, all you need to do is add a requirement to <code>init.lua</code> and the definition of that requirement., <code>lua/config/lazy.lua</code>. The <code>lazy.lua</code> file is what bootstraps lazy.nvim and sets it up.</p>
+<p>Here&rsquo;s the file structure for lazy.nvim:</p>
+<pre tabindex="0"><code>~/.config/nvim
+├── lua
+│   ├── config
+│   │   └── lazy.lua
+│   └── plugins
+│       ├── spec1.lua
+│       ├── **
+│       └── spec2.lua
+└── init.lua
+</code></pre><p>And <code>lazy.lua</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Bootstrap lazy.nvim</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">lazypath</span> <span class="o">=</span> <span class="n">vim.fn</span><span class="p">.</span><span class="n">stdpath</span><span class="p">(</span><span class="s2">&#34;data&#34;</span><span class="p">)</span> <span class="o">..</span> <span class="s2">&#34;/lazy/lazy.nvim&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">vim.uv</span> <span class="ow">or</span> <span class="n">vim.loop</span><span class="p">).</span><span class="n">fs_stat</span><span class="p">(</span><span class="n">lazypath</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">local</span> <span class="n">lazyrepo</span> <span class="o">=</span> <span class="s2">&#34;https://github.com/folke/lazy.nvim.git&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">local</span> <span class="n">out</span> <span class="o">=</span> <span class="n">vim.fn</span><span class="p">.</span><span class="n">system</span><span class="p">({</span> <span class="s2">&#34;git&#34;</span><span class="p">,</span> <span class="s2">&#34;clone&#34;</span><span class="p">,</span> <span class="s2">&#34;--filter=blob:none&#34;</span><span class="p">,</span> <span class="s2">&#34;--branch=stable&#34;</span><span class="p">,</span> <span class="n">lazyrepo</span><span class="p">,</span> <span class="n">lazypath</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span> <span class="n">vim.v</span><span class="p">.</span><span class="n">shell_error</span> <span class="o">~=</span> <span class="mi">0</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.api</span><span class="p">.</span><span class="n">nvim_echo</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="s2">&#34;Failed to clone lazy.nvim:</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="s2">&#34;ErrorMsg&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="n">out</span><span class="p">,</span> <span class="s2">&#34;WarningMsg&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Press any key to exit...&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="kc">true</span><span class="p">,</span> <span class="p">{})</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.fn</span><span class="p">.</span><span class="n">getchar</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os.exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">rtp</span><span class="p">:</span><span class="n">prepend</span><span class="p">(</span><span class="n">lazypath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Make sure to setup `mapleader` and `maplocalleader` before</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- loading lazy.nvim so that mappings are correct.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- This is also a good place to setup other settings (vim.opt)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.g</span><span class="p">.</span><span class="n">mapleader</span> <span class="o">=</span> <span class="s2">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.g</span><span class="p">.</span><span class="n">maplocalleader</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="se">\\</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Setup lazy.nvim</span>
+</span></span><span class="line"><span class="cl"><span class="n">require</span><span class="p">(</span><span class="s2">&#34;lazy&#34;</span><span class="p">).</span><span class="n">setup</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="n">defaults</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lazy</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="n">spec</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">-- import your plugins</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&#34;plugins&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- Configure any other settings here. See the documentation for more details.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- colorscheme that will be used when installing plugins.</span>
+</span></span><span class="line"><span class="cl">  <span class="n">install</span> <span class="o">=</span> <span class="p">{</span> <span class="n">colorscheme</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;default&#34;</span> <span class="p">}</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- automatically check for plugin updates</span>
+</span></span><span class="line"><span class="cl">  <span class="n">checker</span> <span class="o">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><p>Now let&rsquo;s install some plugins!</p>
+<h3 id="vim-airline" class="relative group">vim-airline <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-airline" aria-label="Anchor">#</a></span></h3><p>Let&rsquo;s start off simple, since I don&rsquo;t actually trust that I installed lazy.nvim correctly. <a href="https://github.com/vim-airline/vim-airline" target="_blank" rel="noreferrer">vim-airline</a> is a &ldquo;lean &amp; mean&rdquo; status line that sits just above the command area and below the window. I just think it looks better than the standard status line, and it should be a simple introduction to Plugin Specs.</p>
+<p>lazy.nvim uses something called a &ldquo;spec&rdquo; to define plugins for lazy.nvim. This defines where to download a plugin, the config of that plugin, what it&rsquo;s priority is, whether to load the plugin lazily, etc. I gotta be honest, having used VimPlug (another vim plugin manager) in the past I kind of miss being able to just declare a plugin and running with it. Specs can be a little more involved, and i&rsquo;m also a little disappointed that vim-awesome does not show lazy specs for plugins listed on their site. Then again, I haven&rsquo;t actually written the spec yet. Maybe it&rsquo;s easier than it looks.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;vim-airline/vim-airline&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">lazy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">-- needs to be available at start, no lazy</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And hey! Looks like that&rsquo;s all you need! We can see that the status line has changed to vim-airline in this screenshot:
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Pasted%20image%2020250226122249.png" alt="Pasted image 20250226122249.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+That window that opened is the Lazy manager window, whenever you need to manage plugins on the fly you use this window. By default, this opens every time you install a new plugin. If you need to access this while in neovim, you simply run <code>:Lazy</code>.</p>
+<h3 id="vim-gitgutter" class="relative group">vim-gitgutter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-gitgutter" aria-label="Anchor">#</a></span></h3><p>Damn! I way underestimated how hard it would be to pick out plugins, because they&rsquo;re all so good. I&rsquo;m trying not to overload myself to start, and to keep the number of plugins as small as possible (since more plugins $\approx slower editor). Let&rsquo;s play it safe with gitgutter, which will show changes in the gutter of neovim (far left side of the window).
+Here&rsquo;s the spec:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;airblade/vim-gitgutter&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">lazy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">-- needs to be available at start, no lazy</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Pasted%20image%2020250227205103.png" alt="Pasted image 20250227205103.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+See those <code>+</code>&rsquo;s on the left side of the screen? That&rsquo;s gitgutter! It just marks lines that are different from the previous commit.</p>
+<h3 id="nerdtree" class="relative group">NERDTree <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nerdtree" aria-label="Anchor">#</a></span></h3><p>Now this one&rsquo;s pretty neat, and it&rsquo;s going to be the first plugin that will be lazy loaded. NERDTree is a file explorer that runs inside neovim. I&rsquo;ll also be installing some plugins for NERDTree, mainly nerdtree-git-plugin &amp; vim-devicons.
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Pasted%20image%2020250305210629.png" alt="Pasted image 20250305210629.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+Here&rsquo;s the spec for NERDTree:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;preservim/nerdtree&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cmd</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;NERDTreeToggle&#34;</span><span class="p">,</span> <span class="s2">&#34;NERDTreeFind&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="n">keys</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="s2">&#34;&lt;leader&gt;n&#34;</span><span class="p">,</span> <span class="s2">&#34;:NERDTreeToggle&lt;CR&gt;&#34;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&#34;Toggle NERDTree&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="s2">&#34;&lt;leader&gt;f&#34;</span><span class="p">,</span> <span class="s2">&#34;:NERDTreeFind&lt;CR&gt;&#34;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&#34;Find file in NERDTree&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dependencies</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;Xuyuanp/nerdtree-git-plugin&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">          <span class="n">vim.g</span><span class="p">.</span><span class="n">NERDTreeShowHidden</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">-- Show hidden files</span>
+</span></span><span class="line"><span class="cl">          <span class="n">vim.g</span><span class="p">.</span><span class="n">NERDTreeMinimalUI</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1">-- Simplify UI</span>
+</span></span><span class="line"><span class="cl">          <span class="n">vim.g</span><span class="p">.</span><span class="n">NERDTreeDirArrows</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1">-- Enable arrows for directories</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">end</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And the spec for vim-devicons:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;ryanoasis/vim-devicons&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="nerd-commenter" class="relative group">NERD Commenter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nerd-commenter" aria-label="Anchor">#</a></span></h3><hr>
+<p>The NERD Tools are really good, you kinda can&rsquo;t go wrong with one. This tool makes commenting almost as easy as it would be in VSCode (with Ctrl+/). Simply select test in visual mode, or leave your cursor on a line to be commented, then run any of these commands:</p>
 <ul>
-<li>Normal Mode
+<li><code>[count]&lt;leader&gt;cc</code> <strong>|NERDCommenterComment|</strong>
 <ul>
-<li>The default mode, used for navigation and executing commands.</li>
-<li>To get back to Normal mode from any other mode, hit <code>Esc</code> or type <code>Ctrl + [</code>.</li>
+<li>Comment out the current line or text selected in visual mode.</li>
 </ul>
 </li>
-<li>Insert Mode
+<li><code>[count]&lt;leader&gt;cn</code> <strong>|NERDCommenterNested|</strong>
 <ul>
-<li>Used for inserting and editing text.</li>
-<li>Entered by typing any <a href="#insert-mode">Insert Mode</a> keybinds.</li>
+<li>Same as cc but forces nesting.</li>
 </ul>
 </li>
-<li>Visual Mode
+<li><code>[count]&lt;leader&gt;c&lt;space&gt;</code> <strong>|NERDCommenterToggle|</strong>
 <ul>
-<li>Used for selecting text</li>
-<li>Entered by typing:
-<ul>
-<li><code>v</code> to do character wise selection</li>
-<li><code>V</code> to do line wise selection</li>
-<li><code>Ctrl + v</code> to do Block Selection</li>
+<li>Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.</li>
 </ul>
 </li>
+<li><code>[count]&lt;leader&gt;cm</code> <strong>|NERDCommenterMinimal|</strong>
+<ul>
+<li>Comments the given lines using only one set of multipart delimiters.</li>
 </ul>
 </li>
-<li>Command-Line Mode
+<li><code>[count]&lt;leader&gt;ci</code> <strong>|NERDCommenterInvert|</strong>
 <ul>
-<li>Used for executing vim <a href="#commands">commands</a></li>
-<li>Entered by typing <code>:</code> (usually most commands are document as something like <code>:q</code>)</li>
+<li>Toggles the comment state of the selected line(s) individually.</li>
 </ul>
 </li>
-<li>Replace Mode
+<li><code>[count]&lt;leader&gt;cs</code> <strong>|NERDCommenterSexy|</strong>
 <ul>
-<li>Similar to Insert mode, but replaces existing characters instead of inserting new ones.</li>
-<li>Entered by typing <code>R</code></li>
+<li>Comments out the selected lines with a pretty block formatted layout.</li>
 </ul>
 </li>
-<li>Select Mode
+<li><code>[count]&lt;leader&gt;cy</code> <strong>|NERDCommenterYank|</strong>
 <ul>
-<li>Similar to Visual mode but behaves similar to selection in other editors
-<ul>
-<li>Typing replaces the selection</li>
+<li>Same as cc except that the commented line(s) are yanked first.</li>
 </ul>
 </li>
-<li>Entered by typing <code>gh</code>, <code>gH</code>, or <code>g&lt;C-h&gt;</code>
-The next section will be all the &ldquo;most practical&rdquo; (more common) keybinds you might need to know. It is not an exhaustive list, and is also what <em>I</em> personally think would be necessary or convenient to <em>me</em>. If you have the time, I would recommend you scroll through the cheat sheet mentioned next and see if there is anything you would like to be able to use.</li>
+<li><code>&lt;leader&gt;c$</code> <strong>|NERDCommenterToEOL|</strong>
+<ul>
+<li>Comments the current line from the cursor to the end of line.</li>
 </ul>
 </li>
-</ul>
-<h1 id="all-the-most-practical-commands-i-will-learn" class="relative group">All the most practical commands I will learn <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#all-the-most-practical-commands-i-will-learn" aria-label="Anchor">#</a></span></h1><hr>
-<p>A great resource is <a href="https://vim.rtorr.com/" target="_blank" rel="noreferrer">Vim Cheat Sheet</a>, which has most of the common key binds detailed. I will be picking and chosing from this list for this article, mainly so that I can cut out features that I do not use currently. It should make the transition process easier, and I can still learn the other functionality at a later date if I need to. Basically, i&rsquo;m using this as my own documentation on how to use vim.</p>
-<p>As a side note, if you don&rsquo;t understand <em>what</em> a keybind does, ChatGPT gives some really good explanations with examples.</p>
-<h2 id="cursor-movement" class="relative group">Cursor Movement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cursor-movement" aria-label="Anchor">#</a></span></h2><ul>
-<li>Arrow Keys will move the cursor around, but the &ldquo;vim&rdquo; way is to use <code>h,j,k,l</code>. Use either.
+<li><code>&lt;leader&gt;cA</code> <strong>|NERDCommenterAppend|</strong>
 <ul>
-<li><code>h</code> moves the cursor left</li>
-<li><code>j</code> moves the cursor down</li>
-<li><code>k</code> moves the cursor up</li>
-<li><code>l</code> moves the cursor right</li>
+<li>Adds comment delimiters to the end of line and goes into insert mode between them.</li>
 </ul>
 </li>
-<li><code>&lt;line number&gt;gg</code> or <code>&lt;line number&gt;G</code> will jump the cursor to the line number typed.
+<li><code>&lt;leader&gt;ca</code> <strong>|NERDCommenterAltDelims|</strong>
 <ul>
-<li><code>gg</code> on its own will jump the cursor to the first line in the document</li>
-<li><code>G</code> on its own will jump the cursor to the last line in the document</li>
+<li>Switches to the alternative set of delimiters.</li>
 </ul>
 </li>
-<li>Jumping within the screen
+<li><code>[count]&lt;leader&gt;cl</code> <strong>|NERDCommenterAlignLeft</strong> <code>[count]&lt;leader&gt;cb</code> <strong>|NERDCommenterAlignBoth</strong>
 <ul>
-<li><code>H</code> will jump the cursor to the top of the screen</li>
-<li><code>M</code> will jump the cursor to the middle of the screen</li>
-<li><code>L</code> will jump the cursor to the bottom of the screen</li>
+<li>Same as <strong>|NERDCommenterComment|</strong> except that the delimiters are aligned down the left side (<code>&lt;leader&gt;cl</code>) or both sides (<code>&lt;leader&gt;cb</code>).</li>
 </ul>
 </li>
-<li>Jumping to a paragraph/function/block
+<li><code>[count]&lt;leader&gt;cu</code> <strong>|NERDCommenterUncomment|</strong>
 <ul>
-<li><code>}</code> jumps to the next paragraph (next empty line)</li>
-<li><code>{</code> jumps to the previous paragraph (next empty line)</li>
-</ul>
-</li>
-<li>Scrolling the Screen
-<ul>
-<li><code>zz</code> will scroll the screen until the current line is in the center of the screen</li>
-<li><code>zt</code> will scroll the screen until the current line is at the top of the screen</li>
-<li><code>zb</code> will scroll the screen until the current line is at the bottom of the screen</li>
-<li><code>Ctrl + e</code> will move the screen down one line (without moving cursor)</li>
-<li><code>Ctrl + y</code> will move the screen up one line (without moving cursor)</li>
-<li><code>Ctrl + b</code> will move the screen up one page (cursor to last line)</li>
-<li><code>Ctrl + f</code> will move the screen down one page (cursor to first line)</li>
-<li><code>Ctrl + d</code> will move the cursor and screen down 1/2 page</li>
-<li><code>Ctrl + u</code> will move the cursor and screen up 1/2 page</li>
+<li>Uncomments the selected line(s).
+Here&rsquo;s the spec:</li>
 </ul>
 </li>
 </ul>
-<h2 id="insert-mode" class="relative group">Insert Mode <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#insert-mode" aria-label="Anchor">#</a></span></h2><p>This is the mode you will be in to actually write text. Any of these commands will place you in Insert mode (Except for the commands that take you out of insert mode 🙂):</p>
-<ul>
-<li><code>i</code> will insert text before the cursor</li>
-<li><code>I</code> will insert text at the beginning of the line</li>
-<li><code>a</code> will insert text (append) after the cursor</li>
-<li><code>A</code> will insert text (append) at the end of the line</li>
-<li><code>o</code> will append text (open) a new line below the current line</li>
-<li><code>O</code> will append text (open) a new line above the current line</li>
-</ul>
-<h2 id="editing-in-normal-mode" class="relative group">Editing in Normal Mode <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#editing-in-normal-mode" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>u</code> will undo a change</li>
-<li><code>Ctrl + r</code> will redo a change</li>
-<li><code>.</code> will repeat a change</li>
-<li><code>ciw</code> will replace an entire word
-<ul>
-<li>Place the cursor anywhere on/in a word, run <code>ciw&lt;replacement word&gt;</code>, and the word you had selected will be replaced with the replacement.</li>
-</ul>
-</li>
-<li><code>cw</code> will perform a change until the end of a word
-<ul>
-<li><code>ce</code> will also do this but only works in the middle of a word. <code>cw</code> is more versatile since it works at the beginning and in the middle of a word.</li>
-</ul>
-</li>
-<li><code>cc</code> will change an entire line, and is generally (but not always) faster than deleting and retyping the line.
-<ul>
-<li><code>c$</code> or <code>C</code> is similar to <code>cc</code> but is intended to replace <em>part</em> of a line instead of the whole line.</li>
-</ul>
-</li>
-<li><code>xp</code> swaps two letters, intended to be used to fix typos.
-<ul>
-<li><code>x</code> deletes the highlighted letter</li>
-<li><code>p</code> pastes the previously deleted letter</li>
-</ul>
-</li>
-</ul>
-<h2 id="visual-mode-commands" class="relative group">Visual Mode Commands <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#visual-mode-commands" aria-label="Anchor">#</a></span></h2><p>Visual Mode is entered by typing <code>v</code>. You select a block of text with your cursor.</p>
-<ul>
-<li><code>&gt;</code> shifts text to the right</li>
-<li><code>&lt;</code> shifts text to the left</li>
-<li><code>y</code> yanks (copies) the selected text</li>
-<li><code>d</code> deletes the selected text</li>
-<li><code>~</code> switches the case of the selected text
-<ul>
-<li>e.g. <code>false</code> becomes <code>FALSE</code>.</li>
-</ul>
-</li>
-<li><code>u</code> changes the selected text to lowercase</li>
-<li><code>U</code> changes the selected text to uppercase</li>
-</ul>
-<h2 id="cutting-copying-and-pasting" class="relative group">Cutting, Copying, and Pasting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cutting-copying-and-pasting" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>yy</code> yanks (copies) a line</li>
-<li><code>&lt;number&gt;yy</code> yanks (copies) <code>&lt;number&gt;</code> numbers of lines</li>
-<li><code>yw</code> yanks from where the cursor is to the beginning of the next word</li>
-<li><code>yiw</code> yanks the word under the cursor</li>
-<li><code>y$</code> yanks from cursor to the end of the line</li>
-<li><code>p</code> puts (pastes) the clipboard after the cursor</li>
-<li><code>P</code> puts (pastes) the clipboard before the cursor</li>
-<li><code>dd</code> deletes (cuts) a line</li>
-<li><code>&lt;number&gt;dd</code> deletes (cuts) <code>&lt;number&gt;</code> number of lines</li>
-<li><code>dw</code> deletes (cuts) from the cursor to the start of the next word</li>
-<li><code>diw</code> deletes (cuts) the word under the cursor</li>
-<li><code>d$</code> or <code>D</code> deletes (cuts) from cursor to the end of the line</li>
-<li><code>x</code> deletes (cuts) a character</li>
-</ul>
-<h2 id="indenting" class="relative group">Indenting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#indenting" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>&gt;&gt;</code> indents a line one shiftwidth</li>
-<li><code>&lt;&lt;</code> de-indents a line one shiftwidth</li>
-<li><code>gg=G</code> re indents the entire buffer (Visual Mode)</li>
-<li><code>=%</code> re indents the entire block inside a <code>()</code> or <code>{}</code> (Cursor must be on one of the braces)</li>
-<li><code>]p</code> puts (pastes) with adjusted indentation</li>
-<li><code>&lt;number&gt;==</code> re indents <code>&lt;number&gt;</code> number of lines</li>
-</ul>
-<h1 id="special-vim-like-stuff" class="relative group">Special vim-like stuff <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#special-vim-like-stuff" aria-label="Anchor">#</a></span></h1><hr>
-<p>This is gonna be the section for stuff that aren&rsquo;t commands, but are sorta specific to vim editors.</p>
-<h2 id="registers" class="relative group">Registers <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#registers" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>:reg[isters]</code> shows all registers content</li>
-<li><code>&quot;xy</code> yanks whatever is selected into register x</li>
-<li><code>&quot;xp</code> pastes whatever is in register x where the cursor is</li>
-<li><code>&quot;+y</code> yanks whatever is selected into the system clipboard</li>
-<li><code>&quot;+p</code> pastes from the system clipboard where the cursor is</li>
-<li>Special Registers:
-<ul>
-<li><code>0</code> holds the last yank</li>
-<li><code>&quot;</code> is an unnamed register, holds the last delete or yank</li>
-<li><code>%</code> holds the current file name</li>
-<li><code>#</code> holds an alternate file name</li>
-<li><code>+</code> holds the system clipboard</li>
-<li><code>/</code> holds the last search pattern</li>
-<li><code>:</code> holds the last command run</li>
-<li><code>.</code> holds the last inserted text</li>
-<li><code>-</code> holds the last small delete (less than a line)</li>
-<li><code>=</code> is the expression register
-<ul>
-<li>This register holds the result of an expression, handy for not having to use <code>:call</code></li>
-</ul>
-</li>
-<li><code>_</code> is the black hole register
-<ul>
-<li>Like <code>/dev/null</code> as a register, anything written to it disappears</li>
-<li>Can be useful when you want to delete something but not affect any registers</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="macros" class="relative group">Macros <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#macros" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>qa</code> records a macro and stores it as macro <code>a</code></li>
-<li><code>q</code> stops recording whatever macro is currently being recorded</li>
-<li><code>@a</code> runs macro <code>a</code></li>
-<li><code>@@</code> runs the last run macro</li>
-</ul>
-<h2 id="marks-and-positions" class="relative group">Marks and Positions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#marks-and-positions" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>:marks</code> shows a list of marks</li>
-<li><code>m&lt;letter&gt;</code> sets the current position as mark <code>&lt;letter&gt;</code></li>
-<li><code>`&lt;letter&gt;</code> jumps the cursor to mark <code>&lt;letter&gt;</code></li>
-<li><code>y`a</code> yanks text from the cursor to the position of mark A</li>
-<li><code>`0</code> goes to the position where Vim was previously exited</li>
-<li><code>`&quot;</code> goes to the position when last editing this file</li>
-<li><code>`.</code> goes to the position of the last change in this file</li>
-<li><code> \</code> `` goes to the position before the last jump</li>
-<li><code>:ju[mps]</code> - list of jumps</li>
-<li><code>Ctrl + i</code> - go to newer position in jump list</li>
-<li><code>Ctrl + o</code> - go to older position in jump list</li>
-<li><code>:changes</code> - list of changes</li>
-<li><code>g,</code> - go to newer position in change list</li>
-<li><code>g;</code> - go to older position in change list</li>
-</ul>
-<h1 id="commands" class="relative group">Commands <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#commands" aria-label="Anchor">#</a></span></h1><hr>
-<p>I&rsquo;m separating this from the prior section because commands are started with colons. They are different, and are typically longer than the previous keybinds which make them different. It is too early to be writing like this.</p>
-<h2 id="global-commands" class="relative group">Global commands <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#global-commands" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>:h[elp] &lt;keyword&gt;</code> opens the help for keyword</li>
-<li><code>:sav[eas] &lt;filename&gt;</code> will save the file using the filename provided</li>
-<li><code>:clo[se]</code> closes the current pane</li>
-<li><code>:ter[minal]</code> opens a terminal window</li>
-<li><code>K</code> opens the man page for the word under the cursor</li>
-</ul>
-<h2 id="exiting" class="relative group">Exiting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#exiting" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>:w</code> saves the current file, but does not exit.
-<ul>
-<li><code>:wq</code> or <code>:x</code> or <code>ZZ</code> saves the current file and then quits</li>
-</ul>
-</li>
-<li><code>:q</code> quits out of vim (will not work if there are unsaved changes)</li>
-<li><code>:q!</code> or <code>ZQ</code> quits out of vim and throws out unsaved changes (quit without saving)</li>
-<li><code>:wqa</code> saves the file and quits on <em>every</em> tab.</li>
-</ul>
-<h2 id="search-and-replace" class="relative group">Search and Replace <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#search-and-replace" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>/pattern</code> will search for a pattern</li>
-<li><code>?pattern</code> will search backward for a pattern</li>
-<li><code>n</code> goes to the next result of the search in same direction</li>
-<li><code>N</code> goes to the next result of the in opposite direction</li>
-<li><code>\vpattern</code> is &lsquo;very magic&rsquo; pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)</li>
-<li><code>:%s/old/new/g</code> will replace all <code>old</code> with <code>new</code> throughout file</li>
-<li><code>:%s/old/new/gc</code> will replace all <code>old</code> with <code>new</code> throughout file with confirmations</li>
-<li><code>:g/{pattern}/d</code> will delete all lines containing pattern</li>
-<li><code>:g!/{pattern}/d</code> will delete all lines not containing pattern</li>
-</ul>
-<h2 id="searching-in-multiple-files" class="relative group">Searching in Multiple Files <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#searching-in-multiple-files" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>:vim[grep] /pattern/ {&lt;file&gt;}</code> searches for pattern in multiple files</li>
-<li><code>:cn[ext]</code> jumps to the next match</li>
-<li><code>:cp[revious]</code> jumps to the previous match</li>
-<li><code>:cope[n]</code> opens a window containing the list of matches</li>
-<li><code>:ccl[ose]</code> closes the window containing the list of matches</li>
-</ul>
-<h2 id="tabs" class="relative group">Tabs <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tabs" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>:tabnew</code> or <code>:tabnew &lt;file&gt;</code> opens a file in a new tab</li>
-<li><code>Ctrl + wT</code> - moves the current split window into its own tab</li>
-<li><code>gt</code> or <code>:tabn[ext]</code> moves you to the next tab</li>
-<li><code>gT</code> or <code>:tabp[revious]</code> moves you to the previous tab</li>
-<li><code>#gt</code> moves you to the # tab</li>
-<li><code>:tabm[ove] #</code> moves the current tab to the #th position (indexed from 0)</li>
-<li><code>:tabo[nly]</code> closes all tabs except for the current one</li>
-</ul>
-<h2 id="working-with-multiple-files" class="relative group">Working with Multiple Files <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#working-with-multiple-files" aria-label="Anchor">#</a></span></h2><ul>
-<li><code>:e[dit] &lt;file&gt;</code> - edit a file in a new buffer</li>
-<li><code>:bn[ext]</code> - go to the next buffer</li>
-<li><code>:bp[revious]</code> - go to the previous buffer</li>
-<li><code>:bd[elete]</code> - delete a buffer (close a file)</li>
-<li><code>:b[uffer]#</code> - go to a buffer by index #</li>
-<li><code>:b[uffer] &lt;file&gt;</code> - go to a buffer by file</li>
-<li><code>:ls</code> or <code>:buffers</code> - list all open buffers</li>
-<li><code>:sp[lit] &lt;file&gt;</code> - open a file in a new buffer and split window</li>
-<li><code>:vs[plit] &lt;file&gt;</code> - open a file in a new buffer and vertically split window</li>
-<li><code>Ctrl + ws</code> - split window</li>
-<li><code>Ctrl + wv</code> - split window vertically</li>
-<li><code>Ctrl + ww</code> - switch windows</li>
-<li><code>Ctrl + &lt;movement key&gt;</code> - move cursor to the window in the direction of the movement key</li>
-</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span><span class="s2">&#34;scrooloose/nerdcommenter&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="syntastic" class="relative group">Syntastic <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#syntastic" aria-label="Anchor">#</a></span></h3><hr>
+<p>Syntastic is a syntax checking plugin for vim. Here&rsquo;s the spec:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;vim-syntastic/syntastic&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">lazy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">-- Ensure it loads on startup</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">-- Example configuration</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.g</span><span class="p">.</span><span class="n">syntastic_always_populate_loc_list</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.g</span><span class="p">.</span><span class="n">syntastic_auto_loc_list</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.g</span><span class="p">.</span><span class="n">syntastic_check_on_open</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.g</span><span class="p">.</span><span class="n">syntastic_check_on_wq</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Syntastic comes with <em>almost</em> every checker you might need, but for the ones that aren&rsquo;t you&rsquo;ll need to install the checker yourself. Check the syntastic page for information.</p>
+<p>I Purposefully broke this spec to see if it detected bad syntax. And it does!
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Pasted%20image%2020250305211905.png" alt="Pasted image 20250305211905.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+But only when you save the file. You can always run <code>:SyntasticCheck</code>, but why not save the file? It might reinforce some good behavior.</p>
+<h3 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h3><hr>
+<p>Okay, I have <strong>GOT</strong> to stop with it. I kept looking at every plugin and vexing over whether it would actually get used or not, or if I was going to end up adding too many plugins. This is a pretty good start point, though, and I can always change stuff later. Because of how Lazy handles plugins modularly, it&rsquo;s easy to just edit the spec of any plugin I want since they are all separated.</p>
 
       </div>
     </section>
@@ -998,7 +1108,7 @@ The next section will be all the &ldquo;most practical&rdquo; (more common) keyb
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/posts/blog-tweaks-pedantic-perils/">
+            <a class="group flex" href="/posts/disabling-background-scanning-on-networkmanager-when-connected/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -1007,11 +1117,11 @@ The next section will be all the &ldquo;most practical&rdquo; (more common) keyb
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Blog Tweaks: Pedantic Perils</span
+                  >Disabling Background Scanning on NetworkManager when connected</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2025-02-23 00:00:00 &#43;0000 UTC">February 23, 2025</time>
+                    <time datetime="2025-02-27 00:00:00 &#43;0000 UTC">February 27, 2025</time>
                   
                 </span>
               </span>
@@ -1103,7 +1213,7 @@ The next section will be all the &ldquo;most practical&rdquo; (more common) keyb
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
-  data-url="http://localhost:1313/"
+  data-url="https://blog.coeus.icu/"
 >
   <div
     id="search-modal"

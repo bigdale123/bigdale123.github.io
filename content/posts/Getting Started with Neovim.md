@@ -1,8 +1,8 @@
 ---
 title: Getting Started with Neovim
-date: 2025-02-25
-lastmod: 2025-02-27
-draft: true
+date: 2025-03-05
+lastmod: 2025-03-05
+draft: false
 tags:
   - Software
   - Linux
@@ -226,7 +226,6 @@ Let's start off simple, since I don't actually trust that I installed lazy.nvim 
 
 lazy.nvim uses something called a "spec" to define plugins for lazy.nvim. This defines where to download a plugin, the config of that plugin, what it's priority is, whether to load the plugin lazily, etc. I gotta be honest, having used VimPlug (another vim plugin manager) in the past I kind of miss being able to just declare a plugin and running with it. Specs can be a little more involved, and i'm also a little disappointed that vim-awesome does not show lazy specs for plugins listed on their site. Then again, I haven't actually written the spec yet. Maybe it's easier than it looks.
 ```lua
-
 return {
 	{
 		"vim-airline/vim-airline",
@@ -248,3 +247,98 @@ return {
 	}
 }
 ```
+![Pasted image 20250227205103.png](/attachments/Pasted%20image%2020250227205103.png)
+See those `+`'s on the left side of the screen? That's gitgutter! It just marks lines that are different from the previous commit.
+
+### NERDTree
+Now this one's pretty neat, and it's going to be the first plugin that will be lazy loaded. NERDTree is a file explorer that runs inside neovim. I'll also be installing some plugins for NERDTree, mainly nerdtree-git-plugin & vim-devicons.
+![Pasted image 20250305210629.png](/attachments/Pasted%20image%2020250305210629.png)
+Here's the spec for NERDTree:
+```lua
+return {
+    {
+        "preservim/nerdtree",
+        cmd = { "NERDTreeToggle", "NERDTreeFind" },
+        keys = {
+          { "<leader>n", ":NERDTreeToggle<CR>", desc = "Toggle NERDTree" },
+          { "<leader>f", ":NERDTreeFind<CR>", desc = "Find file in NERDTree" },
+        },
+        dependencies = {
+          "Xuyuanp/nerdtree-git-plugin", 
+        },
+        config = function()
+          vim.g.NERDTreeShowHidden = 1 -- Show hidden files
+          vim.g.NERDTreeMinimalUI = 1  -- Simplify UI
+          vim.g.NERDTreeDirArrows = 1  -- Enable arrows for directories
+        end,
+    }
+}
+```
+And the spec for vim-devicons:
+```lua
+return {
+	{
+		"ryanoasis/vim-devicons"
+	}
+}
+```
+
+### NERD Commenter
+***
+The NERD Tools are really good, you kinda can't go wrong with one. This tool makes commenting almost as easy as it would be in VSCode (with Ctrl+/). Simply select test in visual mode, or leave your cursor on a line to be commented, then run any of these commands:
+- `[count]<leader>cc` **|NERDCommenterComment|**
+	- Comment out the current line or text selected in visual mode.
+- `[count]<leader>cn` **|NERDCommenterNested|**
+	- Same as cc but forces nesting.
+- `[count]<leader>c<space>` **|NERDCommenterToggle|**
+	- Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
+- `[count]<leader>cm` **|NERDCommenterMinimal|**
+	- Comments the given lines using only one set of multipart delimiters.
+- `[count]<leader>ci` **|NERDCommenterInvert|**
+	- Toggles the comment state of the selected line(s) individually.
+- `[count]<leader>cs` **|NERDCommenterSexy|**
+	- Comments out the selected lines with a pretty block formatted layout.
+- `[count]<leader>cy` **|NERDCommenterYank|**
+	- Same as cc except that the commented line(s) are yanked first.
+- `<leader>c$` **|NERDCommenterToEOL|**
+	- Comments the current line from the cursor to the end of line.
+- `<leader>cA` **|NERDCommenterAppend|**
+	- Adds comment delimiters to the end of line and goes into insert mode between them.
+- `<leader>ca` **|NERDCommenterAltDelims|**
+	- Switches to the alternative set of delimiters.
+- `[count]<leader>cl` **|NERDCommenterAlignLeft** `[count]<leader>cb` **|NERDCommenterAlignBoth**
+	- Same as **|NERDCommenterComment|** except that the delimiters are aligned down the left side (`<leader>cl`) or both sides (`<leader>cb`).
+- `[count]<leader>cu` **|NERDCommenterUncomment|**
+	- Uncomments the selected line(s).
+Here's the spec:
+```lua
+return {
+	{"scrooloose/nerdcommenter"}
+}
+```
+
+### Syntastic
+***
+Syntastic is a syntax checking plugin for vim. Here's the spec:
+```lua
+return {
+  "vim-syntastic/syntastic",
+  lazy = false, -- Ensure it loads on startup
+  config = function()
+    -- Example configuration
+    vim.g.syntastic_always_populate_loc_list = 1
+    vim.g.syntastic_auto_loc_list = 1
+    vim.g.syntastic_check_on_open = 1
+    vim.g.syntastic_check_on_wq = 0
+  end,
+}
+```
+Syntastic comes with *almost* every checker you might need, but for the ones that aren't you'll need to install the checker yourself. Check the syntastic page for information.
+
+I Purposefully broke this spec to see if it detected bad syntax. And it does!
+![Pasted image 20250305211905.png](/attachments/Pasted%20image%2020250305211905.png)
+But only when you save the file. You can always run `:SyntasticCheck`, but why not save the file? It might reinforce some good behavior.
+
+### Conclusion
+***
+Okay, I have **GOT** to stop with it. I kept looking at every plugin and vexing over whether it would actually get used or not, or if I was going to end up adding too many plugins. This is a pretty good start point, though, and I can always change stuff later. Because of how Lazy handles plugins modularly, it's easy to just edit the spec of any plugin I want since they are all separated.
