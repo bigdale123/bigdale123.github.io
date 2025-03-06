@@ -83,7 +83,7 @@ It's already a lot nicer to work with, being able to use the mouse (even though 
 ***
 Right now I think I am happy with the way it looks, but I also want to go ahead and lay out some groundwork for myself in the future. I am also going to setup background transparency, I just like being able to see stuff behind my terminal.
 
-#### Transparency
+## Transparency
 I've done this in the past, but after not realizing that I didn't back up my dotfiles correctly I lost that configuration 😭. I remember that I did it without a plugin, so it *should* be possible to write it in vimscript. I'm just at a loss trying to find it in other storage, so I guess i'll have to find in on *The Internet*. Thankfully, you can throw a rock and hit vim/neovim configs. [Here's a site](https://blog.chaitanyashahare.com/posts/how-to-make-nvim-backround-transparent/) that had a "vanilla" (plugin independent) method to get transparency working. Just add the following to your config:
 ```vimscript
 highlight Normal guibg=none
@@ -95,7 +95,7 @@ And you're good to go:
 ![Pasted image 20250225204310.png](/attachments/Pasted%20image%2020250225204310.png)
 Can you tell I've been watching Severance? 
 
-### Color Schemes
+## Color Schemes
 Even though I don't intend on installing a color scheme right now, I would like to already have all the groundwork laid out so that in the future all I have to do is swap out one theme for another. Vim and Neovim actually already come with some preinstalled color schemes, accessible through the `:colorscheme` command. Some color schemes require 24 bit color, though, and this wont make it a persistent change. Here's what i've added to my config:
 ```
 set termguicolors
@@ -163,7 +163,8 @@ vim.opt.clipboard = "unnamedplus" -- Use system clipboard for copy/paste
 -- vim.opt.backupdir = os.getenv("HOME") .. "/.cache/vim" -- Directory for backup files
 ```
 On the plus side, now that it's lua the code block highlights the syntax. That's nice.
-### Lazy.nvim
+## Lazy.nvim
+***
 If you're following along, please read the [Official lazy.nvim documentation](https://lazy.folke.io/) to install it since it might change overtime. At the time of install, following the structured setup, all you need to do is add a requirement to `init.lua` and the definition of that requirement., `lua/config/lazy.lua`. The `lazy.lua` file is what bootstraps lazy.nvim and sets it up.
 
 Here's the file structure for lazy.nvim:
@@ -221,7 +222,8 @@ require("lazy").setup({
 ```
 Now let's install some plugins!
 
-### vim-airline
+## vim-airline
+***
 Let's start off simple, since I don't actually trust that I installed lazy.nvim correctly. [vim-airline](https://github.com/vim-airline/vim-airline) is a "lean & mean" status line that sits just above the command area and below the window. I just think it looks better than the standard status line, and it should be a simple introduction to Plugin Specs.
 
 lazy.nvim uses something called a "spec" to define plugins for lazy.nvim. This defines where to download a plugin, the config of that plugin, what it's priority is, whether to load the plugin lazily, etc. I gotta be honest, having used VimPlug (another vim plugin manager) in the past I kind of miss being able to just declare a plugin and running with it. Specs can be a little more involved, and i'm also a little disappointed that vim-awesome does not show lazy specs for plugins listed on their site. Then again, I haven't actually written the spec yet. Maybe it's easier than it looks.
@@ -236,7 +238,8 @@ return {
 And hey! Looks like that's all you need! We can see that the status line has changed to vim-airline in this screenshot:
 ![Pasted image 20250226122249.png](/attachments/Pasted%20image%2020250226122249.png)
 That window that opened is the Lazy manager window, whenever you need to manage plugins on the fly you use this window. By default, this opens every time you install a new plugin. If you need to access this while in neovim, you simply run `:Lazy`. 
-### vim-gitgutter
+## vim-gitgutter
+***
 Damn! I way underestimated how hard it would be to pick out plugins, because they're all so good. I'm trying not to overload myself to start, and to keep the number of plugins as small as possible (since more plugins $\approx slower editor). Let's play it safe with gitgutter, which will show changes in the gutter of neovim (far left side of the window).
 Here's the spec:
 ```lua
@@ -250,7 +253,8 @@ return {
 ![Pasted image 20250227205103.png](/attachments/Pasted%20image%2020250227205103.png)
 See those `+`'s on the left side of the screen? That's gitgutter! It just marks lines that are different from the previous commit.
 
-### NERDTree
+## NERDTree
+***
 Now this one's pretty neat, and it's going to be the first plugin that will be lazy loaded. NERDTree is a file explorer that runs inside neovim. I'll also be installing some plugins for NERDTree, mainly nerdtree-git-plugin & vim-devicons.
 ![Pasted image 20250305210629.png](/attachments/Pasted%20image%2020250305210629.png)
 Here's the spec for NERDTree:
@@ -283,7 +287,7 @@ return {
 }
 ```
 
-### NERD Commenter
+## NERD Commenter
 ***
 The NERD Tools are really good, you kinda can't go wrong with one. This tool makes commenting almost as easy as it would be in VSCode (with Ctrl+/). Simply select test in visual mode, or leave your cursor on a line to be commented, then run any of these commands:
 - `[count]<leader>cc` **|NERDCommenterComment|**
@@ -317,7 +321,7 @@ return {
 }
 ```
 
-### Syntastic
+## Syntastic
 ***
 Syntastic is a syntax checking plugin for vim. Here's the spec:
 ```lua
@@ -339,6 +343,6 @@ I Purposefully broke this spec to see if it detected bad syntax. And it does!
 ![Pasted image 20250305211905.png](/attachments/Pasted%20image%2020250305211905.png)
 But only when you save the file. You can always run `:SyntasticCheck`, but why not save the file? It might reinforce some good behavior.
 
-### Conclusion
+## Conclusion
 ***
 Okay, I have **GOT** to stop with it. I kept looking at every plugin and vexing over whether it would actually get used or not, or if I was going to end up adding too many plugins. This is a pretty good start point, though, and I can always change stuff later. Because of how Lazy handles plugins modularly, it's easy to just edit the spec of any plugin I want since they are all separated.

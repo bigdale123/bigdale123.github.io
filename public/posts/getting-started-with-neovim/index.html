@@ -141,7 +141,7 @@
     "keywords": ["Software","Linux","Vim","Neovim"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2643"
+    "wordCount": "2647"
   }
   </script>
     
@@ -534,7 +534,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-03-05 00:00:00 &#43;0000 UTC">March 5, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2643 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
+      <time datetime="2025-03-05 00:00:00 &#43;0000 UTC">March 5, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2647 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
     
 
     
@@ -694,7 +694,7 @@ set clipboard=unnamedplus    &#34; use system clipboard for copy/paste
 It&rsquo;s already a lot nicer to work with, being able to use the mouse (even though I should be using the keyboard) is a nice addition. The mouse is still pretty limited on it&rsquo;s own, which I think will wean me off of using the mouse. It&rsquo;s mainly just nice to be able to move the cursor with the mouse.</p>
 <h1 id="appearance" class="relative group">Appearance <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#appearance" aria-label="Anchor">#</a></span></h1><hr>
 <p>Right now I think I am happy with the way it looks, but I also want to go ahead and lay out some groundwork for myself in the future. I am also going to setup background transparency, I just like being able to see stuff behind my terminal.</p>
-<h4 id="transparency" class="relative group">Transparency <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#transparency" aria-label="Anchor">#</a></span></h4><p>I&rsquo;ve done this in the past, but after not realizing that I didn&rsquo;t back up my dotfiles correctly I lost that configuration 😭. I remember that I did it without a plugin, so it <em>should</em> be possible to write it in vimscript. I&rsquo;m just at a loss trying to find it in other storage, so I guess i&rsquo;ll have to find in on <em>The Internet</em>. Thankfully, you can throw a rock and hit vim/neovim configs. <a href="https://blog.chaitanyashahare.com/posts/how-to-make-nvim-backround-transparent/" target="_blank" rel="noreferrer">Here&rsquo;s a site</a> that had a &ldquo;vanilla&rdquo; (plugin independent) method to get transparency working. Just add the following to your config:</p>
+<h2 id="transparency" class="relative group">Transparency <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#transparency" aria-label="Anchor">#</a></span></h2><p>I&rsquo;ve done this in the past, but after not realizing that I didn&rsquo;t back up my dotfiles correctly I lost that configuration 😭. I remember that I did it without a plugin, so it <em>should</em> be possible to write it in vimscript. I&rsquo;m just at a loss trying to find it in other storage, so I guess i&rsquo;ll have to find in on <em>The Internet</em>. Thankfully, you can throw a rock and hit vim/neovim configs. <a href="https://blog.chaitanyashahare.com/posts/how-to-make-nvim-backround-transparent/" target="_blank" rel="noreferrer">Here&rsquo;s a site</a> that had a &ldquo;vanilla&rdquo; (plugin independent) method to get transparency working. Just add the following to your config:</p>
 <pre tabindex="0"><code class="language-vimscript" data-lang="vimscript">highlight Normal guibg=none
 highlight NonText guibg=none
 highlight Normal ctermbg=none
@@ -713,7 +713,7 @@ highlight NonText ctermbg=none
 </figure>
 
 Can you tell I&rsquo;ve been watching Severance?</p>
-<h3 id="color-schemes" class="relative group">Color Schemes <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#color-schemes" aria-label="Anchor">#</a></span></h3><p>Even though I don&rsquo;t intend on installing a color scheme right now, I would like to already have all the groundwork laid out so that in the future all I have to do is swap out one theme for another. Vim and Neovim actually already come with some preinstalled color schemes, accessible through the <code>:colorscheme</code> command. Some color schemes require 24 bit color, though, and this wont make it a persistent change. Here&rsquo;s what i&rsquo;ve added to my config:</p>
+<h2 id="color-schemes" class="relative group">Color Schemes <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#color-schemes" aria-label="Anchor">#</a></span></h2><p>Even though I don&rsquo;t intend on installing a color scheme right now, I would like to already have all the groundwork laid out so that in the future all I have to do is swap out one theme for another. Vim and Neovim actually already come with some preinstalled color schemes, accessible through the <code>:colorscheme</code> command. Some color schemes require 24 bit color, though, and this wont make it a persistent change. Here&rsquo;s what i&rsquo;ve added to my config:</p>
 <pre tabindex="0"><code>set termguicolors
 colorscheme default
 </code></pre><p>And that should be about it. If I install a colorscheme in the future, it&rsquo;ll be as a plugin, and still be accessible through <code>:colorscheme</code>.</p>
@@ -772,7 +772,8 @@ colorscheme default
 </span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">clipboard</span> <span class="o">=</span> <span class="s2">&#34;unnamedplus&#34;</span> <span class="c1">-- Use system clipboard for copy/paste</span>
 </span></span><span class="line"><span class="cl"><span class="c1">-- vim.opt.backupdir = os.getenv(&#34;HOME&#34;) .. &#34;/.cache/vim&#34; -- Directory for backup files</span>
 </span></span></code></pre></div><p>On the plus side, now that it&rsquo;s lua the code block highlights the syntax. That&rsquo;s nice.</p>
-<h3 id="lazynvim" class="relative group">Lazy.nvim <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lazynvim" aria-label="Anchor">#</a></span></h3><p>If you&rsquo;re following along, please read the <a href="https://lazy.folke.io/" target="_blank" rel="noreferrer">Official lazy.nvim documentation</a> to install it since it might change overtime. At the time of install, following the structured setup, all you need to do is add a requirement to <code>init.lua</code> and the definition of that requirement., <code>lua/config/lazy.lua</code>. The <code>lazy.lua</code> file is what bootstraps lazy.nvim and sets it up.</p>
+<h2 id="lazynvim" class="relative group">Lazy.nvim <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lazynvim" aria-label="Anchor">#</a></span></h2><hr>
+<p>If you&rsquo;re following along, please read the <a href="https://lazy.folke.io/" target="_blank" rel="noreferrer">Official lazy.nvim documentation</a> to install it since it might change overtime. At the time of install, following the structured setup, all you need to do is add a requirement to <code>init.lua</code> and the definition of that requirement., <code>lua/config/lazy.lua</code>. The <code>lazy.lua</code> file is what bootstraps lazy.nvim and sets it up.</p>
 <p>Here&rsquo;s the file structure for lazy.nvim:</p>
 <pre tabindex="0"><code>~/.config/nvim
 ├── lua
@@ -823,7 +824,8 @@ colorscheme default
 </span></span><span class="line"><span class="cl">  <span class="n">checker</span> <span class="o">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">},</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></div><p>Now let&rsquo;s install some plugins!</p>
-<h3 id="vim-airline" class="relative group">vim-airline <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-airline" aria-label="Anchor">#</a></span></h3><p>Let&rsquo;s start off simple, since I don&rsquo;t actually trust that I installed lazy.nvim correctly. <a href="https://github.com/vim-airline/vim-airline" target="_blank" rel="noreferrer">vim-airline</a> is a &ldquo;lean &amp; mean&rdquo; status line that sits just above the command area and below the window. I just think it looks better than the standard status line, and it should be a simple introduction to Plugin Specs.</p>
+<h2 id="vim-airline" class="relative group">vim-airline <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-airline" aria-label="Anchor">#</a></span></h2><hr>
+<p>Let&rsquo;s start off simple, since I don&rsquo;t actually trust that I installed lazy.nvim correctly. <a href="https://github.com/vim-airline/vim-airline" target="_blank" rel="noreferrer">vim-airline</a> is a &ldquo;lean &amp; mean&rdquo; status line that sits just above the command area and below the window. I just think it looks better than the standard status line, and it should be a simple introduction to Plugin Specs.</p>
 <p>lazy.nvim uses something called a &ldquo;spec&rdquo; to define plugins for lazy.nvim. This defines where to download a plugin, the config of that plugin, what it&rsquo;s priority is, whether to load the plugin lazily, etc. I gotta be honest, having used VimPlug (another vim plugin manager) in the past I kind of miss being able to just declare a plugin and running with it. Specs can be a little more involved, and i&rsquo;m also a little disappointed that vim-awesome does not show lazy specs for plugins listed on their site. Then again, I haven&rsquo;t actually written the spec yet. Maybe it&rsquo;s easier than it looks.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
@@ -845,7 +847,8 @@ colorscheme default
 </figure>
 
 That window that opened is the Lazy manager window, whenever you need to manage plugins on the fly you use this window. By default, this opens every time you install a new plugin. If you need to access this while in neovim, you simply run <code>:Lazy</code>.</p>
-<h3 id="vim-gitgutter" class="relative group">vim-gitgutter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-gitgutter" aria-label="Anchor">#</a></span></h3><p>Damn! I way underestimated how hard it would be to pick out plugins, because they&rsquo;re all so good. I&rsquo;m trying not to overload myself to start, and to keep the number of plugins as small as possible (since more plugins $\approx slower editor). Let&rsquo;s play it safe with gitgutter, which will show changes in the gutter of neovim (far left side of the window).
+<h2 id="vim-gitgutter" class="relative group">vim-gitgutter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-gitgutter" aria-label="Anchor">#</a></span></h2><hr>
+<p>Damn! I way underestimated how hard it would be to pick out plugins, because they&rsquo;re all so good. I&rsquo;m trying not to overload myself to start, and to keep the number of plugins as small as possible (since more plugins $\approx slower editor). Let&rsquo;s play it safe with gitgutter, which will show changes in the gutter of neovim (far left side of the window).
 Here&rsquo;s the spec:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span>
@@ -866,7 +869,8 @@ Here&rsquo;s the spec:</p>
 </figure>
 
 See those <code>+</code>&rsquo;s on the left side of the screen? That&rsquo;s gitgutter! It just marks lines that are different from the previous commit.</p>
-<h3 id="nerdtree" class="relative group">NERDTree <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nerdtree" aria-label="Anchor">#</a></span></h3><p>Now this one&rsquo;s pretty neat, and it&rsquo;s going to be the first plugin that will be lazy loaded. NERDTree is a file explorer that runs inside neovim. I&rsquo;ll also be installing some plugins for NERDTree, mainly nerdtree-git-plugin &amp; vim-devicons.
+<h2 id="nerdtree" class="relative group">NERDTree <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nerdtree" aria-label="Anchor">#</a></span></h2><hr>
+<p>Now this one&rsquo;s pretty neat, and it&rsquo;s going to be the first plugin that will be lazy loaded. NERDTree is a file explorer that runs inside neovim. I&rsquo;ll also be installing some plugins for NERDTree, mainly nerdtree-git-plugin &amp; vim-devicons.
 
 
 
@@ -904,7 +908,7 @@ Here&rsquo;s the spec for NERDTree:</p>
 </span></span><span class="line"><span class="cl">		<span class="s2">&#34;ryanoasis/vim-devicons&#34;</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="nerd-commenter" class="relative group">NERD Commenter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nerd-commenter" aria-label="Anchor">#</a></span></h3><hr>
+</span></span></code></pre></div><h2 id="nerd-commenter" class="relative group">NERD Commenter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nerd-commenter" aria-label="Anchor">#</a></span></h2><hr>
 <p>The NERD Tools are really good, you kinda can&rsquo;t go wrong with one. This tool makes commenting almost as easy as it would be in VSCode (with Ctrl+/). Simply select test in visual mode, or leave your cursor on a line to be commented, then run any of these commands:</p>
 <ul>
 <li><code>[count]&lt;leader&gt;cc</code> <strong>|NERDCommenterComment|</strong>
@@ -972,7 +976,7 @@ Here&rsquo;s the spec:</li>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="p">{</span><span class="s2">&#34;scrooloose/nerdcommenter&#34;</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="syntastic" class="relative group">Syntastic <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#syntastic" aria-label="Anchor">#</a></span></h3><hr>
+</span></span></code></pre></div><h2 id="syntastic" class="relative group">Syntastic <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#syntastic" aria-label="Anchor">#</a></span></h2><hr>
 <p>Syntastic is a syntax checking plugin for vim. Here&rsquo;s the spec:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="s2">&#34;vim-syntastic/syntastic&#34;</span><span class="p">,</span>
@@ -1000,7 +1004,7 @@ Here&rsquo;s the spec:</li>
 </figure>
 
 But only when you save the file. You can always run <code>:SyntasticCheck</code>, but why not save the file? It might reinforce some good behavior.</p>
-<h3 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h3><hr>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><hr>
 <p>Okay, I have <strong>GOT</strong> to stop with it. I kept looking at every plugin and vexing over whether it would actually get used or not, or if I was going to end up adding too many plugins. This is a pretty good start point, though, and I can always change stuff later. Because of how Lazy handles plugins modularly, it&rsquo;s easy to just edit the spec of any plugin I want since they are all separated.</p>
 
       </div>
