@@ -73,7 +73,9 @@ if __name__ == "__main__":
         if "y" in choice:
             commit_message = input("Enter Commit Message: ")
         publish(commit_message)
+        quit()
     else:
         choice = input("Do you want to test out with `hugo serve`? (yes/no): ").strip()
         if "y" in choice:
             subprocess.run(["hugo", "serve"])
+        quit()
