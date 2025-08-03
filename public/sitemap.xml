@@ -4,7 +4,7 @@
   
     
       <url>
-            <loc>https://blog.coeus.icu/</loc>
+            <loc>http://localhost:1313/</loc>
             <lastmod>2025-03-28T00:00:00+00:00</lastmod>
           </url>
     
@@ -15,7 +15,7 @@
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/</loc>
+            <loc>http://localhost:1313/posts/</loc>
             <lastmod>2025-03-28T00:00:00+00:00</lastmod>
           </url>
     
@@ -24,14 +24,14 @@
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/taking-pictures-of-space/</loc>
+            <loc>http://localhost:1313/posts/taking-pictures-of-space/</loc>
             <lastmod>2025-03-28T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/getting-started-with-neovim/</loc>
+            <loc>http://localhost:1313/posts/getting-started-with-neovim/</loc>
             <lastmod>2025-03-05T00:00:00+00:00</lastmod>
           </url>
     
@@ -46,7 +46,7 @@
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</loc>
+            <loc>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</loc>
             <lastmod>2025-02-27T00:00:00+00:00</lastmod>
           </url>
     
@@ -55,14 +55,14 @@
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
+            <loc>http://localhost:1313/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
             <lastmod>2025-02-25T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</loc>
+            <loc>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</loc>
             <lastmod>2025-02-23T00:00:00+00:00</lastmod>
           </url>
     
@@ -73,7 +73,7 @@
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/listening-to-the-police-scanner-with-sdr-trunk/</loc>
+            <loc>http://localhost:1313/posts/listening-to-the-police-scanner-with-sdr-trunk/</loc>
             <lastmod>2025-02-20T00:00:00+00:00</lastmod>
           </url>
     
@@ -82,7 +82,7 @@
   
     
       <url>
-            <loc>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</loc>
+            <loc>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</loc>
             <lastmod>2025-02-20T00:00:00+00:00</lastmod>
           </url>
     

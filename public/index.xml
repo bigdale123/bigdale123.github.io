@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>bigdale123&#39;s Blog</title>
-    <link>https://blog.coeus.icu/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.coeus.icu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Taking Pictures of Space</title>
-      <link>https://blog.coeus.icu/posts/taking-pictures-of-space/</link>
+      <link>http://localhost:1313/posts/taking-pictures-of-space/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/taking-pictures-of-space/</guid>
+      <guid>http://localhost:1313/posts/taking-pictures-of-space/</guid>
       <description></description>
     </item>
     <item>
       <title>Getting Started with Neovim</title>
-      <link>https://blog.coeus.icu/posts/getting-started-with-neovim/</link>
+      <link>http://localhost:1313/posts/getting-started-with-neovim/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/getting-started-with-neovim/</guid>
+      <guid>http://localhost:1313/posts/getting-started-with-neovim/</guid>
       <description></description>
     </item>
     <item>
       <title>Disabling Background Scanning on NetworkManager when connected</title>
-      <link>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</link>
+      <link>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</guid>
+      <guid>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</guid>
       <description></description>
     </item>
     <item>
       <title>A (Mostly) Exhaustive List of Keybinds and Commands for Vim</title>
-      <link>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
+      <link>http://localhost:1313/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
+      <guid>http://localhost:1313/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog Tweaks: Pedantic Perils</title>
-      <link>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</link>
+      <link>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</guid>
+      <guid>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</guid>
       <description></description>
     </item>
     <item>
       <title>Listening to the Police Scanner with SDR Trunk</title>
-      <link>https://blog.coeus.icu/posts/listening-to-the-police-scanner-with-sdr-trunk/</link>
+      <link>http://localhost:1313/posts/listening-to-the-police-scanner-with-sdr-trunk/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/listening-to-the-police-scanner-with-sdr-trunk/</guid>
+      <guid>http://localhost:1313/posts/listening-to-the-police-scanner-with-sdr-trunk/</guid>
       <description></description>
     </item>
     <item>
       <title>First Post! Learning how to use Hugo to host Obsidian files</title>
-      <link>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
+      <link>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
+      <guid>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
       <description></description>
     </item>
   </channel>

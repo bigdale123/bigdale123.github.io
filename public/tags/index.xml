@@ -2,87 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on bigdale123&#39;s Blog</title>
-    <link>https://blog.coeus.icu/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Fri, 28 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.coeus.icu/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Miscellaneous</title>
-      <link>https://blog.coeus.icu/tags/miscellaneous/</link>
+      <link>http://localhost:1313/tags/miscellaneous/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/miscellaneous/</guid>
+      <guid>http://localhost:1313/tags/miscellaneous/</guid>
       <description></description>
     </item>
     <item>
       <title>Photography</title>
-      <link>https://blog.coeus.icu/tags/photography/</link>
+      <link>http://localhost:1313/tags/photography/</link>
       <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/photography/</guid>
+      <guid>http://localhost:1313/tags/photography/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://blog.coeus.icu/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Neovim</title>
-      <link>https://blog.coeus.icu/tags/neovim/</link>
+      <link>http://localhost:1313/tags/neovim/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/neovim/</guid>
+      <guid>http://localhost:1313/tags/neovim/</guid>
       <description></description>
     </item>
     <item>
       <title>Software</title>
-      <link>https://blog.coeus.icu/tags/software/</link>
+      <link>http://localhost:1313/tags/software/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/software/</guid>
+      <guid>http://localhost:1313/tags/software/</guid>
       <description></description>
     </item>
     <item>
       <title>Vim</title>
-      <link>https://blog.coeus.icu/tags/vim/</link>
+      <link>http://localhost:1313/tags/vim/</link>
       <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/vim/</guid>
+      <guid>http://localhost:1313/tags/vim/</guid>
       <description></description>
     </item>
     <item>
       <title>Networking</title>
-      <link>https://blog.coeus.icu/tags/networking/</link>
+      <link>http://localhost:1313/tags/networking/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/networking/</guid>
+      <guid>http://localhost:1313/tags/networking/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>https://blog.coeus.icu/tags/hugo/</link>
+      <link>http://localhost:1313/tags/hugo/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/hugo/</guid>
+      <guid>http://localhost:1313/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Obsidian</title>
-      <link>https://blog.coeus.icu/tags/obsidian/</link>
+      <link>http://localhost:1313/tags/obsidian/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/obsidian/</guid>
+      <guid>http://localhost:1313/tags/obsidian/</guid>
       <description></description>
     </item>
     <item>
       <title>RTL-SDR</title>
-      <link>https://blog.coeus.icu/tags/rtl-sdr/</link>
+      <link>http://localhost:1313/tags/rtl-sdr/</link>
       <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/rtl-sdr/</guid>
+      <guid>http://localhost:1313/tags/rtl-sdr/</guid>
       <description></description>
     </item>
     <item>
       <title>Homelab</title>
-      <link>https://blog.coeus.icu/tags/homelab/</link>
+      <link>http://localhost:1313/tags/homelab/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/tags/homelab/</guid>
+      <guid>http://localhost:1313/tags/homelab/</guid>
       <description></description>
     </item>
   </channel>
