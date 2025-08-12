@@ -12,7 +12,7 @@ FT8 is a digital mode for amatuer radio that i've always wanted to try (which is
 # How FT8 Works
 - FT8 is a semi-automatic digital mode in amateur radio. 
 	- FT8 is made up of multiple 50Hz signals within a 2.8KHz SSB space, with transmissions being about 15 seconds long.
-		- ![[Pasted image 20250804113318.png]]
+		- ![Pasted image 20250804113318.png](/attachments/Pasted%20image%2020250804113318.png)
 		- FT8 Operates on 15 Second intervals, so a Synchronized Clock is important. The clock on you computer must be within 1 second accuracy to UTC.
 		- FT8 Transmissions use 8 Frequency Shift Keying, 8 tones spaced 6.25 Hz apart.
 			- Each tone represents 3 bits, and results in a baud rate of about 6 bits/sec.
@@ -110,7 +110,7 @@ FT8 is a digital mode for amatuer radio that i've always wanted to try (which is
 	- It will also spot somebody if they are doing POTA, if you answer someone calling "CQ POTA" gridtracker will automatically spot them on pota.app
 # Conclusion
 You'll find that FT8 is a pretty fun mode! I use a Xiegu G90 with an EFHW setup in a sloped configuration, and the first time I decided to run FT8 I made about 60 contacts in day, two of them overseas! All only on 15 watts!
-![[Pasted image 20250812120756.png]]
+![Pasted image 20250812120756.png](/attachments/Pasted%20image%2020250812120756.png)
 I like to use FT8 to get a good idea of how far out I could realistically go. Of course, distance will depend on what mode you're in. SSB will shrink your effective distance due to it (sorry for the bad explanation) being a less power dense mode. Sure, I can broadcast 20 watts SSB but that power is divided over 2.8KHz of bandwidth. Where as in FT8, the 15 Watts I was using is distributed over 50Hz of bandwidth. 
 
 FT8 is also one of those modes that you can do while you do something else. Get some laundry done, do the dishes, just pop back to your computer every once in a while to start another QSO or start calling CQ again.  
