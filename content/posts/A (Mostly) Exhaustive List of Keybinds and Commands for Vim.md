@@ -1,7 +1,7 @@
 ---
 title: A (Mostly) Exhaustive List of Keybinds and Commands for Vim
 date: 2025-02-25
-lastmod: 
+lastmod: 2025-02-25
 draft: false
 tags:
   - Software
@@ -17,14 +17,14 @@ A great resource is [Vim Cheat Sheet](https://vim.rtorr.com/), which has most of
 Lastly, before I jump into this, you don't have to use vim or Neovim to take advantage of the vim style keybindings. There exist many plugins for many editors that replicate this functionality. Here we go!
 
 ### Editor's Note:
-![spongebob-squarepants-tired.gif](/attachments/spongebob-squarepants-tired.gif)
+![spongebob-squarepants-tired.gif](/attachments/A%20(Mostly)%20Exhaustive%20List%20of%20Keybinds%20and%20Commands%20for%20Vim/spongebob-squarepants-tired.gif)
 WHAT IS WRONG WITH ME?! I ended up writing down a little bit from each section of the cheat sheet, because I kept finding stuff and going "oh that's cool". What I had planned on being a very basic list of commands to get started, and then building onto it later, ended up being an EXHAUSTIVE (but not complete) list of commands and key binds to be used in vim. I guess it's good that the work is already done, but MAN. I'm gonna have to take a nap. 
 
 Let this be a warning to *all*: The rabbit hole can go as deep as you want to. Be Careful!
 
 # Vim Modes
 ***
-![Pasted image 20250223112457.png](/attachments/Pasted%20image%2020250223112457.png)
+![Pasted image 20250223112457.png](/attachments/A%20(Mostly)%20Exhaustive%20List%20of%20Keybinds%20and%20Commands%20for%20Vim/Pasted%20image%2020250223112457.png)
 Yes, yes, back to back memes. Gotta have fun with it, y'know?
 
 Vim has different modes for accomplishing different tasks. They are:

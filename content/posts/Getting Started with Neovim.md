@@ -9,7 +9,7 @@ tags:
   - Vim
   - Neovim
 ---
-![Pasted image 20250223112239.png](/attachments/Pasted%20image%2020250223112239.png)
+![Pasted image 20250223112239.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250223112239.png)
 
 Finally, I can do the part of the original post I planned on! If you're unaware, [I made a post before this one about vim keybinds](https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/). This post was originally intended to be a complete article detailing what key binds I was going to learn *and* getting neovim setup with some plugins and settings to help out anybody else that got intimidated by the learning curve. And as you can see, the key binds and commands became a really long list. This post will be about configuring Neovim and setting it up with plugins.
 
@@ -18,9 +18,9 @@ My hope is that mainly, I can document my setup so that I can understand it late
 # Neovim Settings
 ***
 By default, Neovim looks like this:
-![Pasted image 20250225124857.png](/attachments/Pasted%20image%2020250225124857.png)
+![Pasted image 20250225124857.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250225124857.png)
 It might change a little for you, but this is pretty much how it looks out of the box. And if you open up a file...
-![Pasted image 20250225124940.png](/attachments/Pasted%20image%2020250225124940.png)
+![Pasted image 20250225124940.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250225124940.png)
 This is what it should look like. You'll notice it's missing some features that we might have in other editors like VSCode, like line numbers, syntax highlighting, etc. And this isn't because it can't do those things, it's just that they are not enabled by default. Vim and other vim-like editors (Neovim) are built to be incredibly lightweight while still being a powerful editor. Things that might cause the editor to take longer to draw get disabled, in favor for faster draw times which make the editor feel and behave faster. Another reason for this is it makes the editor *much* faster to launch. You may notice when you open VSCode, it takes a couple of seconds to load *everything*. It takes about a second to load enough to the point where you can start using it, opening files and editing them. With vim editors, it's near instant. It loads up, file open, ready to edit in almost no time at all.
 
 So now that we know why these features are turned off, lets turn them back on. Unless you are running Neovim on a potato, enabling these really shouldn't affect the speed of the editor at all, only marginally. The real speed killer will be plugins, but there's something we'll cover later to help remedy that in the plugins section. I will be using [This Site's start config](https://builtin.com/software-engineering-perspectives/neovim-configuration) to start my vim config (which for Neovim is located at `~/.config/nvim/init.vim):
@@ -76,7 +76,7 @@ set clipboard=unnamedplus    " use system clipboard for copy/paste
 " set backupdir=~/.cache/vim " Directory to store backup files.
 ```
 This is already a pretty good start! I tried out the `set cc=80`, thinking it would just be a line and not highlight the whole column. It wasn't so I disabled it, but maybe I will revisit later if I can find a solution that's not too invasive. Here's what Neovim looks like now:
-![Pasted image 20250225195802.png](/attachments/Pasted%20image%2020250225195802.png)
+![Pasted image 20250225195802.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250225195802.png)
 It's already a lot nicer to work with, being able to use the mouse (even though I should be using the keyboard) is a nice addition. The mouse is still pretty limited on it's own, which I think will wean me off of using the mouse. It's mainly just nice to be able to move the cursor with the mouse.
 
 # Appearance
@@ -92,7 +92,7 @@ highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 ```
 And you're good to go:
-![Pasted image 20250225204310.png](/attachments/Pasted%20image%2020250225204310.png)
+![Pasted image 20250225204310.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250225204310.png)
 Can you tell I've been watching Severance? 
 
 ## Color Schemes
@@ -236,7 +236,7 @@ return {
 }
 ```
 And hey! Looks like that's all you need! We can see that the status line has changed to vim-airline in this screenshot:
-![Pasted image 20250226122249.png](/attachments/Pasted%20image%2020250226122249.png)
+![Pasted image 20250226122249.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250226122249.png)
 That window that opened is the Lazy manager window, whenever you need to manage plugins on the fly you use this window. By default, this opens every time you install a new plugin. If you need to access this while in neovim, you simply run `:Lazy`. 
 ## vim-gitgutter
 ***
@@ -250,13 +250,13 @@ return {
 	}
 }
 ```
-![Pasted image 20250227205103.png](/attachments/Pasted%20image%2020250227205103.png)
+![Pasted image 20250227205103.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250227205103.png)
 See those `+`'s on the left side of the screen? That's gitgutter! It just marks lines that are different from the previous commit.
 
 ## NERDTree
 ***
 Now this one's pretty neat, and it's going to be the first plugin that will be lazy loaded. NERDTree is a file explorer that runs inside neovim. I'll also be installing some plugins for NERDTree, mainly nerdtree-git-plugin & vim-devicons.
-![Pasted image 20250305210629.png](/attachments/Pasted%20image%2020250305210629.png)
+![Pasted image 20250305210629.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250305210629.png)
 Here's the spec for NERDTree:
 ```lua
 return {
@@ -340,7 +340,7 @@ return {
 Syntastic comes with *almost* every checker you might need, but for the ones that aren't you'll need to install the checker yourself. Check the syntastic page for information.
 
 I Purposefully broke this spec to see if it detected bad syntax. And it does!
-![Pasted image 20250305211905.png](/attachments/Pasted%20image%2020250305211905.png)
+![Pasted image 20250305211905.png](/attachments/Getting%20Started%20with%20Neovim/Pasted%20image%2020250305211905.png)
 But only when you save the file. You can always run `:SyntasticCheck`, but why not save the file? It might reinforce some good behavior.
 
 ## Conclusion

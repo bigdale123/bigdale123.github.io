@@ -7,75 +7,129 @@ import sys
 import subprocess
 from datetime import datetime
 
+
 def copy_vault_files(path_to_vault_folder):
-    # Check that folder contains posts folder (validity check)
+    """
+    Copies an Obsidian vault's posts/ folder into a Hugo project, preserving
+    whatever directory structure exists.
+
+    The posts/ tree is mirrored under content/posts/, and any images found in
+    a post's attachments/ subfolder are copied to static/attachments/ under the
+    same relative path as the post directory.
+
+    Example:
+        Vault:
+            posts/2025/My Post/My Post.md
+            posts/2025/My Post/attachments/image.png
+            posts/misc/Notes.md
+
+        Hugo output:
+            content/posts/2025/My Post/My Post.md
+            static/attachments/2025/My Post/image.png
+            content/posts/misc/Notes.md
+    """
     if not os.path.isdir(path_to_vault_folder):
-        raise IOError("Given path does not exist.")
-    if not os.path.isdir(os.path.join(path_to_vault_folder, 'posts')):
-        raise IOError("Given path does not contain a 'posts' folder.")
+        raise IOError(f"Given path does not exist: {path_to_vault_folder}")
 
-    # Recursively copy files over, maintaining the structure, including attachments
-    shutil.copytree(path_to_vault_folder, os.path.join(os.getcwd(), "content"), dirs_exist_ok=True)
+    posts_src = os.path.join(path_to_vault_folder, "posts")
+    if not os.path.isdir(posts_src):
+        raise IOError("Given vault path does not contain a 'posts' folder.")
 
-    # For every file that was copied over, replace obsidian formatted images with appropriate hugo image format
-    for dirpath, _, filenames in os.walk("content"):
+    posts_dst = os.path.join(os.getcwd(), "content", "posts")
+    print(f"Copying posts from: {posts_src}")
+    shutil.copytree(posts_src, posts_dst, dirs_exist_ok=True)
+
+    # Walk every markdown file and rewrite image embeds
+    for dirpath, _, filenames in os.walk(posts_dst):
         for filename in filenames:
-            if filename.endswith('.md'):
-                file_path = os.path.join(dirpath, filename)
-                # print(f"Markdown File: {file_path}")
-                attachments_directory = os.path.join(dirpath, 'attachments')
+            if not filename.endswith(".md"):
+                continue
+            file_path = os.path.join(dirpath, filename)
+            # Relative path of this file's directory inside content/posts/
+            # e.g. "2025/My Post" or "misc"
+            rel_dir = os.path.relpath(dirpath, posts_dst)
+            _process_markdown(file_path, rel_dir)
 
-                # Load file content and find all images matching format ![[]]
-                with open(file_path, "r", encoding="utf-8") as file:
-                    content = file.read()
 
-                images = re.findall(r'\[\[([^]]+\.(?:png|jpg|jpeg|gif|bmp|svg|webp))\]\]', content)
+def _process_markdown(file_path, rel_dir):
+    """
+    Rewrites Obsidian-style image embeds (![[image.png]]) in a markdown file
+    to standard Hugo markdown, and copies the images to the mirrored location
+    under static/attachments/<rel_dir>/.
+    """
+    image_pattern = re.compile(
+        r'!\[\[([^\]]+\.(?:png|jpg|jpeg|gif|bmp|svg|webp))\]\]',
+        re.IGNORECASE,
+    )
 
-                for image in images:
-                    # Edge case: check that the image actually exists before replacing the markdown
-                    # print(f"Found Image: {image}")
-                    # check that attachments directory exists, only if file contains images
-                    if not os.path.isdir(attachments_directory):
-                        raise IOError(f"Attachments directory for file {file_path} does not exist")
-                    image_path = os.path.join(attachments_directory, image)
-                    if os.path.exists(image_path) and os.path.isfile(image_path):
-                        # image exists, replace markdown and copy file to static/attachments
-                        # copy file to static/attachments
-                        new_image = os.path.join("static", "attachments", image)
-                        os.makedirs(os.path.join("static", "attachments"), exist_ok=True)
-                        shutil.copy2(image_path, new_image)
-                        # replace markdown
-                        new_markdown = f"![{image}](/attachments/{image.replace(' ', '%20')})"
-                        # print(new_markdown)
-                        content = content.replace(f"![[{image}]]", new_markdown)
-                        print(f"Image Found in {file_path}:\n    Replacing ![[{image}]] with {new_markdown}")
-                with open(file_path, "w", encoding="utf-8") as file:
-                    file.write(content)    
+    with open(file_path, "r", encoding="utf-8") as fh:
+        content = fh.read()
+
+    images = image_pattern.findall(content)
+    if not images:
+        return
+
+    attachments_src = os.path.join(os.path.dirname(file_path), "attachments")
+    if not os.path.isdir(attachments_src):
+        raise IOError(
+            f"'{file_path}' contains image embeds but has no attachments/ "
+            f"directory at: {attachments_src}"
+        )
+
+    # Mirror the post's relative path under static/attachments/,
+    # nested one level deeper under the markdown file's own name.
+    post_title = os.path.splitext(os.path.basename(file_path))[0]
+    attachments_dst = os.path.join(os.getcwd(), "static", "attachments", rel_dir, post_title)
+
+    modified = False
+    for image in images:
+        image_src = os.path.join(attachments_src, image)
+        if not os.path.isfile(image_src):
+            print(f"  WARNING: image not found, skipping: {image}")
+            continue
+
+        os.makedirs(attachments_dst, exist_ok=True)
+        shutil.copy2(image_src, os.path.join(attachments_dst, image))
+
+        parts = [p for p in rel_dir.replace("\\", "/").split("/") if p != "."]
+        url_path = "/".join(
+            ["/attachments"] + parts + [post_title.replace(" ", "%20"), image.replace(" ", "%20")]
+        )
+        new_md = f"![{image}]({url_path})"
+        old_md = f"![[{image}]]"
+
+        print(f"  {os.path.relpath(file_path)}\n    {old_md} → {new_md}")
+        content = content.replace(old_md, new_md)
+        modified = True
+
+    if modified:
+        with open(file_path, "w", encoding="utf-8") as fh:
+            fh.write(content)
+
 
 def publish(commit_message):
     os.system("hugo")
-    os.system("git add *")
+    os.system("git add .")
     os.system(f'git commit -am "{commit_message}"')
     os.system("git push")
 
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        print("Usage: python3 obsidian_import.py <path>")
-        quit()
+        print("Usage: python3 obsidian_import.py <path-to-vault>")
+        sys.exit(1)
+
     path_to_vault_folder = sys.argv[1]
     copy_vault_files(path_to_vault_folder)
-    choice = input("Do you want to go ahead and publish these changes? (yes/no): ").strip()
 
+    choice = input("\nPublish these changes? (yes/no): ").strip().lower()
     if "y" in choice:
-        commit_message = f"Automated Publish on {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}"
-        choice = input("Do you want to write a commit message? (yes/no): ").strip()
-        if "y" in choice:
-            commit_message = input("Enter Commit Message: ")
+        commit_message = (
+            f"Automated Publish on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        )
+        if "y" in input("Write a custom commit message? (yes/no): ").strip().lower():
+            commit_message = input("Commit message: ").strip()
         publish(commit_message)
-        quit()
     else:
-        choice = input("Do you want to test out with `hugo serve`? (yes/no): ").strip()
-        if "y" in choice:
-            subprocess.run(["hugo", "serve"])
-        quit()
+        if "y" in input("Preview with `hugo serve`? (yes/no): ").strip().lower():
+            subprocess.run(["hugo", "serve", "--disableFastRender"])

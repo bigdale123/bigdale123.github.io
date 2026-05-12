@@ -31,10 +31,10 @@ Shrimple.
 # Step 1: Learning how to use Hugo
 ***
 I'm planning on using Congo for my Hugo theme. Looks nice, can support search, tags, archives, etc. Setup has been a little difficult, because I got confused on which config directory to use. Once I figured that out, I could finally see my changes. Behold, the first thing I have seen other than a blank page!
-![Pasted image 20250219224139.png](/attachments/Pasted%20image%2020250219224139.png)
+![Pasted image 20250219224139.png](/attachments/First%20Post!%20Learning%20how%20to%20use%20Hugo%20to%20host%20Obsidian%20files/Pasted%20image%2020250219224139.png)
 We love a good RoboCop quote. If only I could figure out how to get my damn Obsidian files to show up.
 (Some time later)
-![Pasted image 20250219225631.png](/attachments/Pasted%20image%2020250219225631.png)
+![Pasted image 20250219225631.png](/attachments/First%20Post!%20Learning%20how%20to%20use%20Hugo%20to%20host%20Obsidian%20files/Pasted%20image%2020250219225631.png)
 Yeah, I forgot. Whoops. 
 New problem to tackle, the way Obsidian handles photos in text (following the form of `![[some_image.png]]`) is not the same as the way that Hugo handles images (following the form of `![Example Image](/path/to/some_image.png)`). Not a problem with Hugo, but we will need to follow the same route NetworkChuck used by writing a script to port over images and replace any image paths. Also not a huge deal, since the way I want to have hugo build the site will require *copying* the markdown files from my Obsidian vault to Hugo. This way I can keep my blog posts in my vault, and the script should just copy them over.
 
@@ -96,7 +96,7 @@ def copy_vault_files(path_to_vault_folder):
                     file.write(content)
 ```
 A tad ugly, but it gets the job done. And now we have images showing up in Hugo!
-![Pasted image 20250220102903.png](/attachments/Pasted%20image%2020250220102903.png)
+![Pasted image 20250220102903.png](/attachments/First%20Post!%20Learning%20how%20to%20use%20Hugo%20to%20host%20Obsidian%20files/Pasted%20image%2020250220102903.png)
 
 # Step 3: Workflowing the pipeline
 ***
@@ -134,7 +134,7 @@ def publish():
 Well, if *you're* reading this you know it works. I had some trouble getting github pages to work with it. I got an error the first time I tried to have the pages action build the site, `Liquid Exception: Invalid Date: '"{{ .Date }}"' is not a valid datetime. in /_layouts/default.html`. To fix this, i added a .nojekyll file inside the docs directory, which should make pages serve the site as is. And...
 It didn't work. I guess that just don't work no more 😮‍💨. I looked up what to do on the hugo docs, and they recommend a custom github action that will build the hugo site up on github.
 Turns out I forgot to set `them = "congo"` in `config.toml`, but once I did that...
-![Pasted image 20250220121602.png](/attachments/Pasted%20image%2020250220121602.png)
+![Pasted image 20250220121602.png](/attachments/First%20Post!%20Learning%20how%20to%20use%20Hugo%20to%20host%20Obsidian%20files/Pasted%20image%2020250220121602.png)
 WOOP! Github Pages built and deployed the site using the action that I definitely did not copy word for word from the Hugo site 🙂. The important thing is, the site is up. We can polish all the other stuff later.
 
 # Conclusion 🎉

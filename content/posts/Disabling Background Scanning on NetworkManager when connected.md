@@ -1,7 +1,7 @@
 ---
 title: Disabling Background Scanning on NetworkManager when connected
 date: 2025-02-27
-lastmod: 
+lastmod: 2025-02-27
 draft: false
 tags:
   - Networking

@@ -1,6 +1,6 @@
-languageCode = "en"
-languageName = "English"
-languageDirection = "ltr"
+Locale = "en"
+Label = "English"
+Direction = "ltr"
 weight = 1
 
 title = "bigdale123's Blog"
@@ -14,7 +14,7 @@ title = "bigdale123's Blog"
 
 [params.author]
   name = "Dylan Calvin"
-  image = "img/lou.png"
+  image = "img/headshot.jpg"
   headline = "Thank you for your cooperation. Good night."
   bio = "Currently pursuing my Master's Degree in Comp Sci @ Georgia Tech, Avid Homelabber."
   links = [
@@ -61,6 +61,6 @@ title = "bigdale123's Blog"
   #   { twitch = "https://twitch.tv/username" },
   #   { whatsapp = "https://wa.me/phone-number" },
   #   { x-twitter = "https://twitter.com/username" },
-  #   { youtube = "https://youtube.com/username" },
+    { youtube = "https://youtube.com/@dylancalvin9357" },
   #   { xing = "https://xing.com/profile/username" },
   ]
