@@ -1,94 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-    
-      <url>
-            <loc>http://localhost:1313/</loc>
-            <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/</loc>
-            <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/taking-pictures-of-space/</loc>
-            <lastmod>2025-03-28T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/getting-started-with-neovim/</loc>
-            <lastmod>2025-03-05T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</loc>
-            <lastmod>2025-02-27T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
-            <lastmod>2025-02-25T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</loc>
-            <lastmod>2025-02-23T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/listening-to-the-police-scanner-with-sdr-trunk/</loc>
-            <lastmod>2025-02-20T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</loc>
-            <lastmod>2025-02-20T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
+  <url>
+    <loc>https://blog.coeus.icu/</loc>
+    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/post-of-shame/</loc>
+    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/postofshame/</loc>
+    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/</loc>
+    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/</loc>
+    <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/ft8---a-beginners-guide/</loc>
+    <lastmod>2025-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/radio/</loc>
+    <lastmod>2025-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/rtl-sdr/</loc>
+    <lastmod>2025-08-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/back-from-the-dead/</loc>
+    <lastmod>2025-08-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/miscellaneous/</loc>
+    <lastmod>2025-08-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/photography/</loc>
+    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/taking-pictures-of-space/</loc>
+    <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/getting-started-with-neovim/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/linux/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/neovim/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/software/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/vim/</loc>
+    <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/networking/</loc>
+    <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
+    <lastmod>2025-02-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/hugo/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/obsidian/</loc>
+    <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/listening-to-the-police-scanner-with-sdr-trunk/</loc>
+    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</loc>
+    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/tags/homelab/</loc>
+    <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.coeus.icu/categories/</loc>
+  </url>
 </urlset>
