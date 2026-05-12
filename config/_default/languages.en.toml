@@ -14,7 +14,7 @@ title = "bigdale123's Blog"
 
 [params.author]
   name = "Dylan Calvin"
-  image = "img/headshot.png"
+  image = "img/square_updated_headshot.png"
   headline = "Thank you for your cooperation. Good night."
   bio = "Currently pursuing my Master's Degree in Comp Sci @ Georgia Tech, Avid Homelabber."
   links = [
