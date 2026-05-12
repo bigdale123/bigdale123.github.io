@@ -1,0 +1,5 @@
+{{ if .Params.author }}
+  {{ if and .Params.author.name (not .Params.author.image) }}
+    {{ warnf "Congo: Author name is set but image is missing." }}
+  {{ end }}
+{{ end }}
