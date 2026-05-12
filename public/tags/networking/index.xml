@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Networking on bigdale123&#39;s Blog</title>
-    <link>https://blog.coeus.icu/tags/networking/</link>
+    <link>http://localhost:1313/tags/networking/</link>
     <description>Recent content in Networking on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.coeus.icu/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Disabling Background Scanning on NetworkManager when connected</title>
-      <link>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</link>
+      <link>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</guid>
+      <guid>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</guid>
       <description></description>
     </item>
   </channel>

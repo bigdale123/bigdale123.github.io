@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Obsidian on bigdale123&#39;s Blog</title>
-    <link>https://blog.coeus.icu/tags/obsidian/</link>
+    <link>http://localhost:1313/tags/obsidian/</link>
     <description>Recent content in Obsidian on bigdale123&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 23 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://blog.coeus.icu/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog Tweaks: Pedantic Perils</title>
-      <link>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</link>
+      <link>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</guid>
+      <guid>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</guid>
       <description></description>
     </item>
     <item>
       <title>First Post! Learning how to use Hugo to host Obsidian files</title>
-      <link>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
+      <link>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
       <pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
+      <guid>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
       <description></description>
     </item>
   </channel>
