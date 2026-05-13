@@ -83,22 +83,25 @@ def _process_markdown(file_path, rel_dir):
 
     modified = False
     for image in images:
-        image_src = os.path.join(attachments_src, image)
+        # Use only the basename for the source lookup
+        image_filename = os.path.basename(image)
+        image_src = os.path.join(attachments_src, image_filename)
+
         if not os.path.isfile(image_src):
             print(f"  WARNING: image not found, skipping: {image}")
+            print(f"      Article: {post_title}")
             continue
 
         os.makedirs(attachments_dst, exist_ok=True)
-        shutil.copy2(image_src, os.path.join(attachments_dst, image))
+        shutil.copy2(image_src, os.path.join(attachments_dst, image_filename))
 
         parts = [p for p in rel_dir.replace("\\", "/").split("/") if p != "."]
         url_path = "/".join(
-            ["/attachments"] + parts + [post_title.replace(" ", "%20"), image.replace(" ", "%20")]
+            ["/attachments"] + parts + [post_title.replace(" ", "%20"), image_filename.replace(" ", "%20")]
         )
-        new_md = f"![{image}]({url_path})"
-        old_md = f"![[{image}]]"
+        new_md = f"![{image_filename}]({url_path})"
+        old_md = f"![[{image}]]"  # old_md still uses full original match to replace correctly
 
-        print(f"  {os.path.relpath(file_path)}\n    {old_md} → {new_md}")
         content = content.replace(old_md, new_md)
         modified = True
 
