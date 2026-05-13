@@ -16,6 +16,13 @@
       <description></description>
     </item>
     <item>
+      <title>Getting Started with Neovim</title>
+      <link>https://blog.coeus.icu/posts/software/getting-started-with-neovim/</link>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/software/getting-started-with-neovim/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Disabling Background Scanning on NetworkManager when connected</title>
       <link>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
@@ -23,10 +30,24 @@
       <description></description>
     </item>
     <item>
+      <title>Disabling Background Scanning on NetworkManager when connected</title>
+      <link>https://blog.coeus.icu/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>A (Mostly) Exhaustive List of Keybinds and Commands for Vim</title>
       <link>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
       <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>A (Mostly) Exhaustive List of Keybinds and Commands for Vim</title>
+      <link>https://blog.coeus.icu/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
       <description></description>
     </item>
   </channel>

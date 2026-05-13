@@ -1,0 +1,1351 @@
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Getting Started with Neovim &middot; bigdale123&#39;s Blog</title>
+    <meta name="title" content="Getting Started with Neovim &middot; bigdale123&#39;s Blog" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://blog.coeus.icu/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://blog.coeus.icu/css/main.bundle.min.bc2289cda60f511b1296d435e2dd60d62fd4c5d405194adfecbd09f4b21cd0a7.css"
+    integrity="sha256-vCKJzaYPURsSltQ14t1g1i/UxdQFGUrf7L0J9LIc0Kc="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="https://blog.coeus.icu/js/main.bundle.min.ad7c1061b54aa5c79b6614847630c72567108bdf84dbf18d025ed692b0074cfe.js"
+      integrity="sha256-rXwQYbVKpcebZhSEdjDHJWcQi9&#43;E2/GNAl7WkrAHTP4="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="https://blog.coeus.icu/posts/software/getting-started-with-neovim/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://blog.coeus.icu/posts/software/getting-started-with-neovim/">
+  <meta property="og:site_name" content="bigdale123&#39;s Blog">
+  <meta property="og:title" content="Getting Started with Neovim">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-05T00:00:00+00:00">
+    <meta property="article:tag" content="Software">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Vim">
+    <meta property="article:tag" content="Neovim">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Getting Started with Neovim">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Getting Started with Neovim",
+    "headline": "Getting Started with Neovim",
+    
+    
+    "inLanguage": "en",
+    "url" : "https:\/\/blog.coeus.icu\/posts\/software\/getting-started-with-neovim\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Dylan Calvin"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-03-05T00:00:00\u002b00:00",
+    "datePublished": "2025-03-05T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-03-05T00:00:00\u002b00:00",
+    
+    "keywords": ["Software","Linux","Vim","Neovim"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2647"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://blog.coeus.icu/",
+       "name": "Bigdale123's Blog",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://blog.coeus.icu/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Getting Started With Neovim",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="Dylan Calvin" />
+  
+  
+    
+      <link href="https://github.com/bigdale123" rel="me" />
+    
+      <link href="https://linkedin.com/in/dylancalvin" rel="me" />
+    
+      <link href="https://youtube.com/@dylancalvin9357" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >bigdale123&rsquo;s Blog</a
+  >
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/posts/"
+                      title="Posts"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Posts</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/tags/"
+                      title="Tags"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Tags</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="Search (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    <button
+                      id="appearance-switcher-1"
+                      type="button"
+                      aria-label="appearance switcher"
+                    >
+                      <span
+                        class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                        title="Switch to dark appearance"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </span>
+                      <span
+                        class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                        title="Switch to light appearance"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </span>
+                    </button>
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/index.xml"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      
+                      >
+                        <span
+                          class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                        ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+</span></span><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          ></span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                  
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="Search (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                <button
+                  id="appearance-switcher-2"
+                  type="button"
+                  aria-label="appearance switcher"
+                >
+                  <span
+                    class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                    title="Switch to dark appearance"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </span>
+                  <span
+                    class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                    title="Switch to light appearance"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </span>
+                </button>
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/index.xml"
+                  title=""
+                  
+                  
+                  >
+                    <span
+                      class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                    ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+</span></span><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      ></span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+              
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="https://blog.coeus.icu/"
+      >bigdale123&#39;s Blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="https://blog.coeus.icu/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="https://blog.coeus.icu/posts/software/getting-started-with-neovim/"
+      >Getting Started with Neovim</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Getting Started with Neovim
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-03-05 00:00:00 &#43;0000 UTC">March 5, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2647 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">13 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+      
+        
+          
+            <a
+              href="https://blog.coeus.icu/tags/software/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Software</a
+            >
+          
+            <a
+              href="https://blog.coeus.icu/tags/linux/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Linux</a
+            >
+          
+            <a
+              href="https://blog.coeus.icu/tags/vim/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Vim</a
+            >
+          
+            <a
+              href="https://blog.coeus.icu/tags/neovim/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Neovim</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250223112239.png" alt="Pasted image 20250223112239.png" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
+<p>Finally, I can do the part of the original post I planned on! If you&rsquo;re unaware, <a href="https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/" target="_blank" rel="noreferrer">I made a post before this one about vim keybinds</a>. This post was originally intended to be a complete article detailing what key binds I was going to learn <em>and</em> getting neovim setup with some plugins and settings to help out anybody else that got intimidated by the learning curve. And as you can see, the key binds and commands became a really long list. This post will be about configuring Neovim and setting it up with plugins.</p>
+<p>My hope is that mainly, I can document my setup so that I can understand it later when I forget what things do.</p>
+<h1 id="neovim-settings" class="relative group">Neovim Settings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#neovim-settings" aria-label="Anchor">#</a></span></h1><hr>
+<p>By default, Neovim looks like this:
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250225124857.png" alt="Pasted image 20250225124857.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+It might change a little for you, but this is pretty much how it looks out of the box. And if you open up a file&hellip;
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250225124940.png" alt="Pasted image 20250225124940.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+This is what it should look like. You&rsquo;ll notice it&rsquo;s missing some features that we might have in other editors like VSCode, like line numbers, syntax highlighting, etc. And this isn&rsquo;t because it can&rsquo;t do those things, it&rsquo;s just that they are not enabled by default. Vim and other vim-like editors (Neovim) are built to be incredibly lightweight while still being a powerful editor. Things that might cause the editor to take longer to draw get disabled, in favor for faster draw times which make the editor feel and behave faster. Another reason for this is it makes the editor <em>much</em> faster to launch. You may notice when you open VSCode, it takes a couple of seconds to load <em>everything</em>. It takes about a second to load enough to the point where you can start using it, opening files and editing them. With vim editors, it&rsquo;s near instant. It loads up, file open, ready to edit in almost no time at all.</p>
+<p>So now that we know why these features are turned off, lets turn them back on. Unless you are running Neovim on a potato, enabling these really shouldn&rsquo;t affect the speed of the editor at all, only marginally. The real speed killer will be plugins, but there&rsquo;s something we&rsquo;ll cover later to help remedy that in the plugins section. I will be using <a href="https://builtin.com/software-engineering-perspectives/neovim-configuration" target="_blank" rel="noreferrer">This Site&rsquo;s start config</a> to start my vim config (which for Neovim is located at `~/.config/nvim/init.vim):</p>
+<pre tabindex="0"><code class="language-vimscript" data-lang="vimscript">&#34; Basic Settings
+&#34; **************
+set nocompatible            &#34; disable compatibility to old-time vi
+
+
+&#34; Selection Behavior
+&#34; ******************
+set showmatch               &#34; highlights matching brackets (),[],{}
+set ignorecase              &#34; makes search patterns case insensitive
+set hlsearch                &#34; highlight all search matches
+set incsearch               &#34; show matches as search pattern is typed
+
+
+&#34; Mouse and Cursor Behavior
+&#34; *************************
+set mouse=a                 &#34; enable mouse support
+set cursorline              &#34; highlights the line where the cursor is
+
+
+&#34; Tab and Indentation Settings
+&#34; ****************************
+set tabstop=4               &#34; number of columns occupied by a tab 
+set softtabstop=4           &#34; see multiple spaces as tabstops so &lt;BS&gt; does the right thing
+set expandtab               &#34; converts tabs to white space
+set shiftwidth=4            &#34; width for autoindents
+set autoindent              &#34; indent a new line the same amount as the line just typed
+
+
+&#34; UI Enhancements
+&#34; ***************
+set number                  &#34; adds line numbers
+set wildmode=longest,list   &#34; adds command line autocomplete
+							&#34;     longest = longest unambiguous match
+							&#34;     list = displays all possible matches
+set cc=80                   &#34; set an 80 column border for recommended line length
+set ttyfast                 &#34; Scrolls as fast as the terminal supports
+
+
+&#34; File Type and Syntax Highlighting
+&#34; *********************************
+filetype plugin on          &#34; turn on file-type-specific plugins
+filetype plugin indent on   &#34; allow auto-indenting depending on file type
+syntax on                   &#34; syntax highlighting
+
+
+&#34; Clipboard
+&#34; *********
+set clipboard=unnamedplus    &#34; use system clipboard for copy/paste
+&#34; set backupdir=~/.cache/vim &#34; Directory to store backup files.
+</code></pre><p>This is already a pretty good start! I tried out the <code>set cc=80</code>, thinking it would just be a line and not highlight the whole column. It wasn&rsquo;t so I disabled it, but maybe I will revisit later if I can find a solution that&rsquo;s not too invasive. Here&rsquo;s what Neovim looks like now:
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250225195802.png" alt="Pasted image 20250225195802.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+It&rsquo;s already a lot nicer to work with, being able to use the mouse (even though I should be using the keyboard) is a nice addition. The mouse is still pretty limited on it&rsquo;s own, which I think will wean me off of using the mouse. It&rsquo;s mainly just nice to be able to move the cursor with the mouse.</p>
+<h1 id="appearance" class="relative group">Appearance <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#appearance" aria-label="Anchor">#</a></span></h1><hr>
+<p>Right now I think I am happy with the way it looks, but I also want to go ahead and lay out some groundwork for myself in the future. I am also going to setup background transparency, I just like being able to see stuff behind my terminal.</p>
+<h2 id="transparency" class="relative group">Transparency <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#transparency" aria-label="Anchor">#</a></span></h2><p>I&rsquo;ve done this in the past, but after not realizing that I didn&rsquo;t back up my dotfiles correctly I lost that configuration 😭. I remember that I did it without a plugin, so it <em>should</em> be possible to write it in vimscript. I&rsquo;m just at a loss trying to find it in other storage, so I guess i&rsquo;ll have to find in on <em>The Internet</em>. Thankfully, you can throw a rock and hit vim/neovim configs. <a href="https://blog.chaitanyashahare.com/posts/how-to-make-nvim-backround-transparent/" target="_blank" rel="noreferrer">Here&rsquo;s a site</a> that had a &ldquo;vanilla&rdquo; (plugin independent) method to get transparency working. Just add the following to your config:</p>
+<pre tabindex="0"><code class="language-vimscript" data-lang="vimscript">highlight Normal guibg=none
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+</code></pre><p>And you&rsquo;re good to go:
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250225204310.png" alt="Pasted image 20250225204310.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+Can you tell I&rsquo;ve been watching Severance?</p>
+<h2 id="color-schemes" class="relative group">Color Schemes <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#color-schemes" aria-label="Anchor">#</a></span></h2><p>Even though I don&rsquo;t intend on installing a color scheme right now, I would like to already have all the groundwork laid out so that in the future all I have to do is swap out one theme for another. Vim and Neovim actually already come with some preinstalled color schemes, accessible through the <code>:colorscheme</code> command. Some color schemes require 24 bit color, though, and this wont make it a persistent change. Here&rsquo;s what i&rsquo;ve added to my config:</p>
+<pre tabindex="0"><code>set termguicolors
+colorscheme default
+</code></pre><p>And that should be about it. If I install a colorscheme in the future, it&rsquo;ll be as a plugin, and still be accessible through <code>:colorscheme</code>.</p>
+<h1 id="plugins" class="relative group">Plugins <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#plugins" aria-label="Anchor">#</a></span></h1><hr>
+<p>It&rsquo;s time. The moment that <em>i&rsquo;ve</em> been looking forward to. <strong>Plugins</strong>.</p>
+<p>This is where the cool stuff happens, and (can) add a <em>ton</em> of functionality to vim. They can add syntax highlighting, autocompletion, Git integration, and more. You can find most of all the plugins available at <a href="https://vimawesome.com" target="_blank" rel="noreferrer">vim-awesome</a>. But, these can make vim load slower, so let me introduce you to what will be the most important plugin for me: <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noreferrer">Lazy.nvim</a>. This plugin manager <em>Lazily</em> loads plugins, meaning that plugins get loaded when they try to get used. This keeps it fast, while still being able to handle a lot of plugins. It&rsquo;s kind of like a library: when you want to read a book you don&rsquo;t have to pull every book off the shelf first, you just grab the book you want. In fact, <a href="https://www.lazyvim.org/" target="_blank" rel="noreferrer">LazyVim</a> is a neovim setup that is powered by lazy.nvim. It comes with a bunch of plugins installed and pre configured. I&rsquo;ve also used this in the past, and while it&rsquo;s nice, I think it is a little overkill for me. So, i&rsquo;ll be selecting my plugins myself.</p>
+<p>There&rsquo;s one more order of business before we start installing plugins, and that&rsquo;s because i&rsquo;m using lazy.nvim. The documentation specifies you need to setup lazy in <code>init.lua</code>, and not <code>init.vim</code> like i&rsquo;m using now. So, I need to translate my <code>init.vim</code> to an equivalent <code>init.lua</code> 😞</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Appearance</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">termguicolors</span> <span class="o">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[colorscheme default]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[highlight Normal guibg=none]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[highlight NonText guibg=none]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[highlight Normal ctermbg=none]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[highlight NonText ctermbg=none]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Basic Settings</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-----------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">compatible</span> <span class="o">=</span> <span class="kc">false</span>  <span class="c1">-- Disable compatibility to old-time vi</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Selection Behavior</span>
+</span></span><span class="line"><span class="cl"><span class="c1">---------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">showmatch</span> <span class="o">=</span> <span class="kc">true</span>    <span class="c1">-- Highlight matching brackets</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">ignorecase</span> <span class="o">=</span> <span class="kc">true</span>   <span class="c1">-- Case-insensitive searching</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">hlsearch</span> <span class="o">=</span> <span class="kc">true</span>     <span class="c1">-- Highlight all search matches</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">incsearch</span> <span class="o">=</span> <span class="kc">true</span>    <span class="c1">-- Show matches as search pattern is typed</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Mouse and Cursor Behavior</span>
+</span></span><span class="line"><span class="cl"><span class="c1">----------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">mouse</span> <span class="o">=</span> <span class="s2">&#34;a&#34;</span>         <span class="c1">-- Enable mouse support</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">cursorline</span> <span class="o">=</span> <span class="kc">true</span>   <span class="c1">-- Highlight the current line</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Tab and Indentation Settings</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">tabstop</span> <span class="o">=</span> <span class="mi">4</span>         <span class="c1">-- Number of columns occupied by a tab</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">softtabstop</span> <span class="o">=</span> <span class="mi">4</span>     <span class="c1">-- See multiple spaces as tabstops</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">expandtab</span> <span class="o">=</span> <span class="kc">true</span>    <span class="c1">-- Convert tabs to spaces</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">shiftwidth</span> <span class="o">=</span> <span class="mi">4</span>      <span class="c1">-- Width for auto-indents</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">autoindent</span> <span class="o">=</span> <span class="kc">true</span>   <span class="c1">-- Maintain indent of current line</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- UI Enhancements</span>
+</span></span><span class="line"><span class="cl"><span class="c1">------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">number</span> <span class="o">=</span> <span class="kc">true</span>       <span class="c1">-- Show line numbers</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">wildmode</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;longest&#34;</span><span class="p">,</span> <span class="s2">&#34;list&#34;</span> <span class="p">}</span> <span class="c1">-- Command-line autocomplete</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- vim.opt.colorcolumn = &#34;80&#34; -- Set an 80 column border for recommended line length</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">ttyfast</span> <span class="o">=</span> <span class="kc">true</span>      <span class="c1">-- Enable fast terminal scrolling</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- File Type and Syntax Highlighting</span>
+</span></span><span class="line"><span class="cl"><span class="c1">------------------------------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[filetype plugin on]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[filetype plugin indent on]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.cmd</span><span class="p">(</span><span class="s">[[syntax on]]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Clipboard</span>
+</span></span><span class="line"><span class="cl"><span class="c1">------------</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">clipboard</span> <span class="o">=</span> <span class="s2">&#34;unnamedplus&#34;</span> <span class="c1">-- Use system clipboard for copy/paste</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- vim.opt.backupdir = os.getenv(&#34;HOME&#34;) .. &#34;/.cache/vim&#34; -- Directory for backup files</span>
+</span></span></code></pre></div><p>On the plus side, now that it&rsquo;s lua the code block highlights the syntax. That&rsquo;s nice.</p>
+<h2 id="lazynvim" class="relative group">Lazy.nvim <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lazynvim" aria-label="Anchor">#</a></span></h2><hr>
+<p>If you&rsquo;re following along, please read the <a href="https://lazy.folke.io/" target="_blank" rel="noreferrer">Official lazy.nvim documentation</a> to install it since it might change overtime. At the time of install, following the structured setup, all you need to do is add a requirement to <code>init.lua</code> and the definition of that requirement., <code>lua/config/lazy.lua</code>. The <code>lazy.lua</code> file is what bootstraps lazy.nvim and sets it up.</p>
+<p>Here&rsquo;s the file structure for lazy.nvim:</p>
+<pre tabindex="0"><code>~/.config/nvim
+├── lua
+│   ├── config
+│   │   └── lazy.lua
+│   └── plugins
+│       ├── spec1.lua
+│       ├── **
+│       └── spec2.lua
+└── init.lua
+</code></pre><p>And <code>lazy.lua</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">-- Bootstrap lazy.nvim</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">lazypath</span> <span class="o">=</span> <span class="n">vim.fn</span><span class="p">.</span><span class="n">stdpath</span><span class="p">(</span><span class="s2">&#34;data&#34;</span><span class="p">)</span> <span class="o">..</span> <span class="s2">&#34;/lazy/lazy.nvim&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">vim.uv</span> <span class="ow">or</span> <span class="n">vim.loop</span><span class="p">).</span><span class="n">fs_stat</span><span class="p">(</span><span class="n">lazypath</span><span class="p">)</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">local</span> <span class="n">lazyrepo</span> <span class="o">=</span> <span class="s2">&#34;https://github.com/folke/lazy.nvim.git&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">local</span> <span class="n">out</span> <span class="o">=</span> <span class="n">vim.fn</span><span class="p">.</span><span class="n">system</span><span class="p">({</span> <span class="s2">&#34;git&#34;</span><span class="p">,</span> <span class="s2">&#34;clone&#34;</span><span class="p">,</span> <span class="s2">&#34;--filter=blob:none&#34;</span><span class="p">,</span> <span class="s2">&#34;--branch=stable&#34;</span><span class="p">,</span> <span class="n">lazyrepo</span><span class="p">,</span> <span class="n">lazypath</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span> <span class="n">vim.v</span><span class="p">.</span><span class="n">shell_error</span> <span class="o">~=</span> <span class="mi">0</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.api</span><span class="p">.</span><span class="n">nvim_echo</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="s2">&#34;Failed to clone lazy.nvim:</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">,</span> <span class="s2">&#34;ErrorMsg&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="n">out</span><span class="p">,</span> <span class="s2">&#34;WarningMsg&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">Press any key to exit...&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="kc">true</span><span class="p">,</span> <span class="p">{})</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.fn</span><span class="p">.</span><span class="n">getchar</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os.exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.opt</span><span class="p">.</span><span class="n">rtp</span><span class="p">:</span><span class="n">prepend</span><span class="p">(</span><span class="n">lazypath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Make sure to setup `mapleader` and `maplocalleader` before</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- loading lazy.nvim so that mappings are correct.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- This is also a good place to setup other settings (vim.opt)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.g</span><span class="p">.</span><span class="n">mapleader</span> <span class="o">=</span> <span class="s2">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.g</span><span class="p">.</span><span class="n">maplocalleader</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="se">\\</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- Setup lazy.nvim</span>
+</span></span><span class="line"><span class="cl"><span class="n">require</span><span class="p">(</span><span class="s2">&#34;lazy&#34;</span><span class="p">).</span><span class="n">setup</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="n">defaults</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">lazy</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="n">spec</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">-- import your plugins</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span> <span class="n">import</span> <span class="o">=</span> <span class="s2">&#34;plugins&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- Configure any other settings here. See the documentation for more details.</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- colorscheme that will be used when installing plugins.</span>
+</span></span><span class="line"><span class="cl">  <span class="n">install</span> <span class="o">=</span> <span class="p">{</span> <span class="n">colorscheme</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;default&#34;</span> <span class="p">}</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">-- automatically check for plugin updates</span>
+</span></span><span class="line"><span class="cl">  <span class="n">checker</span> <span class="o">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><p>Now let&rsquo;s install some plugins!</p>
+<h2 id="vim-airline" class="relative group">vim-airline <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-airline" aria-label="Anchor">#</a></span></h2><hr>
+<p>Let&rsquo;s start off simple, since I don&rsquo;t actually trust that I installed lazy.nvim correctly. <a href="https://github.com/vim-airline/vim-airline" target="_blank" rel="noreferrer">vim-airline</a> is a &ldquo;lean &amp; mean&rdquo; status line that sits just above the command area and below the window. I just think it looks better than the standard status line, and it should be a simple introduction to Plugin Specs.</p>
+<p>lazy.nvim uses something called a &ldquo;spec&rdquo; to define plugins for lazy.nvim. This defines where to download a plugin, the config of that plugin, what it&rsquo;s priority is, whether to load the plugin lazily, etc. I gotta be honest, having used VimPlug (another vim plugin manager) in the past I kind of miss being able to just declare a plugin and running with it. Specs can be a little more involved, and i&rsquo;m also a little disappointed that vim-awesome does not show lazy specs for plugins listed on their site. Then again, I haven&rsquo;t actually written the spec yet. Maybe it&rsquo;s easier than it looks.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;vim-airline/vim-airline&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">lazy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">-- needs to be available at start, no lazy</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And hey! Looks like that&rsquo;s all you need! We can see that the status line has changed to vim-airline in this screenshot:
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250226122249.png" alt="Pasted image 20250226122249.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+That window that opened is the Lazy manager window, whenever you need to manage plugins on the fly you use this window. By default, this opens every time you install a new plugin. If you need to access this while in neovim, you simply run <code>:Lazy</code>.</p>
+<h2 id="vim-gitgutter" class="relative group">vim-gitgutter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vim-gitgutter" aria-label="Anchor">#</a></span></h2><hr>
+<p>Damn! I way underestimated how hard it would be to pick out plugins, because they&rsquo;re all so good. I&rsquo;m trying not to overload myself to start, and to keep the number of plugins as small as possible (since more plugins $\approx slower editor). Let&rsquo;s play it safe with gitgutter, which will show changes in the gutter of neovim (far left side of the window).
+Here&rsquo;s the spec:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;airblade/vim-gitgutter&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		<span class="n">lazy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">-- needs to be available at start, no lazy</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250227205103.png" alt="Pasted image 20250227205103.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+See those <code>+</code>&rsquo;s on the left side of the screen? That&rsquo;s gitgutter! It just marks lines that are different from the previous commit.</p>
+<h2 id="nerdtree" class="relative group">NERDTree <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nerdtree" aria-label="Anchor">#</a></span></h2><hr>
+<p>Now this one&rsquo;s pretty neat, and it&rsquo;s going to be the first plugin that will be lazy loaded. NERDTree is a file explorer that runs inside neovim. I&rsquo;ll also be installing some plugins for NERDTree, mainly nerdtree-git-plugin &amp; vim-devicons.
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250305210629.png" alt="Pasted image 20250305210629.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+Here&rsquo;s the spec for NERDTree:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;preservim/nerdtree&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cmd</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&#34;NERDTreeToggle&#34;</span><span class="p">,</span> <span class="s2">&#34;NERDTreeFind&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="n">keys</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="s2">&#34;&lt;leader&gt;n&#34;</span><span class="p">,</span> <span class="s2">&#34;:NERDTreeToggle&lt;CR&gt;&#34;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&#34;Toggle NERDTree&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">          <span class="p">{</span> <span class="s2">&#34;&lt;leader&gt;f&#34;</span><span class="p">,</span> <span class="s2">&#34;:NERDTreeFind&lt;CR&gt;&#34;</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&#34;Find file in NERDTree&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="n">dependencies</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;Xuyuanp/nerdtree-git-plugin&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">          <span class="n">vim.g</span><span class="p">.</span><span class="n">NERDTreeShowHidden</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">-- Show hidden files</span>
+</span></span><span class="line"><span class="cl">          <span class="n">vim.g</span><span class="p">.</span><span class="n">NERDTreeMinimalUI</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1">-- Simplify UI</span>
+</span></span><span class="line"><span class="cl">          <span class="n">vim.g</span><span class="p">.</span><span class="n">NERDTreeDirArrows</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1">-- Enable arrows for directories</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">end</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And the spec for vim-devicons:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="s2">&#34;ryanoasis/vim-devicons&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="nerd-commenter" class="relative group">NERD Commenter <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nerd-commenter" aria-label="Anchor">#</a></span></h2><hr>
+<p>The NERD Tools are really good, you kinda can&rsquo;t go wrong with one. This tool makes commenting almost as easy as it would be in VSCode (with Ctrl+/). Simply select test in visual mode, or leave your cursor on a line to be commented, then run any of these commands:</p>
+<ul>
+<li><code>[count]&lt;leader&gt;cc</code> <strong>|NERDCommenterComment|</strong>
+<ul>
+<li>Comment out the current line or text selected in visual mode.</li>
+</ul>
+</li>
+<li><code>[count]&lt;leader&gt;cn</code> <strong>|NERDCommenterNested|</strong>
+<ul>
+<li>Same as cc but forces nesting.</li>
+</ul>
+</li>
+<li><code>[count]&lt;leader&gt;c&lt;space&gt;</code> <strong>|NERDCommenterToggle|</strong>
+<ul>
+<li>Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.</li>
+</ul>
+</li>
+<li><code>[count]&lt;leader&gt;cm</code> <strong>|NERDCommenterMinimal|</strong>
+<ul>
+<li>Comments the given lines using only one set of multipart delimiters.</li>
+</ul>
+</li>
+<li><code>[count]&lt;leader&gt;ci</code> <strong>|NERDCommenterInvert|</strong>
+<ul>
+<li>Toggles the comment state of the selected line(s) individually.</li>
+</ul>
+</li>
+<li><code>[count]&lt;leader&gt;cs</code> <strong>|NERDCommenterSexy|</strong>
+<ul>
+<li>Comments out the selected lines with a pretty block formatted layout.</li>
+</ul>
+</li>
+<li><code>[count]&lt;leader&gt;cy</code> <strong>|NERDCommenterYank|</strong>
+<ul>
+<li>Same as cc except that the commented line(s) are yanked first.</li>
+</ul>
+</li>
+<li><code>&lt;leader&gt;c$</code> <strong>|NERDCommenterToEOL|</strong>
+<ul>
+<li>Comments the current line from the cursor to the end of line.</li>
+</ul>
+</li>
+<li><code>&lt;leader&gt;cA</code> <strong>|NERDCommenterAppend|</strong>
+<ul>
+<li>Adds comment delimiters to the end of line and goes into insert mode between them.</li>
+</ul>
+</li>
+<li><code>&lt;leader&gt;ca</code> <strong>|NERDCommenterAltDelims|</strong>
+<ul>
+<li>Switches to the alternative set of delimiters.</li>
+</ul>
+</li>
+<li><code>[count]&lt;leader&gt;cl</code> <strong>|NERDCommenterAlignLeft</strong> <code>[count]&lt;leader&gt;cb</code> <strong>|NERDCommenterAlignBoth</strong>
+<ul>
+<li>Same as <strong>|NERDCommenterComment|</strong> except that the delimiters are aligned down the left side (<code>&lt;leader&gt;cl</code>) or both sides (<code>&lt;leader&gt;cb</code>).</li>
+</ul>
+</li>
+<li><code>[count]&lt;leader&gt;cu</code> <strong>|NERDCommenterUncomment|</strong>
+<ul>
+<li>Uncomments the selected line(s).
+Here&rsquo;s the spec:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span><span class="s2">&#34;scrooloose/nerdcommenter&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="syntastic" class="relative group">Syntastic <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#syntastic" aria-label="Anchor">#</a></span></h2><hr>
+<p>Syntastic is a syntax checking plugin for vim. Here&rsquo;s the spec:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;vim-syntastic/syntastic&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">lazy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">-- Ensure it loads on startup</span>
+</span></span><span class="line"><span class="cl">  <span class="n">config</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">-- Example configuration</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.g</span><span class="p">.</span><span class="n">syntastic_always_populate_loc_list</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.g</span><span class="p">.</span><span class="n">syntastic_auto_loc_list</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.g</span><span class="p">.</span><span class="n">syntastic_check_on_open</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.g</span><span class="p">.</span><span class="n">syntastic_check_on_wq</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Syntastic comes with <em>almost</em> every checker you might need, but for the ones that aren&rsquo;t you&rsquo;ll need to install the checker yourself. Check the syntastic page for information.</p>
+<p>I Purposefully broke this spec to see if it detected bad syntax. And it does!
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Software/Getting%20Started%20with%20Neovim/Pasted%20image%2020250305211905.png" alt="Pasted image 20250305211905.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
+But only when you save the file. You can always run <code>:SyntasticCheck</code>, but why not save the file? It might reinforce some good behavior.</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><hr>
+<p>Okay, I have <strong>GOT</strong> to stop with it. I kept looking at every plugin and vexing over whether it would actually get used or not, or if I was going to end up adding too many plugins. This is a pretty good start point, though, and I can always change stuff later. Because of how Lazy handles plugins modularly, it&rsquo;s easy to just edit the spec of any plugin I want since they are all separated.</p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="896"
+        height="896"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Dylan Calvin"
+        loading="lazy" decoding="async"
+        
+          src="https://blog.coeus.icu/img/square_updated_headshot_hu_645d99654a437ba6.png" srcset="https://blog.coeus.icu/img/square_updated_headshot_hu_dde6f326614f56b9.png 330w,https://blog.coeus.icu/img/square_updated_headshot_hu_645d99654a437ba6.png 660w
+          
+            ,https://blog.coeus.icu/img/square_updated_headshot.png 896w
+          
+          
+            ,https://blog.coeus.icu/img/square_updated_headshot.png 896w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Dylan Calvin
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Currently pursuing my Master&rsquo;s Degree in Comp Sci @ Georgia Tech, Avid Homelabber.</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/bigdale123"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/dylancalvin"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://youtube.com/@dylancalvin9357"
+          target="_blank"
+          aria-label="Youtube"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Disabling Background Scanning on NetworkManager when connected</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-02-27 00:00:00 &#43;0000 UTC">February 27, 2025</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="https://blog.coeus.icu/posts/getting-started-with-neovim/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Getting Started with Neovim</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-03-05 00:00:00 &#43;0000 UTC">March 5, 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            Dylan Calvin
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://blog.coeus.icu/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

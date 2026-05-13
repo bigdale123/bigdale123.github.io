@@ -9,6 +9,13 @@
     <lastBuildDate>Tue, 12 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://blog.coeus.icu/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>A City Built on Lies - Faking a Year of Github Activity</title>
+      <link>https://blog.coeus.icu/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</link>
+      <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Post of Shame</title>
       <link>https://blog.coeus.icu/posts/post-of-shame/</link>
       <pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
@@ -23,10 +30,24 @@
       <description></description>
     </item>
     <item>
+      <title>FT8: A Beginner&#39;s Guide</title>
+      <link>https://blog.coeus.icu/posts/ham-radio/ft8---a-beginners-guide/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/ham-radio/ft8---a-beginners-guide/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Back From the Dead!</title>
       <link>https://blog.coeus.icu/posts/back-from-the-dead/</link>
       <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.coeus.icu/posts/back-from-the-dead/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Taking Pictures of Space</title>
+      <link>https://blog.coeus.icu/posts/space/taking-pictures-of-space/</link>
+      <pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/space/taking-pictures-of-space/</guid>
       <description></description>
     </item>
     <item>
@@ -44,10 +65,24 @@
       <description></description>
     </item>
     <item>
+      <title>Getting Started with Neovim</title>
+      <link>https://blog.coeus.icu/posts/software/getting-started-with-neovim/</link>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/software/getting-started-with-neovim/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Disabling Background Scanning on NetworkManager when connected</title>
       <link>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</link>
       <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Disabling Background Scanning on NetworkManager when connected</title>
+      <link>https://blog.coeus.icu/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</link>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</guid>
       <description></description>
     </item>
     <item>
@@ -58,10 +93,31 @@
       <description></description>
     </item>
     <item>
+      <title>A (Mostly) Exhaustive List of Keybinds and Commands for Vim</title>
+      <link>https://blog.coeus.icu/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
+      <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Blog Tweaks: Pedantic Perils</title>
       <link>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</link>
       <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog Tweaks: Pedantic Perils</title>
+      <link>https://blog.coeus.icu/posts/software/blog-tweaks-pedantic-perils/</link>
+      <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/software/blog-tweaks-pedantic-perils/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Listening to the Police Scanner with SDR Trunk</title>
+      <link>https://blog.coeus.icu/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://blog.coeus.icu/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</guid>
       <description></description>
     </item>
     <item>

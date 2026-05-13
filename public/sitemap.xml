@@ -4,9 +4,20 @@
   
     
       <url>
+            <loc>https://blog.coeus.icu/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</loc>
+            <lastmod>2026-05-12T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
             <loc>https://blog.coeus.icu/</loc>
             <lastmod>2026-05-12T00:00:00+00:00</lastmod>
           </url>
+    
+  
+    
+  
     
   
     
@@ -28,8 +39,17 @@
     
   
     
+  
+    
       <url>
             <loc>https://blog.coeus.icu/posts/ft8---a-beginners-guide/</loc>
+            <lastmod>2025-08-12T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://blog.coeus.icu/posts/ham-radio/ft8---a-beginners-guide/</loc>
             <lastmod>2025-08-12T00:00:00+00:00</lastmod>
           </url>
     
@@ -48,6 +68,11 @@
     
   
     
+      <url>
+            <loc>https://blog.coeus.icu/posts/space/taking-pictures-of-space/</loc>
+            <lastmod>2025-03-28T00:00:00+00:00</lastmod>
+          </url>
+    
   
     
       <url>
@@ -64,6 +89,11 @@
     
   
     
+      <url>
+            <loc>https://blog.coeus.icu/posts/software/getting-started-with-neovim/</loc>
+            <lastmod>2025-03-05T00:00:00+00:00</lastmod>
+          </url>
+    
   
     
   
@@ -79,10 +109,24 @@
     
   
     
+      <url>
+            <loc>https://blog.coeus.icu/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</loc>
+            <lastmod>2025-02-27T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
   
     
       <url>
             <loc>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
+            <lastmod>2025-02-25T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://blog.coeus.icu/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
             <lastmod>2025-02-25T00:00:00+00:00</lastmod>
           </url>
     
@@ -95,7 +139,21 @@
     
   
     
+      <url>
+            <loc>https://blog.coeus.icu/posts/software/blog-tweaks-pedantic-perils/</loc>
+            <lastmod>2025-02-23T00:00:00+00:00</lastmod>
+          </url>
+    
   
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://blog.coeus.icu/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</loc>
+            <lastmod>2025-02-20T00:00:00+00:00</lastmod>
+          </url>
     
   
     

@@ -16,3 +16,25 @@
 .dark .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
     background-color: #404040 !important; /* Force dark mode */
 }
+
+.prose :where(hr):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    border-color: var(--tw-prose-hr);
+    border-top-width: 1px;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.prose :where(h1):not(:where([class~=not-prose],[class~=not-prose] *)) {
+    color: var(--tw-prose-headings);
+    font-weight: 800;
+    font-size: 2.25em;
+    margin-top: 2em;
+    margin-bottom: 0.7rem;
+    line-height: 1.1111111;
+}
+
+/* .max-w-prose {
+  max-width: 65ch; /* or whatever width you prefer */
+  margin-left: auto;
+  margin-right: auto;
+} */
