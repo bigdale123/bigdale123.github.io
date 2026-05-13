@@ -142,7 +142,7 @@
     "keywords": ["Miscellaneous","Software","Engineering","PostOfShame"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "867"
+    "wordCount": "868"
   }
   </script>
     
@@ -587,7 +587,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-05-12 00:00:00 &#43;0000 UTC">May 12, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>867 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+      <time datetime="2026-05-12 00:00:00 &#43;0000 UTC">May 12, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>868 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -642,7 +642,9 @@
         <h1 id="this-is-a-post-of-shame" class="relative group">This is a Post of Shame <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#this-is-a-post-of-shame" aria-label="Anchor">#</a></span></h1><hr>
 <p>I had meant to post this right after the end of the experiment, in January of 2026. But y&rsquo;know, I forgot about all this and didn&rsquo;t feel like writing it up. Until now!</p>
 <h1 id="the-github-skyline" class="relative group">The Github Skyline <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-github-skyline" aria-label="Anchor">#</a></span></h1><hr>
-<p>Do you remember when Github introduced the skyline? It was a neat concept where it would take the activity graph you see on your Github profile and turn it into a 3d representation, and since it looked a lot like a city (if you had a lot of activity), they called it skyline. ![[Blog Content/posts/Software/attachments/Pasted image 20260512182504.png]]It originally started in 2021, and only ran as a web page until 2024. They would later turn it into a <code>gh-cli</code> extension that accomplishes the same goal. I have always wanted to print one of these skylines on my 3D printer, but I normally don&rsquo;t have much, if any, Github activity. Usually I do most of my development on my Seafile server, then every so often do a mass backup where I make sure there is a copy of all my work on Github. This does not make for a great activity graph.</p>
+<p>Do you remember when Github introduced the skyline? It was a neat concept where it would take the activity graph you see on your Github profile and turn it into a 3d representation, and since it looked a lot like a city (if you had a lot of activity), they called it skyline.
+![[Blog Content/posts/Software/attachments/Pasted image 20260512182504.png]]
+It originally started in 2021, and only ran as a web page until 2024. They would later turn it into a <code>gh-cli</code> extension that accomplishes the same goal. I have always wanted to print one of these skylines on my 3D printer, but I normally don&rsquo;t have much, if any, Github activity. Usually I do most of my development on my Seafile server, then every so often do a mass backup where I make sure there is a copy of all my work on Github. This does not make for a great activity graph.</p>
 <p>That is when I had an idea. An awful idea. I had a wonderful, awful idea. I know just what to do! I&rsquo;ll write up a script that runs every day, and generates a random number of commits to a private repository every morning. That way after a year of continuous running, i&rsquo;ll have a nice populated skyline. And so I did just that!</p>
 <h1 id="how-the-script-works" class="relative group">How the Script works <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#how-the-script-works" aria-label="Anchor">#</a></span></h1><hr>
 <p>I made my script as a bash script, so that I could brush up on the syntax a bit. It&rsquo;s very simple. So simple, I can include the whole thing right here:</p>
@@ -702,8 +704,9 @@ The script is started via a cron job set to run every day.</li>
 And here&rsquo;s the skyline I printed!
 ![[Blog Content/posts/Software/attachments/IMG_20260512_201159780_HDR.jpg]]</p>
 <h1 id="a-realization" class="relative group">A Realization <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#a-realization" aria-label="Anchor">#</a></span></h1><hr>
-<p>This project helped me to realize commit activity is not a sole measure of proficiency or productivity, as it can be easily faked. Of course, if all the commit activity is occurring in public repositories there is a sort of &ldquo;proof of work&rdquo;. But most people that work on personal projects likely use private repositories, especially since universities are starting to enforce the use of private repositories for homework. I have heard of several universities including this rule in their Academic Honor policies, and if somebody were to copy your work because your homework repo was public you&rsquo;d get cited for a violation of this policy. I feel if you wanted to use this concept of padding your github activity to look more attractive to potential employers, &ldquo;less is more&rdquo;. For example my activity chart is very dense, but that is because I faked my activity with the sole purpose of generating a nice skyline. If you were to sparsely pad your github activity with 1-4 commits on random days, it would probably be more believable.</p>
-<p>Well, that&rsquo;s it. Just a small little project to accomplish something I had always wanted to print. And I don&rsquo;t care that I cheated, I just like the way the skyline looks.</p>
+<p>This project helped me to realize commit activity is not a sole measure of proficiency or productivity, as it can be easily faked. Of course, if all the commit activity is occurring in public repositories there is a sort of &ldquo;proof of work&rdquo;. But most people that work on personal projects likely use private repositories, especially since universities are starting to enforce the use of private repositories for homework. I have heard of several universities including this rule in their Academic Honor policies, and if somebody were to copy your work because your homework repo was public you&rsquo;d get cited for a violation of this policy. I feel if you wanted to use this concept of padding your github activity to look more attractive to potential employers, &ldquo;less is more&rdquo;. For example my activity chart is very dense, but that is because I faked my activity with the sole purpose of generating a nice skyline. If you were to sparsely pad your github activity with 1-4 commits on random days, it would probably be more believable.
+<br>
+Well, that&rsquo;s it. Just a small little project to accomplish something I had always wanted to print. And I don&rsquo;t care that I cheated, I just like the way the skyline looks.</p>
 
       </div>
     </section>
