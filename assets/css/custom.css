@@ -33,8 +33,8 @@
     line-height: 1.1111111;
 }
 
-/* .max-w-prose {
+.max-w-prose {
   max-width: 65ch; /* or whatever width you prefer */
   margin-left: auto;
   margin-right: auto;
-} */
+}
