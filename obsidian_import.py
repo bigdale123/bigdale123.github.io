@@ -125,14 +125,14 @@ if __name__ == "__main__":
     path_to_vault_folder = sys.argv[1]
     copy_vault_files(path_to_vault_folder)
 
-    choice = input("\nPublish these changes? (yes/no): ").strip().lower()
-    if "y" in choice:
-        commit_message = (
-            f"Automated Publish on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-        )
-        if "y" in input("Write a custom commit message? (yes/no): ").strip().lower():
-            commit_message = input("Commit message: ").strip()
-        publish(commit_message)
-    else:
-        if "y" in input("Preview with `hugo serve`? (yes/no): ").strip().lower():
-            subprocess.run(["hugo", "serve", "--disableFastRender"])
+    # choice = input("\nPublish these changes? (yes/no): ").strip().lower()
+    # if "y" in choice:
+        # commit_message = (
+            # f"Automated Publish on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+        # )
+        # if "y" in input("Write a custom commit message? (yes/no): ").strip().lower():
+            # commit_message = input("Commit message: ").strip()
+        # publish(commit_message)
+    # else:
+        # if "y" in input("Preview with `hugo serve`? (yes/no): ").strip().lower():
+            # subprocess.run(["hugo", "serve", "--disableFastRender"])
