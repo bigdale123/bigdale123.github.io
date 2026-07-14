@@ -141,7 +141,7 @@
     "keywords": ["RTL-SDR","Software","Miscellaneous"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1174"
+    "wordCount": "1149"
   }
   </script>
     
@@ -581,7 +581,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-02-20 00:00:00 &#43;0000 UTC">February 20, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1174 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+      <time datetime="2025-02-20 00:00:00 &#43;0000 UTC">February 20, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1149 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
     
 
     
@@ -657,10 +657,32 @@
 <p>Mac seems like you don&rsquo;t need to do anything? weird. But I don&rsquo;t care. Moving on!</p>
 <h1 id="install--setup-sdr-trunk" class="relative group">Install &amp; Setup SDR Trunk <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#install--setup-sdr-trunk" aria-label="Anchor">#</a></span></h1><hr>
 <p>Pretty easy, download from the <a href="https://github.com/DSheirer/sdrtrunk/releases/latest" target="_blank" rel="noreferrer">Releases Page</a> or install through your package manager (I used the AUR). Once done, you should see an interface like this:
-![Pasted image 20250220165945.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220165945.png)
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220165945.png" alt="Pasted image 20250220165945.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
 You will likely get prompted to perform CPU calibrations if it&rsquo;s the first time running the program, go ahead and accept. Let it do it&rsquo;s thing.
 While that&rsquo;s going, we can actually do one more thing. We need to install the JMBE library, responsible for audio decoding. Click the &ldquo;Create Library&rdquo; button, and install the jar file. You should see something like this in the settings menu once it&rsquo;s setup properly:
-![Pasted image 20250220170416.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220170416.png)
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220170416.png" alt="Pasted image 20250220170416.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
 By now, the JMBE library and the CPU calibration should both be done. The blue, red, orange thing is called a &ldquo;waterfall&rdquo;. Basically a spectrum analyzer, and it&rsquo;s purpose is to show signals and their strength in the range of frequencies being viewed. If it is killing your resource usage, you can disable it by right clicking on it and disabling it.</p>
 <h1 id="building-our-playlist" class="relative group">Building our Playlist <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#building-our-playlist" aria-label="Anchor">#</a></span></h1><hr>
 <p>Alright, here&rsquo;s the true hard part of getting SDR Trunk working. SDR Trunk uses a playlist to manage all the information needed for listening to trunked systems. This includes:</p>
@@ -670,9 +692,31 @@ By now, the JMBE library and the CPU calibration should both be done. The blue, 
 If you bare bones it, it&rsquo;s not hard, but you will be missing some useful data like correct talkgroups and aliases and stuff.</li>
 </ul>
 <p>I <em><strong>Highly</strong></em> encourage you to pay for a <a href="https://www.radioreference.com/" target="_blank" rel="noreferrer">Radio Reference</a>, just one time. They&rsquo;re not expensive, and it&rsquo;s worth the time you can save. Because&hellip;
-![Pasted image 20250220172550.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220172550.png)
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220172550.png" alt="Pasted image 20250220172550.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
 You can import all the data for your area straight from Radio Reference if you have a subscription!
-![yippee-happy.gif](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/yippee-happy.gif)
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/yippee-happy.gif" alt="yippee-happy.gif" class="mx-auto my-0 rounded-md" />
+</figure>
+
 Just make an account, buy a subscription, and then import a system. If you really want to make the most out of your subscription, Backup your playlists of imported data before your subscription runs out. Then in the future, just update any relevant data when a channel quits working.</p>
 <p>I will not go over how to build a playlist manually, if you want to do that (masochist) go read the <a href="https://github.com/DSheirer/sdrtrunk/wiki" target="_blank" rel="noreferrer">SDRTrunk Wiki</a> and figure it out yourself.</p>
 <h1 id="tuning-into-a-site" class="relative group">Tuning into a site <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tuning-into-a-site" aria-label="Anchor">#</a></span></h1><hr>
@@ -683,16 +727,49 @@ Just make an account, buy a subscription, and then import a system. If you reall
 <li>go to the channels section</li>
 <li>Find the site you want to listen to</li>
 <li>click on it, then press the play button
-![Pasted image 20250220173132.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220173132.png)
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220173132.png" alt="Pasted image 20250220173132.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
 You can see in my playlist that I picked the &ldquo;Jefferson County Simulcast&rdquo; site, and the big play button.
-![Pasted image 20250220173227.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220173227.png)
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220173227.png" alt="Pasted image 20250220173227.png" class="mx-auto my-0 rounded-md" />
+</figure>
+
 You should have success! If you see a &ldquo;CONTROL&rdquo; channel, you&rsquo;ve tuned into the trunked system correctly. If aliases are set up properly, those will show up in the Alias column.
 Any sub channels that are pink and say &ldquo;ENCRYPTED&rdquo; can&rsquo;t be played, but any blue channels that say &ldquo;CALL&rdquo; can. SDRTrunk can play 2 calls at the same time, one on the left audio channel and another on the right audio channel. It can get chaotic, and I haven&rsquo;t learned how to enforce a single call to play at a time.</li>
 </ul>
 <p>You can setup recording each snippet that comes in for any given alias, just go to the alias and set it to record audio. Whenever a call occurs with the alias being part of that call, the audio segment will get saved to disk.</p>
 <p>That&rsquo;s about all I know, SDRTrunk is a neat program to run every once in a while. I&rsquo;ll put a link to my playlist <a href="https://github.com/bigdale123/bigdale123.github.io/blob/main/files/Jeff_Co_APRS_Radio_Reference.xml" target="_blank" rel="noreferrer">here</a> once I get it uploaded in the blog repo, in case anybody in &lsquo;Bama wants to give this a try. Other states, you&rsquo;re on your own 😉</p>
 <p>Speaking of blog, This post is the first post to contain a gif! Which I thought was previously not going to work, but I forgot I already implemented that when I wrote my import script.
-![think-smart-meme-945257677 1.gif](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/think-smart-meme-945257677%201.gif)</p>
+
+
+
+
+
+
+
+  
+  
+<figure><img src="/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/think-smart-meme-945257677%201.gif" alt="think-smart-meme-945257677 1.gif" class="mx-auto my-0 rounded-md" />
+</figure>
+</p>
 
       </div>
     </section>

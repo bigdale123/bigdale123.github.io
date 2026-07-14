@@ -47,10 +47,10 @@ Mac seems like you don't need to do anything? weird. But I don't care. Moving on
 # Install & Setup SDR Trunk
 ***
 Pretty easy, download from the [Releases Page](https://github.com/DSheirer/sdrtrunk/releases/latest) or install through your package manager (I used the AUR). Once done, you should see an interface like this:
-![Pasted image 20250220165945.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220165945.png)
+![Pasted image 20250220165945.png](/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220165945.png)
 You will likely get prompted to perform CPU calibrations if it's the first time running the program, go ahead and accept. Let it do it's thing.
 While that's going, we can actually do one more thing. We need to install the JMBE library, responsible for audio decoding. Click the "Create Library" button, and install the jar file. You should see something like this in the settings menu once it's setup properly:
-![Pasted image 20250220170416.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220170416.png)
+![Pasted image 20250220170416.png](/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220170416.png)
 By now, the JMBE library and the CPU calibration should both be done. The blue, red, orange thing is called a "waterfall". Basically a spectrum analyzer, and it's purpose is to show signals and their strength in the range of frequencies being viewed. If it is killing your resource usage, you can disable it by right clicking on it and disabling it.
 
 # Building our Playlist
@@ -61,9 +61,9 @@ Alright, here's the true hard part of getting SDR Trunk working. SDR Trunk uses 
 If you bare bones it, it's not hard, but you will be missing some useful data like correct talkgroups and aliases and stuff. 
 
 I ***Highly*** encourage you to pay for a [Radio Reference](https://www.radioreference.com/), just one time. They're not expensive, and it's worth the time you can save. Because...
-![Pasted image 20250220172550.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220172550.png)
+![Pasted image 20250220172550.png](/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220172550.png)
 You can import all the data for your area straight from Radio Reference if you have a subscription!
-![yippee-happy.gif](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/yippee-happy.gif)
+![yippee-happy.gif](/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/yippee-happy.gif)
 Just make an account, buy a subscription, and then import a system. If you really want to make the most out of your subscription, Backup your playlists of imported data before your subscription runs out. Then in the future, just update any relevant data when a channel quits working.
 
 I will not go over how to build a playlist manually, if you want to do that (masochist) go read the [SDRTrunk Wiki](https://github.com/DSheirer/sdrtrunk/wiki) and figure it out yourself.
@@ -76,9 +76,9 @@ So easy it doesn't really deserve a section.
 - go to the channels section
 - Find the site you want to listen to
 - click on it, then press the play button
-![Pasted image 20250220173132.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220173132.png)
+![Pasted image 20250220173132.png](/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220173132.png)
 You can see in my playlist that I picked the "Jefferson County Simulcast" site, and the big play button. 
-![Pasted image 20250220173227.png](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220173227.png)
+![Pasted image 20250220173227.png](/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/Pasted%20image%2020250220173227.png)
 You should have success! If you see a "CONTROL" channel, you've tuned into the trunked system correctly. If aliases are set up properly, those will show up in the Alias column. 
 Any sub channels that are pink and say "ENCRYPTED" can't be played, but any blue channels that say "CALL" can. SDRTrunk can play 2 calls at the same time, one on the left audio channel and another on the right audio channel. It can get chaotic, and I haven't learned how to enforce a single call to play at a time.
 
@@ -87,4 +87,4 @@ You can setup recording each snippet that comes in for any given alias, just go 
 That's about all I know, SDRTrunk is a neat program to run every once in a while. I'll put a link to my playlist [here](https://github.com/bigdale123/bigdale123.github.io/blob/main/files/Jeff_Co_APRS_Radio_Reference.xml) once I get it uploaded in the blog repo, in case anybody in 'Bama wants to give this a try. Other states, you're on your own 😉
 
 Speaking of blog, This post is the first post to contain a gif! Which I thought was previously not going to work, but I forgot I already implemented that when I wrote my import script.
-![think-smart-meme-945257677 1.gif](/attachments/Ham Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/think-smart-meme-945257677%201.gif)
+![think-smart-meme-945257677 1.gif](/attachments/Ham%20Radio/Listening%20to%20the%20Police%20Scanner%20with%20SDR%20Trunk/think-smart-meme-945257677%201.gif)

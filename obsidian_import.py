@@ -95,7 +95,7 @@ def _process_markdown(file_path, rel_dir):
         os.makedirs(attachments_dst, exist_ok=True)
         shutil.copy2(image_src, os.path.join(attachments_dst, image_filename))
 
-        parts = [p for p in rel_dir.replace("\\", "/").split("/") if p != "."]
+        parts = [p.replace(" ", "%20") for p in rel_dir.replace("\\", "/").split("/") if p != "."]
         url_path = "/".join(
             ["/attachments"] + parts + [post_title.replace(" ", "%20"), image_filename.replace(" ", "%20")]
         )

@@ -58,9 +58,9 @@ rclone-webdav  | 2026/05/31 15:11:55 NOTICE: Local file system at /data/local/da
 ---
 So the "hard part" is done, now we need to configure our RetroArch clients with the WebDAV details and setup sync.
 
-{{<alert "triangle-exclamation">}} Check your RetroArch version!!
+{{<alert "triangle-exclamation">}} 
 
-Cloud Sync is a relatively new feature on some platforms. For instance, Android only got Cloud Sync support in 2025. If you try to find the Cloud Sync option on your RetroArch version and it's not there, you are likely running an old version!
+Check your RetroArch version!! Cloud Sync is a relatively new feature on some platforms. For instance, Android only got Cloud Sync support in 2025. If you try to find the Cloud Sync option on your RetroArch version and it's not there, you are likely running an old version!
 {{</alert>}}
 
 We need to setup an initial client, so let's start by going to **Settings → Saving → Cloud Sync** on RetroArch.

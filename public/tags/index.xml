@@ -10,28 +10,63 @@
 		
 		
 		
-			<lastBuildDate>Sun, 31 May 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Emulation</title>
-				<link>http://localhost:1313/tags/emulation/</link>
-				<pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/tags/emulation/</guid>
+				<title>BBS</title>
+				<link>http://localhost:1313/tags/bbs/</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/bbs/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>C64U</title>
+				<link>http://localhost:1313/tags/c64u/</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/c64u/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Homelab</title>
 				<link>http://localhost:1313/tags/homelab/</link>
-				<pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/tags/homelab/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Self-Hosting</title>
+				<link>http://localhost:1313/tags/self-hosting/</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/self-hosting/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Software</title>
 				<link>http://localhost:1313/tags/software/</link>
-				<pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
 				<guid>http://localhost:1313/tags/software/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Synchronet</title>
+				<link>http://localhost:1313/tags/synchronet/</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/synchronet/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>VintageComputing</title>
+				<link>http://localhost:1313/tags/vintagecomputing/</link>
+				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/vintagecomputing/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Emulation</title>
+				<link>http://localhost:1313/tags/emulation/</link>
+				<pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/tags/emulation/</guid>
 				<description></description>
 			</item>
 			<item>
