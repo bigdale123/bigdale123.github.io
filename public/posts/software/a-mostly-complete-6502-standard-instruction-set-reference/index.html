@@ -1,0 +1,3921 @@
+
+  
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>A (Mostly) Complete 6502 Standard Instruction Set Reference &middot; bigdale123&#39;s Blog</title>
+    <meta name="title" content="A (Mostly) Complete 6502 Standard Instruction Set Reference &middot; bigdale123&#39;s Blog" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://blog.coeus.icu/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://blog.coeus.icu/css/main.bundle.min.cf0a590592673ae80ee049a61c06e6bbeaef85235a1598a7bbd3dc69ca93c0d3.css"
+    integrity="sha256-zwpZBZJnOugO4EmmHAbmu&#43;rvhSNaFZinu9PcacqTwNM="
+  />
+  
+    
+    
+    
+  
+  
+  
+    
+    
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="https://blog.coeus.icu/js/main.bundle.min.ad7c1061b54aa5c79b6614847630c72567108bdf84dbf18d025ed692b0074cfe.js"
+      integrity="sha256-rXwQYbVKpcebZhSEdjDHJWcQi9&#43;E2/GNAl7WkrAHTP4="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="https://blog.coeus.icu/posts/software/a-mostly-complete-6502-standard-instruction-set-reference/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://blog.coeus.icu/posts/software/a-mostly-complete-6502-standard-instruction-set-reference/">
+	<meta property="og:site_name" content="bigdale123&#39;s Blog">
+	<meta property="og:title" content="A (Mostly) Complete 6502 Standard Instruction Set Reference">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-07-20T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-07-20T00:00:00+00:00">
+		<meta property="article:tag" content="Software">
+		<meta property="article:tag" content="C64U">
+		<meta property="article:tag" content="VintageComputing">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="A (Mostly) Complete 6502 Standard Instruction Set Reference">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "A (Mostly) Complete 6502 Standard Instruction Set Reference",
+    "headline": "A (Mostly) Complete 6502 Standard Instruction Set Reference",
+    
+    
+    "inLanguage": "en",
+    "url" : "https:\/\/blog.coeus.icu\/posts\/software\/a-mostly-complete-6502-standard-instruction-set-reference\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Dylan Calvin"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-20T00:00:00\u002b00:00",
+    "datePublished": "2026-07-20T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-07-20T00:00:00\u002b00:00",
+    
+    "keywords": ["Software","C64U","VintageComputing"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "10454"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://blog.coeus.icu/",
+       "name": "Bigdale123's Blog",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://blog.coeus.icu/posts/",
+       "name": "Posts",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "A ( Mostly) Complete 6502 Standard Instruction Set Reference",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="Dylan Calvin" />
+  
+  
+    
+      <link href="https://github.com/bigdale123" rel="me" />
+    
+      <link href="https://linkedin.com/in/dylancalvin" rel="me" />
+    
+      <link href="https://youtube.com/@dylancalvin9357" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >bigdale123&rsquo;s Blog</a
+  >
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/posts/"
+                      title="Posts"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Posts</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/tags/"
+                      title="Tags"
+                      onclick="close_menu()"
+                      
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Tags</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    
+                      <button
+                        id="search-button-1"
+                        title="Search (/)"
+                      >
+                        
+                          <span
+                            class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                          ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </button>
+                    
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    
+                    <button
+                      id="appearance-switcher-1"
+                      type="button"
+                      aria-label="appearance switcher"
+                    >
+                      <span
+                        class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                        title="Switch to dark appearance"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </span>
+                      <span
+                        class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                        title="Switch to light appearance"
+                      >
+                        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span><span
+                            class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                            ></span
+                          >
+                        
+                      </span>
+                    </button>
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/index.xml"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      
+                      >
+                        <span
+                          class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                        ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+</span></span><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          ></span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                  
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Posts</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/tags/"
+                  title="Tags"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Tags</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                
+                  <button
+                    id="search-button-2"
+                    title="Search (/)"
+                  >
+                    
+                      <span
+                        class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                      ><span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span></span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </button>
+                
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                
+                <button
+                  id="appearance-switcher-2"
+                  type="button"
+                  aria-label="appearance switcher"
+                >
+                  <span
+                    class="group-dark:hover:text-primary-400 inline transition-colors group-hover:text-primary-600 dark:hidden"
+                    title="Switch to dark appearance"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </span>
+                  <span
+                    class="group-dark:hover:text-primary-400 hidden transition-colors group-hover:text-primary-600 dark:inline"
+                    title="Switch to light appearance"
+                  >
+                    <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span><span
+                        class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                        ></span
+                      >
+                    
+                  </span>
+                </button>
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/index.xml"
+                  title=""
+                  
+                  
+                  >
+                    <span
+                      class="group-dark:hover:text-primary-400 transition-colors group-hover:text-primary-600"
+                    ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM0 416a64 64 0 1 1 128 0A64 64 0 1 1 0 416zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+</span></span><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      ></span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+              
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="https://blog.coeus.icu/"
+      >bigdale123&#39;s Blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class=" inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="https://blog.coeus.icu/posts/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden inline">
+    <a
+      class="dark:underline-neutral-600 decoration-neutral-300 hover:underline"
+      href="https://blog.coeus.icu/posts/software/a-mostly-complete-6502-standard-instruction-set-reference/"
+      >A (Mostly) Complete 6502 Standard Instruction Set Reference</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        A (Mostly) Complete 6502 Standard Instruction Set Reference
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-20 00:00:00 &#43;0000 UTC">July 20, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>10454 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">50 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+      
+        
+      
+        
+          
+            <a
+              href="https://blog.coeus.icu/tags/software/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Software</a
+            >
+          
+            <a
+              href="https://blog.coeus.icu/tags/c64u/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >C64U</a
+            >
+          
+            <a
+              href="https://blog.coeus.icu/tags/vintagecomputing/"
+              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >VintageComputing</a
+            >
+          
+        
+      
+    </div>
+  
+
+
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>I have been working on this for a couple days, in preparation for writing machine code on the C64 and Apple-1 and other 6502 based machines. I wanted something that I could edit and reference in other documents as I start to acrue some practical knowledge, so I took to adapting the already excellent reference document found at <a href="https://masswerk.at/6502/6502_instruction_set.html" target="_blank" rel="noreferrer">https://masswerk.at/6502/6502_instruction_set.html</a>. This is a great reference, and should suit anybody pretty well. I only adapted it to markdown so that I had a copy that I can update as I learn. So, I give you the 10,454 word document that almost drove me insane!
+<br></p>
+<h1 id="table-of-contents" class="relative group">Table of Contents <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#table-of-contents" aria-label="Anchor">#</a></span></h1><hr>
+<ol>
+<li><a href="#foreword">Foreword</a></li>
+<li><a href="#registers-and-common-properties">Registers and Common Properties</a>
+<ol>
+<li><a href="#registers">Registers</a></li>
+<li><a href="#common-properties">Common Properties</a></li>
+</ol>
+</li>
+<li><a href="#addressing-modes-in-detail">Addressing Modes in Detail</a>
+<ol>
+<li><a href="#implied-addressing">Implied Addressing</a></li>
+<li><a href="#immediate-addressing">Immediate Addressing</a></li>
+<li><a href="#absolute-addressing">Absolute Addressing</a></li>
+<li><a href="#zero-page-addressing">Zero-Page Addressing</a></li>
+<li><a href="#indexed-addressing---absolutex-and-absolutey">Indexed Addressing - Absolute,X and Absolute,Y</a></li>
+<li><a href="#indexed-addressing---zero-pagex-and-zero-pagey">Indexed Addressing - Zero-Page,X and Zero-Page,Y</a></li>
+<li><a href="#indirect-addressing">Indirect Addressing</a></li>
+<li><a href="#pre-indexed-indirect-zero-pagex">Pre-Indexed Indirect, &ldquo;(Zero-Page,X)&rdquo;</a></li>
+<li><a href="#post-indexed-indirect-zero-pagey">Post-Indexed Indirect, &ldquo;(Zero-Page),Y&rdquo;</a></li>
+<li><a href="#relative-addressing-conditional-branching">Relative Addressing (Conditional Branching)</a></li>
+</ol>
+</li>
+<li><a href="#arithmetic-primer">Arithmetic Primer</a>
+<ol>
+<li><a href="#signed-values">Signed Values</a></li>
+<li><a href="#flags-with-adc-and-sbc">Flags with ADC and SBC</a></li>
+<li><a href="#decimal-mode-bcd">Decimal Mode (BCD)</a></li>
+</ol>
+</li>
+<li><a href="#transfer-instructions">Transfer Instructions</a>
+<ol>
+<li><a href="#lda---load-accumulator-with-memory"><code>LDA</code> - Load Accumulator with Memory</a></li>
+<li><a href="#ldx---load-index-x-with-memory"><code>LDX</code> - Load Index X with Memory</a></li>
+<li><a href="#ldy---load-index-y-with-memory"><code>LDY</code> - Load Index Y with Memory</a></li>
+<li><a href="#sta---store-accumulator-in-memory"><code>STA</code> - Store Accumulator in Memory</a></li>
+<li><a href="#stx---store-index-x-in-memory"><code>STX</code> - Store Index X in Memory</a></li>
+<li><a href="#sty---store-index-y-in-memory"><code>STY</code> - Store Index Y in Memory</a></li>
+<li><a href="#tax---transfer-accumulator-to-index-x"><code>TAX</code> - Transfer Accumulator to Index X</a></li>
+<li><a href="#tay---transfer-accumulator-to-index-y"><code>TAY</code> - Transfer Accumulator to Index Y</a></li>
+<li><a href="#tsx---transfer-stack-pointer-to-index-x"><code>TSX</code> - Transfer Stack Pointer to Index X</a></li>
+<li><a href="#txa---transfer-index-x-to-accumulator"><code>TXA</code> - Transfer Index X to Accumulator</a></li>
+<li><a href="#txs---transfer-index-x-to-stack-register"><code>TXS</code> - Transfer Index X to Stack Register</a></li>
+<li><a href="#tya---transfer-index-y-to-accumulator"><code>TYA</code> - Transfer Index Y to Accumulator</a></li>
+</ol>
+</li>
+<li><a href="#stack-instructions">Stack Instructions</a>
+<ol>
+<li><a href="#pha---push-accumulator-on-stack"><code>PHA</code> - Push Accumulator on Stack</a></li>
+<li><a href="#php---push-processor-status-on-stack"><code>PHP</code> - Push Processor Status on Stack</a></li>
+<li><a href="#pla---pull-accumulator-from-stack"><code>PLA</code> - Pull Accumulator from Stack</a></li>
+<li><a href="#plp---pull-processor-status-from-stack"><code>PLP</code> - Pull Processor Status from Stack</a></li>
+</ol>
+</li>
+<li><a href="#decrement-and-increment-instructions">Decrement and Increment Instructions</a>
+<ol>
+<li><a href="#dec---decrement-memory-by-one"><code>DEC</code> - Decrement Memory by One</a></li>
+<li><a href="#dex---decrement-index-x-by-one"><code>DEX</code> - Decrement Index X by One</a></li>
+<li><a href="#dey---decrement-index-y-by-one"><code>DEY</code> - Decrement Index Y by One</a></li>
+<li><a href="#inc---increment-memory-by-one"><code>INC</code> - Increment Memory by One</a></li>
+<li><a href="#inx---increment-index-x-by-one"><code>INX</code> - Increment Index X by One</a></li>
+<li><a href="#iny---increment-index-y-by-one"><code>INY</code> - Increment Index Y by One</a></li>
+</ol>
+</li>
+<li><a href="#arithmetic-instructions">Arithmetic Instructions</a>
+<ol>
+<li><a href="#adc---add-memory-to-accumulator-with-carry"><code>ADC</code> - Add Memory to Accumulator with Carry</a></li>
+<li><a href="#sbc---subtract-memory-from-accumulator-with-borrow"><code>SBC</code> - Subtract Memory from Accumulator with Borrow</a></li>
+</ol>
+</li>
+<li><a href="#logical-operations">Logical Operations</a>
+<ol>
+<li><a href="#and---and-memory-with-accumulator"><code>AND</code> - AND Memory with Accumulator</a></li>
+<li><a href="#eor---exclusive-or-memory-with-accumulator"><code>EOR</code> - Exclusive-OR Memory with Accumulator</a></li>
+<li><a href="#ora---or-memory-with-accumulator"><code>ORA</code> - OR Memory with Accumulator</a></li>
+</ol>
+</li>
+<li><a href="#shift--rotate-instructions">Shift &amp; Rotate Instructions</a>
+<ol>
+<li><a href="#asl---shift-left-one-bit"><code>ASL</code> - Shift Left One Bit</a></li>
+<li><a href="#lsr---shift-right-one-bit"><code>LSR</code> - Shift Right One Bit</a></li>
+<li><a href="#rol---rotate-one-bit-left"><code>ROL</code> - Rotate One Bit Left</a></li>
+<li><a href="#ror---rotate-one-bit-right"><code>ROR</code> - Rotate One Bit Right</a></li>
+</ol>
+</li>
+<li><a href="#flag-instructions">Flag Instructions</a>
+<ol>
+<li><a href="#clc---clear-carry-flag"><code>CLC</code> - Clear Carry Flag</a></li>
+<li><a href="#cld---clear-decimal-mode"><code>CLD</code> - Clear Decimal Mode</a></li>
+<li><a href="#cli---clear-interrupt-disable-bit"><code>CLI</code> - Clear Interrupt Disable Bit</a></li>
+<li><a href="#clv---clear-overflow-flag"><code>CLV</code> - Clear Overflow Flag</a></li>
+<li><a href="#sec---set-carry-flag"><code>SEC</code> - Set Carry Flag</a></li>
+<li><a href="#sed---set-decimal-flag"><code>SED</code> - Set Decimal Flag</a></li>
+<li><a href="#sei---set-interrupt-disable-status"><code>SEI</code> - Set Interrupt Disable Status</a></li>
+</ol>
+</li>
+<li><a href="#comparison-instructions">Comparison Instructions</a>
+<ol>
+<li><a href="#cmp---compare-memory-with-accumulator"><code>CMP</code> - Compare Memory with Accumulator</a></li>
+<li><a href="#cpx---compare-memory-and-index-x"><code>CPX</code> - Compare Memory and Index X</a></li>
+<li><a href="#cpy---compare-memory-and-index-y"><code>CPY</code> - Compare Memory and Index Y</a></li>
+</ol>
+</li>
+<li><a href="#bit-instruction">Bit Instruction</a>
+<ol>
+<li><a href="#bit---test-bits-in-memory-with-accumulator"><code>BIT</code> - Test Bits in Memory with Accumulator</a></li>
+</ol>
+</li>
+<li><a href="#conditional-branch-instructions">Conditional Branch Instructions</a>
+<ol>
+<li><a href="#bcc---branch-on-carry-clear"><code>BCC</code> - Branch on Carry Clear</a></li>
+<li><a href="#bcs---branch-on-carry-set"><code>BCS</code> - Branch on Carry Set</a></li>
+<li><a href="#beq---branch-on-result-zero"><code>BEQ</code> - Branch on Result Zero</a></li>
+<li><a href="#bmi---branch-on-result-minus"><code>BMI</code> - Branch on Result Minus</a></li>
+<li><a href="#bne---branch-on-result-not-zero"><code>BNE</code> - Branch on Result not Zero</a></li>
+<li><a href="#bpl---branch-on-result-plus"><code>BPL</code> - Branch on Result Plus</a></li>
+<li><a href="#bvc---branch-on-overflow-clear"><code>BVC</code> - Branch on Overflow Clear</a></li>
+<li><a href="#bvs---branch-on-overflow-set"><code>BVS</code> - Branch on Overflow Set</a></li>
+</ol>
+</li>
+<li><a href="#jump-and-subroutine-instructions">Jump and Subroutine Instructions</a>
+<ol>
+<li><a href="#jmp---jump-to-new-location"><code>JMP</code> - Jump to New Location</a></li>
+<li><a href="#jsr---jump-to-new-location-saving-return-address"><code>JSR</code> - Jump to New Location Saving Return Address</a></li>
+<li><a href="#rts---return-from-subroutine"><code>RTS</code> - Return from Subroutine</a></li>
+</ol>
+</li>
+<li><a href="#interrupt-instructions">Interrupt Instructions</a>
+<ol>
+<li><a href="#brk---force-break"><code>BRK</code> - Force Break</a></li>
+<li><a href="#rti---return-from-interrupt"><code>RTI</code> - Return from Interrupt</a>
+<ol>
+<li><a href="#curious-interrupt-behavior">Curious Interrupt Behavior</a></li>
+<li><a href="#the-break-flag-and-the-stack">The Break Flag and the Stack</a></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><a href="#other-instructions">Other Instructions</a>
+<ol>
+<li><a href="#nop---no-operation"><code>NOP</code> - No Operation</a></li>
+</ol>
+</li>
+</ol>
+<br>
+<br>
+<br>
+<h1 id="foreword" class="relative group">Foreword <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#foreword" aria-label="Anchor">#</a></span></h1><hr>
+<ul>
+<li>The main source for this document is <a href="https://masswerk.at/6502/6502_instruction_set.html" target="_blank" rel="noreferrer">https://masswerk.at/6502/6502_instruction_set.html</a>
+<ul>
+<li>You may ask, &ldquo;Why copy and paste all this into a markdown file?&rdquo; I have my reasons:
+<ul>
+<li>I wanted a reference that covers only the standard instruction set, so I could get familiar with it in a way that transfers across many machines.</li>
+<li>I wanted it in markdown so I can link back to this file from machine-specific appendices (memory maps, character maps, etc.).</li>
+<li>I wanted it to be a fairly complete reference, so in addition to the great info already on the site, I&rsquo;ve written examples for each operator.
+<ul>
+<li>If an operator only has one address mode, there is no example.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>This document covers only the standard instruction set shared by all 6502 machine code.
+<ul>
+<li>Some computers implement additional opcodes; those will be noted in separate appendix-style documents as I encounter them.</li>
+</ul>
+</li>
+<li>Operators are grouped by similarity.
+<ul>
+<li>For example, the <code>ADC</code> and <code>SBC</code> operators are grouped into an Arithmetic section.</li>
+<li>Sections may include additional information about how those operators work.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Flags Legend:
+<ul>
+<li><code>+</code> &hellip;. modified</li>
+<li><code>-</code> &hellip;. not modified</li>
+<li><code>1</code> &hellip;. set</li>
+<li><code>0</code> &hellip;. cleared</li>
+<li><code>M6</code> &hellip;. memory bit 6</li>
+<li><code>M7</code> &hellip;. memory bit 7</li>
+</ul>
+</li>
+<li>Footnotes:
+<ul>
+<li><code>*</code> — Add 1 cycle if page boundary is crossed.</li>
+<li><code>**</code> — Add 1 cycle if branch occurs on the same page; add 2 cycles if branch occurs to a different page.</li>
+<li><code>***</code> — On the original NMOS CPU, the lookup of the effective address&rsquo;s high byte is always performed on the same memory page as the low byte (e.g., <code>JMP ($11FF)</code> resolves to a lookup at $11FF for the low byte and at $1100 for the high byte). On the CMOS version, add 1 cycle if the address is at a page boundary.</li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="registers-and-common-properties" class="relative group">Registers and Common Properties <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#registers-and-common-properties" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="registers" class="relative group">Registers <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#registers" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>Register</th>
+					<th>Register Name</th>
+					<th>Size</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>PC</td>
+					<td>Program Counter</td>
+					<td>16 bit</td>
+			</tr>
+			<tr>
+					<td>AC</td>
+					<td>Accumulator</td>
+					<td>8 bit</td>
+			</tr>
+			<tr>
+					<td>X</td>
+					<td>X register</td>
+					<td>8 bit</td>
+			</tr>
+			<tr>
+					<td>Y</td>
+					<td>Y register</td>
+					<td>8 bit</td>
+			</tr>
+			<tr>
+					<td>SR</td>
+					<td>Status register</td>
+					<td>8 bit</td>
+			</tr>
+			<tr>
+					<td>SP</td>
+					<td>Stack pointer</td>
+					<td>8 bit</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li>The accumulator is the main register of the 6502.
+<ul>
+<li>Typically used for the first operand of the Arithmetic Logic Unit (ALU); results are deposited back in the accumulator.</li>
+</ul>
+</li>
+<li>X and Y are general-purpose auxiliary registers.
+<ul>
+<li>Commonly referred to as index registers. Their contents are added to a base memory location before values are stored to or retrieved from the resulting address, known as the effective address. Commonly used for loops and table lookups at a given index.</li>
+</ul>
+</li>
+<li>The program counter keeps track of the memory location holding the current instruction code.
+<ul>
+<li>Automatically incremented to progress the program.</li>
+</ul>
+</li>
+<li>The stack pointer points to the top of the stack.</li>
+<li>The status register holds the status of the processor, consisting of flags reflecting the results of previous operations.
+<ul>
+<li>All arithmetic operations update the Z, N, C, and V flags.</li>
+<li>Status Register flags (bit 7 to bit 0):
+<ul>
+<li><code>N</code> - Negative
+<ul>
+<li>Indicates whether a result was positive or negative.</li>
+</ul>
+</li>
+<li><code>V</code> - Overflow
+<ul>
+<li>Indicates if an overflow occurred.</li>
+<li>Since this is an 8-bit CPU, if an operation results in a signed value outside the range -128 to +127, the overflow flag is set.</li>
+</ul>
+</li>
+<li><code>-</code> - ignored</li>
+<li><code>B</code> - Break
+<ul>
+<li>Not a real flag.</li>
+<li>Only appears when the status register is pushed onto the stack: set to 1 if pushed by software (BRK or PHP), and 0 if pushed by hardware (an interrupt).</li>
+<li>This lets an interrupt handler distinguish a software break from a hardware interrupt by checking this value.</li>
+</ul>
+</li>
+<li><code>D</code> - Decimal
+<ul>
+<li>Sets the ALU to binary-coded decimal mode for addition and subtraction.</li>
+</ul>
+</li>
+<li><code>I</code> - Interrupt
+<ul>
+<li>Blocks any maskable interrupt requests (IRQ).</li>
+</ul>
+</li>
+<li><code>Z</code> - Zero
+<ul>
+<li>Indicates that a result was all zeros.</li>
+</ul>
+</li>
+<li><code>C</code> - Carry
+<ul>
+<li>Used as a buffer in arithmetic operations.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="common-properties" class="relative group">Common Properties <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#common-properties" aria-label="Anchor">#</a></span></h3><ul>
+<li>Processor Stack
+<ul>
+<li>A LIFO, top-down stack occupying memory addresses $0100–$01FF.</li>
+</ul>
+</li>
+<li>Bytes, Words, Addressing
+<ul>
+<li>Bytes are 8 bits.</li>
+<li>Words are 16 bits, in low-byte/high-byte order (little-endian).</li>
+<li>The address range is 16 bits; operands follow instruction codes.</li>
+</ul>
+</li>
+<li>Signed Values
+<ul>
+<li>Signed values are two&rsquo;s complement, with the sign in bit 7 (most significant bit).
+<ul>
+<li>%11111111 = $FF = -1</li>
+<li>%10000000 = $80 = -128</li>
+<li>%01111111 = $7F = +127</li>
+</ul>
+</li>
+<li>Both signed binary and Binary Coded Decimal (BCD) arithmetic modes are available; BCD values are unsigned (positive or zero only).</li>
+</ul>
+</li>
+<li>System Vectors
+<ul>
+<li>$FFFA, $FFFB &hellip; NMI (Non-Maskable Interrupt) vector, 16-bit (LB, HB)</li>
+<li>$FFFC, $FFFD &hellip; RES (Reset) vector, 16-bit (LB, HB)</li>
+<li>$FFFE, $FFFF &hellip; IRQ (Interrupt Request) vector, 16-bit (LB, HB)</li>
+</ul>
+</li>
+<li>Start/Reset Operations
+<ul>
+<li>An active-low reset line holds the processor in a known, disabled state while the system initializes.
+<ul>
+<li>When the reset line goes high, the processor performs a start sequence of 7 cycles, at the end of which the program counter (PC) is read from the address provided in the 16-bit reset vector at $FFFC (LB-HB).</li>
+<li>On the eighth cycle, the processor transfers control by jumping to that address.
+<ul>
+<li>Any further initialization is left to the program. (Instructions exist to initialize and load every register except the program counter, which is set by the reset vector.)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="addressing-modes-in-detail" class="relative group">Addressing Modes in Detail <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#addressing-modes-in-detail" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="implied-addressing" class="relative group">Implied Addressing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#implied-addressing" aria-label="Anchor">#</a></span></h3><p>These instructions act directly on one or more registers or flags internal to the CPU. Therefore, these instructions are principally single-byte instructions, lacking an explicit operand. The operand is implied, as it is already provided by the instruction itself.</p>
+<p>Instructions targeting exclusively the contents of the accumulator may or may not be denoted by using an explicit &ldquo;A&rdquo; as the operand, depending on the flavor of syntax. (This may be regarded as a special address mode of its own, but it is really a special case of an implied instruction. It is still a single-byte instruction and no operand is provided in machine language.)</p>
+<h4 id="mnemonic-examples" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">CLC    ;clear the carry flag
+ROL A  ;rotate contents of accumulator left by one position
+ROL    ;same as above, implicit notation (A implied)
+TXA    ;transfer contents of X-register to the accumulator
+PHA    ;push the contents of the accumulator to the stack
+RTS    ;return from subroutine (by pulling PC from stack)
+</code></pre><p><em>Mind that some of these instructions, while simple in appearance, may be quite complex operations, like &ldquo;PHA&rdquo;, which involves the accumulator, the stack pointer, and memory access.</em></p>
+<br>
+<h3 id="immediate-addressing" class="relative group">Immediate Addressing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#immediate-addressing" aria-label="Anchor">#</a></span></h3><p>Here, a literal operand is given immediately after the instruction. The operand is always an 8-bit value and the total instruction length is always 2 bytes. In memory, the operand is a single byte following immediately after the instruction code. In assembler, the mode is usually indicated by a &ldquo;#&rdquo; prefix adjacent to the operand.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">Mnemonic   Instruction  
+ LDA #7       A9 07  
+                  |  
+                  V  
+              A: 07
+</code></pre><h4 id="mnemonic-examples-1" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples-1" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDA #$07  ;load the literal hexadecimal value &#34;$07&#34; into the accumulator  
+ADC #$A0   ;add the literal hexadecimal value &#34;A0&#34; to the accumulator  
+CPX #$32  ;compare the X-register to the literal hexadecimal value &#34;$32&#34;
+</code></pre><br>
+<h3 id="absolute-addressing" class="relative group">Absolute Addressing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#absolute-addressing" aria-label="Anchor">#</a></span></h3><p>Absolute addressing mode provides the 16-bit address of a memory location, the contents of which are used as the operand to the instruction. In machine language, the address is provided in two bytes immediately after the instruction (making these 3-byte instructions) in low-byte, high-byte order (LLHH), i.e. little-endian. In assembler, conventional numbers (HHLL order, i.e. big-endian) are used to provide the address.</p>
+<p>Absolute addresses are also used by the jump instructions JMP and JSR to provide the address of the next instruction to continue with in the control flow.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">Mnemonic   Instruction      Data  
+LDA $3010    AD 10 30    $3010: 34  
+                                 |  
+                                 V  
+                             A: 34
+</code></pre><h4 id="mnemonic-examples-2" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples-2" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDA $3010  ;load the contents of address &#34;$3010&#34; into the accumulator  
+ROL $08A0  ;rotate the contents of address &#34;$08A0&#34; left by one position  
+JMP $4000  ;jump to (continue with) location &#34;$4000&#34;
+</code></pre><br>
+<h3 id="zero-page-addressing" class="relative group">Zero-Page Addressing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#zero-page-addressing" aria-label="Anchor">#</a></span></h3><p>The 16-bit address space available to the 6502 is thought of as consisting of 256 &ldquo;pages&rdquo; of 256 memory locations each ($00…$FF). In this model, the high-byte of an address gives the page number and the low-byte a location inside that page. The very first of these pages, where the high-byte is zero (addresses $0000…$00FF), is somewhat special.</p>
+<p>Zero-page addressing is similar to absolute addressing, but these instructions use only a single byte for the operand — the low-byte — while the high-byte is assumed to be zero by definition. Therefore, these instructions are a total of two bytes long (one less than absolute mode) and take one CPU cycle less to execute, since there is one byte less to fetch.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">Mnemonic   Instruction    Data  
+LDA $80      A5 80      $0080: 34  
+                                |  
+                                V  
+                            A: 34
+</code></pre><h4 id="mnemonic-examples-3" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples-3" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDA $80  ;load the contents of address &#34;$0080&#34; into the accumulator  
+BIT $A2  ;perform bit-test with the contents of address &#34;$00A2&#34;  
+ASL $9A  ;arithmetic shift left of the contents of location &#34;$009A&#34;
+</code></pre><p>(One way to think of the zero-page is as a page of 256 additional registers — somewhat slower than the internal registers, but with zero-page instructions executing faster than &ldquo;normal&rdquo; instructions. The zero-page has a few more tricks up its sleeve, making these addresses perform more like real registers; see below.)</p>
+<br>
+<h3 id="indexed-addressing---absolutex-and-absolutey" class="relative group">Indexed Addressing - Absolute,X and Absolute,Y <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#indexed-addressing---absolutex-and-absolutey" aria-label="Anchor">#</a></span></h3><p>Indexed addressing adds the contents of either the X-register or the Y-register to the provided address to give the <em>effective address</em>, which provides the operand.</p>
+<p>These instructions are useful for, e.g., loading values from tables or writing to a continuous segment of memory in a loop. The most basic forms are &ldquo;absolute,X&rdquo; and &ldquo;absolute,Y&rdquo;, where either the X- or the Y-register, respectively, is added to a given base address. Since the base address is a 16-bit value, these are generally 3-byte instructions. Since there is an additional operation required to determine the effective address, these instructions are one cycle slower than those using absolute addressing mode. If adding the contents of the index register changes the high-byte of the base address — so that the effective address falls on the next memory page — the additional operation to increment the high-byte takes another CPU cycle. This is also known as crossing a page boundary.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">  Mnemonic    Instruction     Data  
+LDA $3120,X    BD 20 31  
+                       \
+                        + = $3132: 78  
+                       /            |   
+                  X: 12             |  
+                                    V  
+                                A: 78
+</code></pre><h4 id="mnemonic-examples-4" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples-4" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDA $3120,X  ;load the contents of address &#34;$3120 + X&#34; into A  
+LDX $8240,Y  ;load the contents of address &#34;$8240 + Y&#34; into X  
+INC $1400,X  ;increment the contents of address &#34;$1400 + X&#34;
+</code></pre><br>
+<h3 id="indexed-addressing---zero-pagex-and-zero-pagey" class="relative group">Indexed Addressing - Zero-Page,X and Zero-Page,Y <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#indexed-addressing---zero-pagex-and-zero-pagey" aria-label="Anchor">#</a></span></h3><p>As with absolute addressing, there is also a zero-page mode for indexed addressing. However, this is generally only available with the X-register. (The one exception is LDX, which has an indexed zero-page mode using the Y-register.) As with normal zero-page mode, these instructions are one byte shorter in total length (two bytes) and take one CPU cycle less than instructions in absolute indexed mode.</p>
+<p>Unlike absolute indexed instructions with 16-bit base addresses, zero-page indexed instructions never affect the high-byte of the effective address — it simply wraps around within the zero-page — so there is no penalty for crossing page boundaries.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502"> Mnemonic    Instruction     Data  
+LDA $80,X       B5 80  
+                     \
+                      + = $0082: 64  
+                     /            |  
+                X: 02             |  
+                                  V  
+                              A: 64
+</code></pre><h4 id="mnemonic-examples-5" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples-5" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDA $80,X  ;load the contents of address &#34;$0080 + X&#34; into A  
+LSR $82,X  ;shift the contents of address &#34;$0082 + X&#34; left  
+LDX $60,Y  ;load the contents of address &#34;$0060 + Y&#34; into X
+</code></pre><br>
+<h3 id="indirect-addressing" class="relative group">Indirect Addressing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#indirect-addressing" aria-label="Anchor">#</a></span></h3><p>This mode looks up a given address and uses the contents of that address and the next one (in LLHH little-endian order) as the effective address. In its basic form, this mode is available only for the JMP instruction. (Its typical use is for jump vectors and jump tables.)
+Like the absolute JMP instruction, it uses a 16-bit address (3 bytes total), but takes two additional CPU cycles to execute, since there are two additional bytes to fetch for the lookup of the effective jump target.
+Indirect addressing is generally denoted by putting the lookup address in parentheses.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">Mnemonic     Instruction      Lookup
+JMP ($FF82)    6C 82 FF -&gt; $FF82: C4 80
+                                     |
+                                     V
+                               PC: $80C4 (Effective Target)
+</code></pre><p><strong>Mnemonic Example:</strong></p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">JMP ($FF82)  ;jump to the address given in locations &#34;$FF82&#34; and &#34;$FF83&#34;
+</code></pre><p>Note: On the original NMOS 6502, the high-byte of the lookup address is not incremented across page boundaries. That is, if the low-byte of the lookup address is $FF, the high-byte will be fetched from $00 on the same page. (E.g., &ldquo;JMP ($11FF)&rdquo; will effectively resolve to a lookup at $11FF for the low-byte and $1100 for the high-byte, where we might expect $1200 to be used for the latter.)
+This is corrected on the CMOS version of the CPU, which behaves as expected but takes an extra cycle to do so.</p>
+<br>
+<h3 id="pre-indexed-indirect-zero-pagex" class="relative group">Pre-Indexed Indirect, &ldquo;(Zero-Page,X)&rdquo; <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pre-indexed-indirect-zero-pagex" aria-label="Anchor">#</a></span></h3><p>Indexed indirect address modes are generally available only for instructions supplying an operand to the accumulator (LDA, STA, ADC, SBC, AND, ORA, EOR, etc.). The placement of the index register inside or outside the parentheses indicating the address lookup gives a clue as to what these instructions are doing.</p>
+<p>Pre-indexed indirect addressing is only available in combination with the X-register. It works much like &ldquo;zero-page,X&rdquo; mode, but after the X-register has been added to the base address, instead of directly accessing that location, an additional lookup is performed, reading the contents of the resulting address and the next one (in LLHH little-endian order) to determine the effective address.</p>
+<p>As with &ldquo;zero-page,X&rdquo; mode, the total instruction length is 2 bytes, but there are two additional CPU cycles required to fetch the effective 16-bit address. Also as with &ldquo;zero-page,X&rdquo; mode, the lookup address will never overflow into the next page, but simply wraps around within the zero-page.</p>
+<p>These instructions are useful whenever we want to loop over a table of pointers to scattered addresses, or apply the same operation to various addresses stored as a table in the zero-page.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">  Mnemonic    Instruction     Lookup            Data  
+LDA ($70,X)      A1 70  
+                      \
+                       + = $0075: 23 20 ---&gt; $3023: A5  
+                      /                              |  
+                 X: 05                               |  
+                                                     V  
+                                                 A: A5
+</code></pre><h4 id="mnemonic-examples-6" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples-6" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDA ($70,X) ;load the contents of the location given in addresses 
+            ;  &#34;$0070+X&#34; and &#34;$0071+X&#34; into A  
+STA ($A2,X) ;store the contents of A in the location given in addresses 
+            ;  &#34;$00A2+X&#34; and &#34;$00A3+X&#34;  
+EOR ($BA,X) ;perform an exclusive OR of the contents of A and the contents
+            ;  of the location given in addresses &#34;$00BA+X&#34; and &#34;$00BB+X&#34;
+</code></pre><br>
+<h3 id="post-indexed-indirect-zero-pagey" class="relative group">Post-Indexed Indirect, &ldquo;(Zero-Page),Y&rdquo; <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#post-indexed-indirect-zero-pagey" aria-label="Anchor">#</a></span></h3><p>Post-indexed indirect addressing is only available in combination with the Y-register. As indicated by the indexing term &ldquo;,Y&rdquo; appended outside the parentheses indicating the indirect lookup, a pointer is first read from the given zero-page address and resolved, and only then is the contents of the Y-register added to it to give the effective address.</p>
+<p>The total instruction length is 2 bytes, but it takes an additional CPU cycle to resolve and index the 16-bit pointer. As with &ldquo;absolute,X&rdquo; mode, the effective address may overflow into the next page, in which case execution takes an extra CPU cycle.</p>
+<p>These instructions are useful whenever we want to perform lookups on varying base addresses, or loop over tables whose base address is stored in the zero-page.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">  Mnemonic   Instruction     Lookup         Data  
+LDA ($70),Y     B1 70      $0070: 20 35  
+                                       \
+                                        + = $3530: 23  
+                                       /            |  
+                                  Y: 10             |  
+                                                    V  
+                                                A: 23
+</code></pre><h4 id="mnemonic-examples-7" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples-7" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDA ($70),Y  ;add the contents of the Y-register to the pointer provided in 
+             ;  &#34;$0070&#34; and &#34;$0071&#34; and load the contents of this address into A
+STA ($A2),Y  ;store the contents of A in the location given by the pointer in 
+             ;  &#34;$00A2&#34; and &#34;$00A3&#34; plus the contents of the Y-register  
+EOR ($BA),Y  ;perform an exclusive OR of the contents of A and the address given
+             ;  by the addition of Y to the pointer in &#34;$00BA&#34; and &#34;$00BB&#34;
+</code></pre><br>
+<h3 id="relative-addressing-conditional-branching" class="relative group">Relative Addressing (Conditional Branching) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#relative-addressing-conditional-branching" aria-label="Anchor">#</a></span></h3><p>This final address mode is exclusive to conditional branch instructions, which branch in the execution path depending on the state of a given CPU flag. Here, the instruction provides only a relative offset, which is added to the contents of the program counter (PC) as it points to the next instruction. The relative offset is a signed single-byte value in two&rsquo;s complement encoding (giving a range of −128…+127), allowing branches up to half a page forward or backward. This makes these instructions compact, fast, and relocatable — but it also means the branch target can never be farther away than half a memory page.</p>
+<p>Generally, an assembler will handle this calculation, so we only need to provide the target address without worrying about the relative offset ourselves.</p>
+<p>These instructions are always 2 bytes long and take 2 CPU cycles if the branch is not taken (the condition resolves to &lsquo;false&rsquo;), and 3 cycles if the branch is taken (the condition is true). If the branch is taken and the target is on a different page, this adds another CPU cycle (4 in total).</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">PC       Mnemonic        Instruction     Target  
+$1000    BEQ $1005          F0 03  
+                                 \ Offset  
+    PC points to next instruction \
+$1002 ---------------------------&gt; + = PC: $1005
+</code></pre><h4 id="mnemonic-examples-8" class="relative group">Mnemonic Examples <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#mnemonic-examples-8" aria-label="Anchor">#</a></span></h4><p><em>(Examples are provided in usual assembler format. Notice how these look much like instructions in absolute address mode.)</em></p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">BEQ $1005  ;branch to location &#34;$1005&#34;, if the zero flag is set.
+		   ;If the current address is $1000, this gives an offset of $03.  
+BCS $08C4  ;branch to location &#34;$08C4&#34;, if the carry flag is set. 
+           ;If the current address is $08D4, this gives an offset of $EE (−$12). 
+BCC $084A  ;branch to location &#34;$084A&#34;, if the carry flag is clear.
+</code></pre><br>
+<br>
+<br>
+<h1 id="arithmetic-primer" class="relative group">Arithmetic Primer <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#arithmetic-primer" aria-label="Anchor">#</a></span></h1><hr>
+<p><em>Small Editor&rsquo;s Note: I originally placed this in the Arithmetic Instructions section, like how some of the other sections have info at the start. But as you can see, it&rsquo;s a very big section. I figured it would be cleaner to place it before the instructions section, so that&rsquo;s why it&rsquo;s here.</em></p>
+<p>The 6502 processor features two basic arithmetic instructions: <code>ADC</code>, <em>ADd with Carry</em>, and <code>SBC</code>, <em>SuBtract with Carry</em>. As the names suggest, these provide addition and subtraction for single-byte operands and results. However, operations are not limited to a single-byte range, which is where the carry flag comes in, providing the means for a single-bit carry (or borrow) to combine operations over several bytes.</p>
+<p>To accomplish this, the carry is included in each of these operations: for additions, it is added (much like another operand); for subtractions — which are just an addition using the inverse of the operand (the complement value of the operand) — the role of the carry is inverted as well. Therefore, it is crucial to set up the carry appropriately: for additions, the carry must initially be cleared (using <code>CLC</code>), while for subtractions, it must initially be set (using <code>SEC</code> — more on <code>SBC</code> below).</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">         ;ADC: A = A + M + C
+CLC      ;clear carry in preparation
+LDA #2   ;load 2 into the accumulator
+ADC #3   ;add 3 -&gt; now 5 in accumulator
+
+         ;SBC: A = A - M - C̅   (&#34;C̅&#34;: &#34;not carry&#34;)
+SEC      ;set carry in preparation
+LDA #15  ;load 15 into the accumulator
+SBC #8   ;subtract 8 -&gt; now 7 in accumulator
+</code></pre><p><em>Note:</em> Here, we used immediate mode, indicated by the &ldquo;#&rdquo; prefix before the operand, to directly load a literal value. If there is no such &ldquo;#&rdquo; prefix, we generally mean to use the value stored at the address given by the operand, as we will see in the next example.</p>
+<p>To combine this for 16-bit values (2 bytes each), we simply chain the instructions for the next bytes to operate on, but this time without setting or clearing the carry again.</p>
+<p>Supposing the following locations for storing 16-bit values:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">                    low-byte high-byte 
+first argument ....  $1000     $1001 
+second argument ...  $1002     $1003 
+result ............  $1004     $1005  
+</code></pre><p>we perform a 16-bit addition by:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">CLC         ;prepare carry for addition
+LDA $1000   ;load value at address $1000 into A (low byte of first argument)
+ADC $1002   ;add low byte of second argument at $1002
+STA $1004   ;store low byte of result at $1004
+LDA $1001   ;load high byte of first argument
+ADC $1003   ;add high byte of second argument
+STA $1005   ;store high byte of result (result in $1004 and $1005)
+</code></pre><p>and, conversely, for a 16-bit subtraction:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">SEC         ;prepare carry for subtraction
+LDA $1000   ;load value at address $1000 into A (low byte of first argument)
+SBC $1002   ;subtract low byte of second argument at $1002
+STA $1004   ;store low byte of result at $1004
+LDA $1001   ;load high byte of first argument
+SBC $1003   ;subtract high byte of second argument
+STA $1005   ;store high byte of result (result in $1004 and $1005)
+</code></pre><p><em>Note:</em> Another important preparatory step is to put the processor into binary mode using the <code>CLD</code> <em>(CLear Decimal flag)</em> instruction. (See the section on decimal mode below.) This only needs to be done once.</p>
+<br>
+<h3 id="signed-values" class="relative group">Signed Values <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#signed-values" aria-label="Anchor">#</a></span></h3><p>Operations for unsigned and signed values are principally the same; the only difference is in how we interpret the values. Generally, the 6502 uses what is known as <em>two&rsquo;s complement</em> to represent negative values.</p>
+<p>(Earlier computers used something known as <em>ones&rsquo; complement</em>, where all bits are simply flipped to represent a negative value. While simple, this came with a few drawbacks — like an additional value of negative zero — which are overcome by two&rsquo;s complement.)</p>
+<p>In two&rsquo;s complement representation, we simply flip all the bits in a byte to their opposite (the same as an XOR with <code>$FF</code>) and then add 1 to the result.</p>
+<p>E.g., to represent -4:
+(We use &ldquo;$&rdquo; to indicate a hexadecimal number and &ldquo;%&rdquo; for binary notation. A dot separates the high- and low-nibble, i.e. groups of 4 bits.)</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">    %0000.0100  ; 4 
+XOR %1111.1111  ; 255 
+-------------- 
+    %1111.1011  ; complement (all bits flipped) 
+ +           1 
+-------------- 
+    %1111.1100  ; -4, two&#39;s complement
+</code></pre><p>Thus, in a single byte, we can represent values ranging from -128 (%1000.0000 or $80) to +127 (%0111.1111 or $7F).</p>
+<p>A notable feature is that the highest-value bit (the leftmost bit) is always 1 for a negative value and always 0 for a positive one — for which it is also known as the <em>sign bit</em>. Whenever we interpret a value as a signed number, a set sign bit indicates a negative value.</p>
+<p>This works just the same for larger values, e.g., for a signed 16-bit value:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">-512 = %1111.1110.0000.0000 = $FE $00 
+-516 = %1111.1101.1111.1100 = $FD $FC (mind how the +1 step carries over)
+</code></pre><p>Notably, the underlying binary operations are still the same as with unsigned values, and provide the expected results:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">  dec     binary     hex 
+
+   00   %0110.0100   $64 
++ -24   %1110.1000   $E8 
+------------------------ 
+   76   %0100.1100   $4C   (+ carry)
+</code></pre><p><em>Note:</em> We can now see how <code>SBC</code> actually works: by adding the <em>ones&rsquo; complement</em> of the operand to the accumulator. If we add 1 from the carry to the result, this effectively produces a subtraction in <em>two&rsquo;s complement</em> (the inverse of the operand + 1). If the carry happens to be zero, the result falls short by 1 in terms of two&rsquo;s complement — equivalent to adding 1 to the operand before the subtraction. Thus, the carry either provides the correction required for a valid two&rsquo;s complement representation, or, if missing, results in a subtraction that includes a binary borrow.</p>
+<br>
+<h3 id="flags-with-adc-and-sbc" class="relative group">Flags with ADC and SBC <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#flags-with-adc-and-sbc" aria-label="Anchor">#</a></span></h3><p>Besides the carry flag (C), which allows us to chain multi-byte operations, the CPU sets the following flags based on the result of an arithmetic operation:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">zero flag (Z) ........ set if the result is zero, else unset  
+negative flag (N) .... always reflects the sign bit of the result  
+overflow flag (V) .... indicates overflow in signed operations
+</code></pre><p>The overflow flag may need some explanation: how is signed overflow different from the carry flag? The overflow flag addresses a certain ambiguity of the sign bit and the negative flag in a signed context: if both operands share the same sign, a case may arise where the sign bit flips (as indicated by a change in the negative flag) even though the true result should still be of that same sign. This condition is indicated by the overflow flag. Notably, such an overflow can never occur when the operands are of opposite signs.</p>
+<p>E.g., adding positive $40 to positive $40:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">         acc.     acc.     flags
+         hex     binary   NVDIZC
+
+LDA #$40 $40  %0100.0000  000000
+ADC #$40 $80  %1000.0000  110000
+</code></pre><p>Here, the change of the sign bit doesn&rsquo;t reflect the true mathematical result — it&rsquo;s merely a consequence of carry propagation from bit 6 into bit 7, the sign bit. Since both operands are positive, the true result must be positive as well, so the overflow flag is set to signal that the sign bit is unreliable. The overflow flag (V) is meaningful only in a signed context, and has no meaning in an unsigned context.</p>
+<br>
+<h3 id="decimal-mode-bcd" class="relative group">Decimal Mode (BCD) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#decimal-mode-bcd" aria-label="Anchor">#</a></span></h3><p>Besides binary arithmetic, the 6502 processor supports a second mode: binary coded decimal (BCD), where each byte, rather than representing a range of 0…255, represents two decimal digits packed into a single byte. For this, a byte is divided into two sections of 4 bits — the high- and low-nibble. Only values from 0…9 are used for each nibble, so a byte can represent only a 2-digit decimal value, i.e. 0…99. E.g.,</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">dec    binary     hex
+
+14   %0001.0100   $14
+98   %1001.1000   $98
+</code></pre><p>Notice how this translates intuitively to hexadecimal notation, where the
+figures A…F are never used.</p>
+<p>Whether the processor is in decimal mode is determined by the decimal flag
+(D). If it is set (using <code>SED</code>), the processor will use BCD arithmetic. If it
+is cleared (using <code>CLD</code>), the processor is in binary mode.
+Decimal mode only affects the <code>ADC</code> and <code>SBC</code> instructions (not <code>INC</code> or <code>DEC</code>).</p>
+<p><strong>Examples:</strong></p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">SED
+CLC
+LDA #$12
+ADC #$44 ;accumulator now holds $56
+
+SED
+CLC
+LDA #$28
+ADC #$14 ;accumulator now holds $42
+</code></pre><p>Mind that BCD mode is always unsigned:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">       acc.  NVDIZC 
+SED 
+SEC 
+LDA #0 $00   001011 
+SBC #1 $99   101000
+</code></pre><p>The carry flag and zero flag work in decimal mode as expected. The negative flag is set similarly to binary mode (and is of questionable value there). The overflow flag has no meaning in decimal mode.</p>
+<p>Multi-byte operations work the same way in decimal mode: we first prepare the carry, then chain operations on the individual bytes in increasing value order, starting with the lowest-value pair.</p>
+<p>(It&rsquo;s worth noting that the Western Design Center (WDC) version of the processor, the 65C02, always clears the decimal flag when it enters an interrupt, while the original NMOS version of the 6502 does not.)</p>
+<br>
+<br>
+<br>
+<h1 id="transfer-instructions" class="relative group">Transfer Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#transfer-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="lda---load-accumulator-with-memory" class="relative group"><code>LDA</code> - Load Accumulator with Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lda---load-accumulator-with-memory" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>LDA #oper</td>
+					<td>A9</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>LDA oper</td>
+					<td>A5</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>LDA oper,X</td>
+					<td>B5</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>LDA oper</td>
+					<td>AD</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>LDA oper,X</td>
+					<td>BD</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>LDA oper,Y</td>
+					<td>B9</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>(indirect,X)</td>
+					<td>LDA (oper,X)</td>
+					<td>A1</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>(indirect),Y</td>
+					<td>LDA (oper),Y</td>
+					<td>B1</td>
+					<td>2</td>
+					<td>5*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDA #$07    ;load the literal value $07 into the accumulator
+LDA $3010   ;load the contents of address $3010 into the accumulator
+LDA $80,X   ;load the contents of address ($0080 + X) into the accumulator
+LDA ($70,X) ;load the contents of the address pointed to by ($0070 + X) into A
+LDA ($70),Y ;load the contents of the address (pointer at $0070) + Y into A
+</code></pre></li>
+</ul>
+<br>
+<h3 id="ldx---load-index-x-with-memory" class="relative group"><code>LDX</code> - Load Index X with Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ldx---load-index-x-with-memory" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>LDX #oper</td>
+					<td>A2</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>LDX oper</td>
+					<td>A6</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,Y</td>
+					<td>LDX oper,Y</td>
+					<td>B6</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>LDX oper</td>
+					<td>AE</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>LDX oper,Y</td>
+					<td>BE</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDX #$0A    ;load the literal value $0A into the X register
+LDX $60     ;load the contents of address $0060 into X
+LDX $60,Y   ;load the contents of address ($0060 + Y) into X
+LDX $8240,Y ;load the contents of address ($8240 + Y) into X
+</code></pre></li>
+</ul>
+<br>
+<h3 id="ldy---load-index-y-with-memory" class="relative group"><code>LDY</code> - Load Index Y with Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ldy---load-index-y-with-memory" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>LDY #oper</td>
+					<td>A0</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>LDY oper</td>
+					<td>A4</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>LDY oper,X</td>
+					<td>B4</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>LDY oper</td>
+					<td>AC</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>LDY oper,X</td>
+					<td>BC</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LDY #$0A    ;load the literal value $0A into the Y register
+LDY $A2     ;load the contents of address $00A2 into Y
+LDY $80,X   ;load the contents of address ($0080 + X) into Y
+LDY $3120,X ;load the contents of address ($3120 + X) into Y
+</code></pre></li>
+</ul>
+<br>
+<h3 id="sta---store-accumulator-in-memory" class="relative group"><code>STA</code> - Store Accumulator in Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sta---store-accumulator-in-memory" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>zeropage</td>
+					<td>STA oper</td>
+					<td>85</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>STA oper,X</td>
+					<td>95</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>STA oper</td>
+					<td>8D</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>STA oper,X</td>
+					<td>9D</td>
+					<td>3</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>STA oper,Y</td>
+					<td>99</td>
+					<td>3</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>(indirect,X)</td>
+					<td>STA (oper,X)</td>
+					<td>81</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>(indirect),Y</td>
+					<td>STA (oper),Y</td>
+					<td>91</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">STA $80      ;store the contents of the accumulator at address $0080
+STA $3010    ;store the contents of the accumulator at address $3010
+STA $A2,X    ;store the contents of A at address ($00A2 + X)
+STA ($A2,X)  ;store A at the address pointed to by ($00A2 + X)
+STA ($A2),Y  ;store A at the address (pointer at $00A2) + Y
+</code></pre></li>
+</ul>
+<br>
+<h3 id="stx---store-index-x-in-memory" class="relative group"><code>STX</code> - Store Index X in Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#stx---store-index-x-in-memory" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>zeropage</td>
+					<td>STX oper</td>
+					<td>86</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>STX oper,X</td>
+					<td>96</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>STX oper</td>
+					<td>8E</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">STX $60     ;store the contents of X at address $0060
+STX $60,Y   ;store the contents of X at address ($0060 + Y)
+STX $8240   ;store the contents of X at address $8240
+</code></pre></li>
+</ul>
+<br>
+<h3 id="sty---store-index-y-in-memory" class="relative group"><code>STY</code> - Store Index Y in Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sty---store-index-y-in-memory" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>zeropage</td>
+					<td>STY oper</td>
+					<td>84</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>STY oper,X</td>
+					<td>94</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>STY oper</td>
+					<td>8C</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">STY $A2     ;store the contents of Y at address $00A2
+STY $A2,X   ;store the contents of Y at address ($00A2 + X)
+STY $3120   ;store the contents of Y at address $3120
+</code></pre></li>
+</ul>
+<br>
+<h3 id="tax---transfer-accumulator-to-index-x" class="relative group"><code>TAX</code> - Transfer Accumulator to Index X <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tax---transfer-accumulator-to-index-x" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>TAX</td>
+					<td>AA</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<h3 id="tay---transfer-accumulator-to-index-y" class="relative group"><code>TAY</code> - Transfer Accumulator to Index Y <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tay---transfer-accumulator-to-index-y" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>TAY</td>
+					<td>A8</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<h3 id="tsx---transfer-stack-pointer-to-index-x" class="relative group"><code>TSX</code> - Transfer Stack Pointer to Index X <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tsx---transfer-stack-pointer-to-index-x" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>TSX</td>
+					<td>BA</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<h3 id="txa---transfer-index-x-to-accumulator" class="relative group"><code>TXA</code> - Transfer Index X to Accumulator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#txa---transfer-index-x-to-accumulator" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>TXA</td>
+					<td>8A</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<h3 id="txs---transfer-index-x-to-stack-register" class="relative group"><code>TXS</code> - Transfer Index X to Stack Register <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#txs---transfer-index-x-to-stack-register" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>TXS</td>
+					<td>9A</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="tya---transfer-index-y-to-accumulator" class="relative group"><code>TYA</code> - Transfer Index Y to Accumulator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tya---transfer-index-y-to-accumulator" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>TYA</td>
+					<td>98</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="stack-instructions" class="relative group">Stack Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#stack-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<p>These instructions transfer the accumulator or status register (flags) to and from the stack. The processor stack is a last-in-first-out (LIFO) stack of 256 bytes, implemented at addresses $0100–$01FF. The stack grows downward as new values are pushed onto it, with the current insertion point maintained in the stack pointer register.
+(When a byte is pushed onto the stack, it is stored at the address indicated by the current value of the stack pointer, which is then decremented by 1. Conversely, when a value is pulled from the stack, the stack pointer is incremented first. The stack pointer is accessible via the TSX and TXS instructions.)</p>
+<br>
+<h3 id="pha---push-accumulator-on-stack" class="relative group"><code>PHA</code> - Push Accumulator on Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pha---push-accumulator-on-stack" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>PHA</td>
+					<td>48</td>
+					<td>1</td>
+					<td>3</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="php---push-processor-status-on-stack" class="relative group"><code>PHP</code> - Push Processor Status on Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#php---push-processor-status-on-stack" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>PHP</td>
+					<td>08</td>
+					<td>1</td>
+					<td>3</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="pla---pull-accumulator-from-stack" class="relative group"><code>PLA</code> - Pull Accumulator from Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pla---pull-accumulator-from-stack" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>PLA</td>
+					<td>68</td>
+					<td>1</td>
+					<td>4</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<h3 id="plp---pull-processor-status-from-stack" class="relative group"><code>PLP</code> - Pull Processor Status from Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#plp---pull-processor-status-from-stack" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>PLP</td>
+					<td>28</td>
+					<td>1</td>
+					<td>4</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="decrement-and-increment-instructions" class="relative group">Decrement and Increment Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#decrement-and-increment-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="dec---decrement-memory-by-one" class="relative group"><code>DEC</code> - Decrement Memory by One <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dec---decrement-memory-by-one" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>zeropage</td>
+					<td>DEC oper</td>
+					<td>C6</td>
+					<td>2</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>DEC oper,X</td>
+					<td>D6</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>DEC oper</td>
+					<td>CE</td>
+					<td>3</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>DEC oper,X</td>
+					<td>DE</td>
+					<td>3</td>
+					<td>7</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">DEC $80     ;decrement the contents of address $0080 by one
+DEC $80,X   ;decrement the contents of address ($0080 + X) by one
+DEC $3010   ;decrement the contents of address $3010 by one
+DEC $3010,X ;decrement the contents of address ($3010 + X) by one
+</code></pre></li>
+</ul>
+<br>
+<h3 id="dex---decrement-index-x-by-one" class="relative group"><code>DEX</code> - Decrement Index X by One <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dex---decrement-index-x-by-one" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>DEX</td>
+					<td>CA</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<h3 id="dey---decrement-index-y-by-one" class="relative group"><code>DEY</code> - Decrement Index Y by One <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dey---decrement-index-y-by-one" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>DEY</td>
+					<td>88</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<h3 id="inc---increment-memory-by-one" class="relative group"><code>INC</code> - Increment Memory by One <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#inc---increment-memory-by-one" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>zeropage</td>
+					<td>INC oper</td>
+					<td>E6</td>
+					<td>2</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>INC oper,X</td>
+					<td>F6</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>INC oper</td>
+					<td>EE</td>
+					<td>3</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>INC oper,X</td>
+					<td>FE</td>
+					<td>3</td>
+					<td>7</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">INC $80     ;increment the contents of address $0080 by one
+INC $80,X   ;increment the contents of address ($0080 + X) by one
+INC $3010   ;increment the contents of address $3010 by one
+INC $3010,X ;increment the contents of address ($3010 + X) by one
+</code></pre></li>
+</ul>
+<br>
+<h3 id="inx---increment-index-x-by-one" class="relative group"><code>INX</code> - Increment Index X by One <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#inx---increment-index-x-by-one" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>INX</td>
+					<td>E8</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<h3 id="iny---increment-index-y-by-one" class="relative group"><code>INY</code> - Increment Index Y by One <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#iny---increment-index-y-by-one" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>INY</td>
+					<td>C8</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="arithmetic-instructions" class="relative group">Arithmetic Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#arithmetic-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="adc---add-memory-to-accumulator-with-carry" class="relative group"><code>ADC</code> - Add Memory to Accumulator with Carry <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#adc---add-memory-to-accumulator-with-carry" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>ADC #oper</td>
+					<td>69</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>ADC oper</td>
+					<td>65</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>ADC oper,X</td>
+					<td>75</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>ADC oper</td>
+					<td>6D</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>ADC oper,X</td>
+					<td>7D</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>ADC oper,Y</td>
+					<td>79</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>(indirect,X)</td>
+					<td>ADC (oper,X)</td>
+					<td>61</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>(indirect),Y</td>
+					<td>ADC (oper),Y</td>
+					<td>71</td>
+					<td>2</td>
+					<td>5*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + + - - +</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">CLC         ;clear carry before adding
+ADC #$10    ;add the literal value $10 to the accumulator
+ADC $80     ;add the contents of address $0080 to the accumulator
+ADC $80,X   ;add the contents of address ($0080 + X) to the accumulator
+ADC $3010   ;add the contents of address $3010 to the accumulator
+ADC $3010,X ;add the contents of address ($3010 + X) to the accumulator
+ADC $3010,Y ;add the contents of address ($3010 + Y) to the accumulator
+ADC ($70,X) ;add the contents of the address pointed to by ($0070 + X) to A
+ADC ($70),Y ;add the contents of the address (pointer at $0070) + Y to A
+</code></pre></li>
+</ul>
+<br>
+<h3 id="sbc---subtract-memory-from-accumulator-with-borrow" class="relative group"><code>SBC</code> - Subtract Memory from Accumulator with Borrow <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sbc---subtract-memory-from-accumulator-with-borrow" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>SBC #oper</td>
+					<td>E9</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>SBC oper</td>
+					<td>E5</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>SBC oper,X</td>
+					<td>F5</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>SBC oper</td>
+					<td>ED</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>SBC oper,X</td>
+					<td>FD</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>SBC oper,Y</td>
+					<td>F9</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>(indirect,X)</td>
+					<td>SBC (oper,X)</td>
+					<td>E1</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>(indirect),Y</td>
+					<td>SBC (oper),Y</td>
+					<td>F1</td>
+					<td>2</td>
+					<td>5*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + + - - +</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">SEC         ;set carry before subtracting
+SBC #$10    ;subtract the literal value $10 from the accumulator
+SBC $80     ;subtract the contents of address $0080 from the accumulator
+SBC $80,X   ;subtract the contents of address ($0080 + X) from the accumulator
+SBC $3010   ;subtract the contents of address $3010 from the accumulator
+SBC $3010,X ;subtract the contents of address ($3010 + X) from the accumulator
+SBC $3010,Y ;subtract the contents of address ($3010 + Y) from the accumulator
+SBC ($70,X) ;subtract the contents of the address pointed to by ($0070 + X) from A
+SBC ($70),Y ;subtract the contents of the address (pointer at $0070) + Y from A
+</code></pre></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="logical-operations" class="relative group">Logical Operations <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#logical-operations" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="and---and-memory-with-accumulator" class="relative group"><code>AND</code> - AND Memory with Accumulator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#and---and-memory-with-accumulator" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>AND #oper</td>
+					<td>29</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>AND oper</td>
+					<td>25</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>AND oper,X</td>
+					<td>35</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>AND oper</td>
+					<td>2D</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>AND oper,X</td>
+					<td>3D</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>AND oper,Y</td>
+					<td>39</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>(indirect,X)</td>
+					<td>AND (oper,X)</td>
+					<td>21</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>(indirect),Y</td>
+					<td>AND (oper),Y</td>
+					<td>31</td>
+					<td>2</td>
+					<td>5*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">AND #$0F    ;mask the accumulator, keeping only the low nibble
+AND $80     ;AND the accumulator with the contents of address $0080
+AND $80,X   ;AND the accumulator with the contents of address ($0080 + X)
+AND $3010   ;AND the accumulator with the contents of address $3010
+AND $3010,X ;AND the accumulator with the contents of address ($3010 + X)
+AND $3010,Y ;AND the accumulator with the contents of address ($3010 + Y)
+AND ($70,X) ;AND the accumulator with the contents of the address pointed to by ($0070 + X)
+AND ($70),Y ;AND the accumulator with the contents of the address (pointer at $0070) + Y
+</code></pre></li>
+</ul>
+<br>
+<h3 id="eor---exclusive-or-memory-with-accumulator" class="relative group"><code>EOR</code> - Exclusive-OR Memory with Accumulator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#eor---exclusive-or-memory-with-accumulator" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>EOR #oper</td>
+					<td>49</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>EOR oper</td>
+					<td>45</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>EOR oper,X</td>
+					<td>55</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>EOR oper</td>
+					<td>4D</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>EOR oper,X</td>
+					<td>5D</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>EOR oper,Y</td>
+					<td>59</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>(indirect,X)</td>
+					<td>EOR (oper,X)</td>
+					<td>41</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>(indirect),Y</td>
+					<td>EOR (oper),Y</td>
+					<td>51</td>
+					<td>2</td>
+					<td>5*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">EOR #$FF    ;flip every bit in the accumulator
+EOR $80     ;EOR the accumulator with the contents of address $0080
+EOR $80,X   ;EOR the accumulator with the contents of address ($0080 + X)
+EOR $3010   ;EOR the accumulator with the contents of address $3010
+EOR $3010,X ;EOR the accumulator with the contents of address ($3010 + X)
+EOR $3010,Y ;EOR the accumulator with the contents of address ($3010 + Y)
+EOR ($70,X) ;EOR the accumulator with the contents of the address pointed to by ($0070 + X)
+EOR ($70),Y ;EOR the accumulator with the contents of the address (pointer at $0070) + Y
+</code></pre></li>
+</ul>
+<br>
+<h3 id="ora---or-memory-with-accumulator" class="relative group"><code>ORA</code> - OR Memory with Accumulator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ora---or-memory-with-accumulator" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>ORA #oper</td>
+					<td>09</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>ORA oper</td>
+					<td>05</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>ORA oper,X</td>
+					<td>15</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>ORA oper</td>
+					<td>0D</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>ORA oper,X</td>
+					<td>1D</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>ORA oper,Y</td>
+					<td>19</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>(indirect,X)</td>
+					<td>ORA (oper,X)</td>
+					<td>01</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>(indirect),Y</td>
+					<td>ORA (oper),Y</td>
+					<td>11</td>
+					<td>2</td>
+					<td>5*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + - - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">ORA #$80    ;set the high bit of the accumulator
+ORA $80     ;OR the accumulator with the contents of address $0080
+ORA $80,X   ;OR the accumulator with the contents of address ($0080 + X)
+ORA $3010   ;OR the accumulator with the contents of address $3010
+ORA $3010,X ;OR the accumulator with the contents of address ($3010 + X)
+ORA $3010,Y ;OR the accumulator with the contents of address ($3010 + Y)
+ORA ($70,X) ;OR the accumulator with the contents of the address pointed to by ($0070 + X)
+ORA ($70),Y ;OR the accumulator with the contents of the address (pointer at $0070) + Y
+</code></pre></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="shift--rotate-instructions" class="relative group">Shift &amp; Rotate Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#shift--rotate-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<p>All shift and rotate instructions preserve the bit shifted out in the carry flag.</p>
+<br>
+<h3 id="asl---shift-left-one-bit" class="relative group"><code>ASL</code> - Shift Left One Bit <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#asl---shift-left-one-bit" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>accumulator</td>
+					<td>ASL A</td>
+					<td>0A</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>ASL oper</td>
+					<td>06</td>
+					<td>2</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>ASL oper,X</td>
+					<td>16</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>ASL oper</td>
+					<td>0E</td>
+					<td>3</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>ASL oper,X</td>
+					<td>1E</td>
+					<td>3</td>
+					<td>7</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + + - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">ASL A       ;shift the accumulator left by one bit; bit 7 goes into carry
+ASL $80     ;shift the contents of address $0080 left by one bit
+ASL $80,X   ;shift the contents of address ($0080 + X) left by one bit
+ASL $3010   ;shift the contents of address $3010 left by one bit
+ASL $3010,X ;shift the contents of address ($3010 + X) left by one bit
+</code></pre></li>
+</ul>
+<br>
+<h3 id="lsr---shift-right-one-bit" class="relative group"><code>LSR</code> - Shift Right One Bit <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lsr---shift-right-one-bit" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>accumulator</td>
+					<td>LSR A</td>
+					<td>4A</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>LSR oper</td>
+					<td>46</td>
+					<td>2</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>LSR oper,X</td>
+					<td>56</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>LSR oper</td>
+					<td>4E</td>
+					<td>3</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>LSR oper,X</td>
+					<td>5E</td>
+					<td>3</td>
+					<td>7</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>0 + + - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">LSR A       ;shift the accumulator right by one bit; bit 0 goes into carry
+LSR $80     ;shift the contents of address $0080 right by one bit
+LSR $80,X   ;shift the contents of address ($0080 + X) right by one bit
+LSR $3010   ;shift the contents of address $3010 right by one bit
+LSR $3010,X ;shift the contents of address ($3010 + X) right by one bit
+</code></pre></li>
+</ul>
+<br>
+<h3 id="rol---rotate-one-bit-left" class="relative group"><code>ROL</code> - Rotate One Bit Left <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#rol---rotate-one-bit-left" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>accumulator</td>
+					<td>ROL A</td>
+					<td>2A</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>ROL oper</td>
+					<td>26</td>
+					<td>2</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>ROL oper,X</td>
+					<td>36</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>ROL oper</td>
+					<td>2E</td>
+					<td>3</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>ROL oper,X</td>
+					<td>3E</td>
+					<td>3</td>
+					<td>7</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + + - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">ROL A       ;rotate the accumulator left by one bit, carry in from bit 0, bit 7 into carry
+ROL $80     ;rotate the contents of address $0080 left by one bit
+ROL $80,X   ;rotate the contents of address ($0080 + X) left by one bit
+ROL $3010   ;rotate the contents of address $3010 left by one bit
+ROL $3010,X ;rotate the contents of address ($3010 + X) left by one bit
+</code></pre></li>
+</ul>
+<br>
+<h3 id="ror---rotate-one-bit-right" class="relative group"><code>ROR</code> - Rotate One Bit Right <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ror---rotate-one-bit-right" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>accumulator</td>
+					<td>ROR A</td>
+					<td>6A</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>ROR oper</td>
+					<td>66</td>
+					<td>2</td>
+					<td>5</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>ROR oper,X</td>
+					<td>76</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>ROR oper</td>
+					<td>6E</td>
+					<td>3</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>ROR oper,X</td>
+					<td>7E</td>
+					<td>3</td>
+					<td>7</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + + - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">ROR A       ;rotate the accumulator right by one bit, carry in from bit 7, bit 0 into carry
+ROR $80     ;rotate the contents of address $0080 right by one bit
+ROR $80,X   ;rotate the contents of address ($0080 + X) right by one bit
+ROR $3010   ;rotate the contents of address $3010 right by one bit
+ROR $3010,X ;rotate the contents of address ($3010 + X) right by one bit
+</code></pre></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="flag-instructions" class="relative group">Flag Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#flag-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="clc---clear-carry-flag" class="relative group"><code>CLC</code> - Clear Carry Flag <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#clc---clear-carry-flag" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>CLC</td>
+					<td>18</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - 0 - - -</code></li>
+</ul>
+<br>
+<h3 id="cld---clear-decimal-mode" class="relative group"><code>CLD</code> - Clear Decimal Mode <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cld---clear-decimal-mode" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>CLD</td>
+					<td>D8</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - 0 -</code></li>
+</ul>
+<br>
+<h3 id="cli---clear-interrupt-disable-bit" class="relative group"><code>CLI</code> - Clear Interrupt Disable Bit <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cli---clear-interrupt-disable-bit" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>CLI</td>
+					<td>58</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - 0 - -</code></li>
+</ul>
+<br>
+<h3 id="clv---clear-overflow-flag" class="relative group"><code>CLV</code> - Clear Overflow Flag <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#clv---clear-overflow-flag" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>CLV</td>
+					<td>B8</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - 0</code></li>
+</ul>
+<br>
+<h3 id="sec---set-carry-flag" class="relative group"><code>SEC</code> - Set Carry Flag <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sec---set-carry-flag" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>SEC</td>
+					<td>38</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - 1 - - -</code></li>
+</ul>
+<br>
+<h3 id="sed---set-decimal-flag" class="relative group"><code>SED</code> - Set Decimal Flag <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sed---set-decimal-flag" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>SED</td>
+					<td>F8</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - 1 -</code></li>
+</ul>
+<br>
+<h3 id="sei---set-interrupt-disable-status" class="relative group"><code>SEI</code> - Set Interrupt Disable Status <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sei---set-interrupt-disable-status" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>SEI</td>
+					<td>78</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - 1 - -</code></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="comparison-instructions" class="relative group">Comparison Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#comparison-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<p>The 6502 MPU features three basic compare instructions in various address modes:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Instruction</th>
+					<th>Comparison</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>CMP</td>
+					<td>Accumulator and operand</td>
+			</tr>
+			<tr>
+					<td>CPX</td>
+					<td>X register and operand</td>
+			</tr>
+			<tr>
+					<td>CPY</td>
+					<td>Y register and operand</td>
+			</tr>
+	</tbody>
+</table>
+<p>The compare instructions subtract the operand from the respective register (as if the carry were set) without storing the result — the register&rsquo;s contents remain unchanged — and adjust the N, Z, and C flags as with any ordinary subtraction.</p>
+<p>Flags are set as follows:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Relation</th>
+					<th>Z</th>
+					<th>C</th>
+					<th>N</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>register &lt; operand</td>
+					<td>0</td>
+					<td>0</td>
+					<td><em>sign-bit of result</em></td>
+			</tr>
+			<tr>
+					<td>register = operand</td>
+					<td>1</td>
+					<td>1</td>
+					<td>0</td>
+			</tr>
+			<tr>
+					<td>register &gt; operand</td>
+					<td>0</td>
+					<td>1</td>
+					<td><em>sign-bit of result</em></td>
+			</tr>
+	</tbody>
+</table>
+<p>This means we can determine the derivative relation <em>&ldquo;greater than or equal&rdquo;</em> (gte) by checking just the carry flag (using the <code>BCS</code> instruction):</p>
+<table>
+	<thead>
+			<tr>
+					<th>Relation</th>
+					<th>Z</th>
+					<th>C</th>
+					<th>N</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>register ≥ operand</td>
+					<td><em>x</em></td>
+					<td>1</td>
+					<td><em>sign-bit of result</em></td>
+			</tr>
+	</tbody>
+</table>
+<p>(For why the carry flag behaves this way, see the notes on subtraction, above.)
+Note that the negative flag is not significant here, and all conditions can be evaluated by checking the carry and/or zero flag(s) alone.</p>
+<br>
+<h3 id="cmp---compare-memory-with-accumulator" class="relative group"><code>CMP</code> - Compare Memory with Accumulator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cmp---compare-memory-with-accumulator" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>CMP #oper</td>
+					<td>C9</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>CMP oper</td>
+					<td>C5</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>zeropage,X</td>
+					<td>CMP oper,X</td>
+					<td>D5</td>
+					<td>2</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>CMP oper</td>
+					<td>CD</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+			<tr>
+					<td>absolute,X</td>
+					<td>CMP oper,X</td>
+					<td>DD</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>absolute,Y</td>
+					<td>CMP oper,Y</td>
+					<td>D9</td>
+					<td>3</td>
+					<td>4*</td>
+			</tr>
+			<tr>
+					<td>(indirect,X)</td>
+					<td>CMP (oper,X)</td>
+					<td>C1</td>
+					<td>2</td>
+					<td>6</td>
+			</tr>
+			<tr>
+					<td>(indirect),Y</td>
+					<td>CMP (oper),Y</td>
+					<td>D1</td>
+					<td>2</td>
+					<td>5*</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + + - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">CMP #$40    ;compare the accumulator to the literal value $40
+CMP $80     ;compare the accumulator to the contents of address $0080
+CMP $80,X   ;compare the accumulator to the contents of address ($0080 + X)
+CMP $3010   ;compare the accumulator to the contents of address $3010
+CMP $3010,X ;compare the accumulator to the contents of address ($3010 + X)
+CMP $3010,Y ;compare the accumulator to the contents of address ($3010 + Y)
+CMP ($70,X) ;compare the accumulator to the contents of the address pointed to by ($0070 + X)
+CMP ($70),Y ;compare the accumulator to the contents of the address (pointer at $0070) + Y
+</code></pre></li>
+</ul>
+<br>
+<h3 id="cpx---compare-memory-and-index-x" class="relative group"><code>CPX</code> - Compare Memory and Index X <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpx---compare-memory-and-index-x" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>CPX #oper</td>
+					<td>E0</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>CPX oper</td>
+					<td>E4</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>CPX oper</td>
+					<td>EC</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + + - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">CPX #$05  ;compare the X register to the literal value $05
+CPX $80   ;compare the X register to the contents of address $0080
+CPX $3010 ;compare the X register to the contents of address $3010
+</code></pre></li>
+</ul>
+<br>
+<h3 id="cpy---compare-memory-and-index-y" class="relative group"><code>CPY</code> - Compare Memory and Index Y <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cpy---compare-memory-and-index-y" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>immediate</td>
+					<td>CPY #oper</td>
+					<td>C0</td>
+					<td>2</td>
+					<td>2</td>
+			</tr>
+			<tr>
+					<td>zeropage</td>
+					<td>CPY oper</td>
+					<td>C4</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>CPY oper</td>
+					<td>CC</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>+ + + - - -</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">CPY #$05  ;compare the Y register to the literal value $05
+CPY $80   ;compare the Y register to the contents of address $0080
+CPY $3010 ;compare the Y register to the contents of address $3010
+</code></pre></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="bit-instruction" class="relative group">Bit Instruction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bit-instruction" aria-label="Anchor">#</a></span></h1><hr>
+<p>The <code>BIT</code> instruction is somewhat similar to <code>CMP</code>, but performs a bit-wise comparison between the contents of the accumulator and a memory location given as the operand.</p>
+<p><code>BIT</code> performs a logical AND between the two values and sets the zero flag according to the result. Additionally, bit #7 (the sign bit) and bit #6 of the operand are transferred to the corresponding bits of the status register — the negative flag and the o<strong>V</strong>erflow flag, respectively. (Thus, these two bits can easily be used to store and set flags for conditional branches; see below.) The contents of the accumulator remain unaffected.</p>
+<p><code>BIT</code> may be the most obscure instruction on the 6502: while other instructions serve a very clear purpose, like transferring values or performing basic arithmetic or logical operations, this one serves a rather specialized purpose — but does so in a very general way. That purpose is bit testing.</p>
+<p>Generally, testing a particular bit is achieved by masking (isolating) that bit (or multiple bits) with an AND operation, then checking the zero flag (Z) with a <code>BNE</code> or <code>BEQ</code> instruction. This, however, destroys the contents of the accumulator.</p>
+<p>This is where <code>BIT</code> comes in: much like the comparison instructions perform a subtraction without storing the result, <code>BIT</code> performs a logical AND without storing the result, but still reflects that result in the state of the zero flag (Z). This allows the same kind of check using <code>BNE</code> or <code>BEQ</code>, without affecting the contents of the accumulator.</p>
+<p>Since the sign bit is often used as a flag, testing it is also covered by <code>BIT</code>: in addition to setting the zero flag, it transfers bits 7 and 6 of the operand into the corresponding bits of the status register — which happen to be the negative (N) and overflow (V) flags. This means bits 7 and 6 of the operand can be tested independently using the <code>BMI</code>/<code>BPL</code> and <code>BVS</code>/<code>BVC</code> instructions.</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">accumulator        operand
+[76543210]   AND   [76543210] == 0 ? 
+                    ↓↓         ↓ 
+                    NV         Z
+</code></pre><p>An interesting use of the <code>BIT</code> instruction can be seen in MS/Commodore BASIC:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">        ;a condition has been previously evaluated 
+        ;by setting the carry, now set a flag… 
+        
+        BCS SETFLAG   ;set a flag in location &#34;FLAG&#34; 
+        (...) 
+
+SETFLAG ROR FLAG      ;rotate carry into sign position 
+                      ;previous sign-bit now in bit 6 
+        BIT FLAG      ;bit 6 (prev. sign) into overflow flag (V) 
+        BVS ABORT     ;was the flag set already? 
+        (...)         ;no: adjust to condition… 
+        JMP CONTINUE  ;done, continue with task… 
+ABORT   (...)         ;flag set twice, abort the operation…
+</code></pre><p>This is easily modified to check the state of <code>FLAG</code> first instead:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">        BCS SETFLAG   ;set a flag… 
+        (...) 
+SETFLAG BIT FLAG      ;sign-bit into negative flag (N) 
+        BMI ABORT     ;is the flag set already? 
+        ROR FLAG      ;no: rotate carry into sign position 
+                      ;(carry is left untouched by BIT) 
+        (...)         ;adjust to condition… 
+        JMP CONTINUE  ;done 
+ABORT   (...)         ;flag already set, abort…
+</code></pre><p>In both cases, we don&rsquo;t care about the AND operation itself or its effect on the zero flag (Z) — only about the bit transfer into the V or N flag, respectively.</p>
+<br>
+<h3 id="bit---test-bits-in-memory-with-accumulator" class="relative group"><code>BIT</code> - Test Bits in Memory with Accumulator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bit---test-bits-in-memory-with-accumulator" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>zeropage</td>
+					<td>BIT oper</td>
+					<td>24</td>
+					<td>2</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>absolute</td>
+					<td>BIT oper</td>
+					<td>2C</td>
+					<td>3</td>
+					<td>4</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>M7 + - - - M6</code></li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">BIT $80   ;AND accumulator with contents of $0080
+        ;   set Z, N (from bit 7), V (from bit 6)
+BIT $3010 ;AND accumulator with contents of $3010
+        ;   set Z, N (from bit 7), V (from bit 6)
+</code></pre></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="conditional-branch-instructions" class="relative group">Conditional Branch Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conditional-branch-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<p>Branch targets are relative, signed 8-bit address offsets. An offset of zero corresponds to the immediately following address. While it is perfectly feasible to calculate offsets by hand, more often these are computed by an assembler program from absolute addresses or labels. In the latter case, branch instructions may look more like absolute address mode instructions, while actually taking just a relative offset as a single-byte operand.</p>
+<br>
+<h3 id="bcc---branch-on-carry-clear" class="relative group"><code>BCC</code> - Branch on Carry Clear <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bcc---branch-on-carry-clear" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>relative</td>
+					<td>BCC oper</td>
+					<td>90</td>
+					<td>2</td>
+					<td>2**</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="bcs---branch-on-carry-set" class="relative group"><code>BCS</code> - Branch on Carry Set <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bcs---branch-on-carry-set" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>relative</td>
+					<td>BCS oper</td>
+					<td>B0</td>
+					<td>2</td>
+					<td>2**</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="beq---branch-on-result-zero" class="relative group"><code>BEQ</code> - Branch on Result Zero <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#beq---branch-on-result-zero" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>relative</td>
+					<td>BEQ oper</td>
+					<td>F0</td>
+					<td>2</td>
+					<td>2**</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="bmi---branch-on-result-minus" class="relative group"><code>BMI</code> - Branch on Result Minus <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bmi---branch-on-result-minus" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>relative</td>
+					<td>BMI oper</td>
+					<td>30</td>
+					<td>2</td>
+					<td>2**</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="bne---branch-on-result-not-zero" class="relative group"><code>BNE</code> - Branch on Result not Zero <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bne---branch-on-result-not-zero" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>relative</td>
+					<td>BNE oper</td>
+					<td>D0</td>
+					<td>2</td>
+					<td>2**</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="bpl---branch-on-result-plus" class="relative group"><code>BPL</code> - Branch on Result Plus <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bpl---branch-on-result-plus" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>relative</td>
+					<td>BPL oper</td>
+					<td>10</td>
+					<td>2</td>
+					<td>2**</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="bvc---branch-on-overflow-clear" class="relative group"><code>BVC</code> - Branch on Overflow Clear <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bvc---branch-on-overflow-clear" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>relative</td>
+					<td>BVC oper</td>
+					<td>50</td>
+					<td>2</td>
+					<td>2**</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<h3 id="bvs---branch-on-overflow-set" class="relative group"><code>BVS</code> - Branch on Overflow Set <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bvs---branch-on-overflow-set" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>relative</td>
+					<td>BVS oper</td>
+					<td>70</td>
+					<td>2</td>
+					<td>2**</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="jump-and-subroutine-instructions" class="relative group">Jump and Subroutine Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#jump-and-subroutine-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<p><code>JSR</code> and <code>RTS</code> affect the stack, as the return address is pushed onto or pulled from the stack, respectively. (<code>JSR</code> first pushes the high byte of the return address [PC+2] onto the stack, then the low byte. The stack will then contain, seen from the bottom — i.e. from the most recently added byte — [PC+2]-L, [PC+2]-H.)</p>
+<p>The 256-byte processor stack of the 6502 is located at $0100…$01FF in memory, growing downward from top to bottom.</p>
+<p>There are three 2-byte address locations at the very top of the 64K address space, serving as jump vectors for reset/startup and interrupt operations:</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">$FFFA, $FFFB ... NMI (Non-Maskable Interrupt) vector  
+$FFFC, $FFFD ... RES (Reset) vector  
+$FFFE, $FFFF ... IRQ (Interrupt Request) vector
+</code></pre><p>When an interrupt occurs, any instruction currently being processed completes first. Only then is the value of the program counter (PC) pushed onto the stack in high-low order, followed by the value currently in the status register, and control is transferred to the address found in the respective interrupt vector. The registers stored on the stack are restored at the end of the interrupt routine, as control is transferred back to the interrupted code by the <code>RTI</code> instruction.</p>
+<p>Similarly, when a <code>JSR</code> instruction is encountered, the PC is pushed onto the stack and later restored by the <code>RTS</code> instruction. (Here, the value actually stored is the address of the instruction <em>before</em> the location the program will eventually return to. Thus, the effective return address is PC+1.)</p>
+<br>
+<h3 id="jmp---jump-to-new-location" class="relative group"><code>JMP</code> - Jump to New Location <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#jmp---jump-to-new-location" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>absolute</td>
+					<td>JMP oper</td>
+					<td>4C</td>
+					<td>3</td>
+					<td>3</td>
+			</tr>
+			<tr>
+					<td>indirect</td>
+					<td>JMP (oper)</td>
+					<td>6C</td>
+					<td>3</td>
+					<td>5***</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+<li><strong>Notes:</strong>
+<ul>
+<li>operand 1st byte -&gt; PCL (Low Byte)</li>
+<li>operand 2nd byte -&gt; PCH (High Byte)</li>
+</ul>
+</li>
+<li><strong>Examples:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">JMP $4000   ;jump directly to address $4000
+JMP ($FF82) ;jump to the address stored in the word at $FF82/$FF83
+JMP ($10FF) ;NMOS 6502: high byte incorrectly fetched from $1000, not $1100
+</code></pre></li>
+</ul>
+<br>
+<h3 id="jsr---jump-to-new-location-saving-return-address" class="relative group"><code>JSR</code> - Jump to New Location Saving Return Address <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#jsr---jump-to-new-location-saving-return-address" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>absolute</td>
+					<td>JSR oper</td>
+					<td>20</td>
+					<td>3</td>
+					<td>6</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+<li>Notes:
+<ul>
+<li>will <code>push (PC+2)</code> (Save current address to return to)</li>
+<li>operand 1st byte -&gt; PCL (Low Byte)</li>
+<li>operand 2nd byte -&gt; PCH (High Byte)</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="rts---return-from-subroutine" class="relative group"><code>RTS</code> - Return from Subroutine <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#rts---return-from-subroutine" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>RTS</td>
+					<td>60</td>
+					<td>1</td>
+					<td>6</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+<li>Notes:
+<ul>
+<li>will <code>pull PC, PC+1 -&gt; PC</code> (Going back to address after <code>JSR</code> call)</li>
+</ul>
+</li>
+</ul>
+<br>
+<br>
+<br>
+<h1 id="interrupt-instructions" class="relative group">Interrupt Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#interrupt-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="brk---force-break" class="relative group"><code>BRK</code> - Force Break <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#brk---force-break" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>BRK</td>
+					<td>00</td>
+					<td>1</td>
+					<td>7</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - 1 - -</code></li>
+<li>Notes:
+<ul>
+<li>Does the following when called:
+<ul>
+<li>interrupt</li>
+<li>push PC+2 (save execution location)</li>
+<li>push SR (save the processor status at the time of the break)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<br>
+<h3 id="rti---return-from-interrupt" class="relative group"><code>RTI</code> - Return from Interrupt <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#rti---return-from-interrupt" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>RTI</td>
+					<td>40</td>
+					<td>1</td>
+					<td>6</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> set from stack</li>
+<li>Notes:
+<ul>
+<li>Will pull Status Register (SR) and Program Counter (PC) from stack when run.</li>
+</ul>
+</li>
+</ul>
+<br>
+<h4 id="curious-interrupt-behavior" class="relative group">Curious Interrupt Behavior <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#curious-interrupt-behavior" aria-label="Anchor">#</a></span></h4><ul>
+<li>If the instruction being executed was a taken branch with a 3-cycle execution time (i.e. no page boundary crossed), the interrupt will only trigger after one extra CPU cycle.</li>
+<li>On the NMOS 6502, an NMI hardware interrupt occurring at the start of a <code>BRK</code> instruction will hijack it: the <code>BRK</code> instruction still executes as normal, but the NMI vector is used instead of the IRQ vector.</li>
+<li>The 65C02 clears the decimal flag on any interrupt (including <code>BRK</code>).</li>
+</ul>
+<br>
+<h4 id="the-break-flag-and-the-stack" class="relative group">The Break Flag and the Stack <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-break-flag-and-the-stack" aria-label="Anchor">#</a></span></h4><p>Interrupts and stack operations involving the status register (the P register) are the only instances where the break flag appears — and even then, only on the stack. It has no representation in the CPU itself and cannot be accessed by any instruction.</p>
+<ul>
+<li>The break flag is set to 1 whenever the transfer was caused by software (<code>BRK</code> or <code>PHP</code>).</li>
+<li>The break flag is set to 0 whenever the transfer was caused by a hardware interrupt.</li>
+<li>The break flag is masked and cleared (0) whenever transferred from the stack back to the status register, either by <code>PLP</code> or during a return from interrupt (<code>RTI</code>).</li>
+</ul>
+<p>This makes it somewhat difficult to inspect the break flag in order to distinguish a software interrupt (<code>BRK</code>) from a hardware interrupt (NMI or IRQ), so the mechanism is rarely used in practice. Accessing the break mark placed in the extra byte following a <code>BRK</code> instruction is even more cumbersome, and probably requires indexed zeropage operations.</p>
+<p>Bit 5 (unused) of the status register is set to 1 whenever the register is pushed to the stack. Bits 5 and 4 are always ignored when transferred back to the status register.</p>
+<p>E.g.,</p>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">1)
+         SR: N V - B D I Z C
+             0 0 - - 0 0 1 1
+
+    PHP  -&gt;  0 0 **1** **1** 0 0 1 1  =  $33
+    PLP  &lt;-  0 0 - - 0 0 1 1  =  $03
+  but:
+    PLA  &lt;-  0 0 **1** **1** 0 0 1 1  =  $33
+
+2)
+    LDA #$32 ;00110010
+    PHA  -&gt;  0 0 **1** **1** 0 0 1 0  =  $32
+    PLP  &lt;-  0 0 - - 0 0 1 0  =  $02
+
+3)
+    LDA #$C0
+    PHA  -&gt;  1 1 0 0 0 0 0 0  =  $C0
+    LDA #$08
+    PHA  -&gt;  0 0 0 0 1 0 0 0  =  $08
+    LDA #$12
+    PHA  -&gt;  0 0 **0** **1** 0 0 1 0  =  $12
+
+    RTI
+         SR: 0 0 - - 0 0 1 0  =  $02
+         PC: $C008
+</code></pre><p>Note that most emulators display the status register (SR or P) as it would appear once pushed to the stack, with bits 4 and 5 turned on — adding a bias of $30 to the register value. Here, we chose to omit this virtual presence of those bits, since there isn&rsquo;t really a slot for them in the hardware.</p>
+<br>
+<br>
+<br>
+<h1 id="other-instructions" class="relative group">Other Instructions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#other-instructions" aria-label="Anchor">#</a></span></h1><hr>
+<h3 id="nop---no-operation" class="relative group"><code>NOP</code> - No Operation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#nop---no-operation" aria-label="Anchor">#</a></span></h3><table>
+	<thead>
+			<tr>
+					<th>addressing</th>
+					<th>assembler</th>
+					<th>opc</th>
+					<th>bytes</th>
+					<th>cycles</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>implied</td>
+					<td>NOP</td>
+					<td>EA</td>
+					<td>1</td>
+					<td>2</td>
+			</tr>
+	</tbody>
+</table>
+<ul>
+<li><strong>Flags:</strong> N Z C I D V -&gt; <code>- - - - - -</code></li>
+<li><strong>Example:</strong>
+<pre tabindex="0"><code class="language-asm6502" data-lang="asm6502">; wastes 10 cycles
+NOP
+NOP
+NOP
+NOP
+NOP
+</code></pre></li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="301"
+        height="303"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="Dylan Calvin"
+        loading="lazy" decoding="async"
+        
+          src="https://blog.coeus.icu/img/headshot.png"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          Dylan Calvin
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Currently pursuing my Master&rsquo;s Degree in Comp Sci @ Georgia Tech, Avid Homelabber.</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/bigdale123"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/dylancalvin"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://youtube.com/@dylancalvin9357"
+          target="_blank"
+          aria-label="Youtube"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="https://blog.coeus.icu/posts/self-hosting/building-a-bbs-in-2026/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Building a BBS in 2026</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-07-13 00:00:00 &#43;0000 UTC">July 13, 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            Dylan Calvin
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 z-50 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://blog.coeus.icu/"
+>
+  <div
+    id="search-modal"
+    class="top-20 mx-auto flex min-h-0 w-full max-w-3xl flex-col rounded-md border border-neutral-200 bg-neutral shadow-lg dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex flex-none items-center justify-between px-2">
+      <form class="flex min-w-0 flex-auto items-center">
+        <div class="flex h-8 w-8 items-center justify-center text-neutral-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="mx-1 flex h-12 flex-auto appearance-none bg-transparent focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex h-8 w-8 items-center justify-center text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto overflow-auto px-2">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

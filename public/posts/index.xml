@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Posts on bigdale123&#39;s Blog</title>
-		<link>http://localhost:1313/posts/</link>
+		<link>https://blog.coeus.icu/posts/</link>
 		<description>Recent content in Posts on bigdale123&#39;s Blog</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -10,154 +10,161 @@
 		
 		
 		
-			<lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Mon, 20 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://blog.coeus.icu/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>A (Mostly) Complete 6502 Standard Instruction Set Reference</title>
+				<link>https://blog.coeus.icu/posts/software/a-mostly-complete-6502-standard-instruction-set-reference/</link>
+				<pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://blog.coeus.icu/posts/software/a-mostly-complete-6502-standard-instruction-set-reference/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Building a BBS in 2026</title>
-				<link>http://localhost:1313/posts/self-hosting/building-a-bbs-in-2026/</link>
+				<link>https://blog.coeus.icu/posts/self-hosting/building-a-bbs-in-2026/</link>
 				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/self-hosting/building-a-bbs-in-2026/</guid>
+				<guid>https://blog.coeus.icu/posts/self-hosting/building-a-bbs-in-2026/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Syncing Saves Between RetroArch Instances</title>
-				<link>http://localhost:1313/posts/emulation/syncing-saves-between-retroarch-instances/</link>
+				<link>https://blog.coeus.icu/posts/emulation/syncing-saves-between-retroarch-instances/</link>
 				<pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/emulation/syncing-saves-between-retroarch-instances/</guid>
+				<guid>https://blog.coeus.icu/posts/emulation/syncing-saves-between-retroarch-instances/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>How I Prepared For a Cruise, and What I Learned</title>
-				<link>http://localhost:1313/posts/how-i-prepared-for-a-cruise-and-what-i-learned/</link>
+				<link>https://blog.coeus.icu/posts/how-i-prepared-for-a-cruise-and-what-i-learned/</link>
 				<pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/how-i-prepared-for-a-cruise-and-what-i-learned/</guid>
+				<guid>https://blog.coeus.icu/posts/how-i-prepared-for-a-cruise-and-what-i-learned/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>A City Built on Lies - Faking a Year of Github Activity</title>
-				<link>http://localhost:1313/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</link>
+				<link>https://blog.coeus.icu/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</link>
 				<pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</guid>
+				<guid>https://blog.coeus.icu/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Post of Shame</title>
-				<link>http://localhost:1313/posts/post-of-shame/</link>
+				<link>https://blog.coeus.icu/posts/post-of-shame/</link>
 				<pubDate>Tue, 12 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/post-of-shame/</guid>
+				<guid>https://blog.coeus.icu/posts/post-of-shame/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>FT8: A Beginner&#39;s Guide</title>
-				<link>http://localhost:1313/posts/ft8---a-beginners-guide/</link>
+				<link>https://blog.coeus.icu/posts/ft8---a-beginners-guide/</link>
 				<pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/ft8---a-beginners-guide/</guid>
+				<guid>https://blog.coeus.icu/posts/ft8---a-beginners-guide/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>FT8: A Beginner&#39;s Guide</title>
-				<link>http://localhost:1313/posts/ham-radio/ft8---a-beginners-guide/</link>
+				<link>https://blog.coeus.icu/posts/ham-radio/ft8---a-beginners-guide/</link>
 				<pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/ham-radio/ft8---a-beginners-guide/</guid>
+				<guid>https://blog.coeus.icu/posts/ham-radio/ft8---a-beginners-guide/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Back From the Dead!</title>
-				<link>http://localhost:1313/posts/back-from-the-dead/</link>
+				<link>https://blog.coeus.icu/posts/back-from-the-dead/</link>
 				<pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/back-from-the-dead/</guid>
+				<guid>https://blog.coeus.icu/posts/back-from-the-dead/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Taking Pictures of Space</title>
-				<link>http://localhost:1313/posts/space/taking-pictures-of-space/</link>
+				<link>https://blog.coeus.icu/posts/space/taking-pictures-of-space/</link>
 				<pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/space/taking-pictures-of-space/</guid>
+				<guid>https://blog.coeus.icu/posts/space/taking-pictures-of-space/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Taking Pictures of Space</title>
-				<link>http://localhost:1313/posts/taking-pictures-of-space/</link>
+				<link>https://blog.coeus.icu/posts/taking-pictures-of-space/</link>
 				<pubDate>Fri, 28 Mar 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/taking-pictures-of-space/</guid>
+				<guid>https://blog.coeus.icu/posts/taking-pictures-of-space/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Getting Started with Neovim</title>
-				<link>http://localhost:1313/posts/getting-started-with-neovim/</link>
+				<link>https://blog.coeus.icu/posts/getting-started-with-neovim/</link>
 				<pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/getting-started-with-neovim/</guid>
+				<guid>https://blog.coeus.icu/posts/getting-started-with-neovim/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Getting Started with Neovim</title>
-				<link>http://localhost:1313/posts/software/getting-started-with-neovim/</link>
+				<link>https://blog.coeus.icu/posts/software/getting-started-with-neovim/</link>
 				<pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/software/getting-started-with-neovim/</guid>
+				<guid>https://blog.coeus.icu/posts/software/getting-started-with-neovim/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Disabling Background Scanning on NetworkManager when connected</title>
-				<link>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</link>
+				<link>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</link>
 				<pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</guid>
+				<guid>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Disabling Background Scanning on NetworkManager when connected</title>
-				<link>http://localhost:1313/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</link>
+				<link>https://blog.coeus.icu/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</link>
 				<pubDate>Thu, 27 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</guid>
+				<guid>https://blog.coeus.icu/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>A (Mostly) Exhaustive List of Keybinds and Commands for Vim</title>
-				<link>http://localhost:1313/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
+				<link>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
 				<pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
+				<guid>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>A (Mostly) Exhaustive List of Keybinds and Commands for Vim</title>
-				<link>http://localhost:1313/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
+				<link>https://blog.coeus.icu/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</link>
 				<pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
+				<guid>https://blog.coeus.icu/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Blog Tweaks: Pedantic Perils</title>
-				<link>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</link>
+				<link>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</link>
 				<pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</guid>
+				<guid>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Blog Tweaks: Pedantic Perils</title>
-				<link>http://localhost:1313/posts/software/blog-tweaks-pedantic-perils/</link>
+				<link>https://blog.coeus.icu/posts/software/blog-tweaks-pedantic-perils/</link>
 				<pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/software/blog-tweaks-pedantic-perils/</guid>
+				<guid>https://blog.coeus.icu/posts/software/blog-tweaks-pedantic-perils/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Listening to the Police Scanner with SDR Trunk</title>
-				<link>http://localhost:1313/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</link>
+				<link>https://blog.coeus.icu/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</link>
 				<pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</guid>
+				<guid>https://blog.coeus.icu/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Listening to the Police Scanner with SDR Trunk</title>
-				<link>http://localhost:1313/posts/listening-to-the-police-scanner-with-sdr-trunk/</link>
+				<link>https://blog.coeus.icu/posts/listening-to-the-police-scanner-with-sdr-trunk/</link>
 				<pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/listening-to-the-police-scanner-with-sdr-trunk/</guid>
+				<guid>https://blog.coeus.icu/posts/listening-to-the-police-scanner-with-sdr-trunk/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>First Post! Learning how to use Hugo to host Obsidian files</title>
-				<link>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
+				<link>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
 				<pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
+				<guid>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
 				<description></description>
 			</item>
 	</channel>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Radio on bigdale123&#39;s Blog</title>
-		<link>http://localhost:1313/tags/radio/</link>
+		<link>https://blog.coeus.icu/tags/radio/</link>
 		<description>Recent content in Radio on bigdale123&#39;s Blog</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,26 +12,26 @@
 		
 			<lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/radio/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://blog.coeus.icu/tags/radio/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>FT8: A Beginner&#39;s Guide</title>
-				<link>http://localhost:1313/posts/ft8---a-beginners-guide/</link>
+				<link>https://blog.coeus.icu/posts/ft8---a-beginners-guide/</link>
 				<pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/ft8---a-beginners-guide/</guid>
+				<guid>https://blog.coeus.icu/posts/ft8---a-beginners-guide/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>FT8: A Beginner&#39;s Guide</title>
-				<link>http://localhost:1313/posts/ham-radio/ft8---a-beginners-guide/</link>
+				<link>https://blog.coeus.icu/posts/ham-radio/ft8---a-beginners-guide/</link>
 				<pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/ham-radio/ft8---a-beginners-guide/</guid>
+				<guid>https://blog.coeus.icu/posts/ham-radio/ft8---a-beginners-guide/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Back From the Dead!</title>
-				<link>http://localhost:1313/posts/back-from-the-dead/</link>
+				<link>https://blog.coeus.icu/posts/back-from-the-dead/</link>
 				<pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/back-from-the-dead/</guid>
+				<guid>https://blog.coeus.icu/posts/back-from-the-dead/</guid>
 				<description></description>
 			</item>
 	</channel>

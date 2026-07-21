@@ -3,35 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
-  
-    
       <url>
-            <loc>http://localhost:1313/</loc>
-            <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+            <loc>https://blog.coeus.icu/posts/software/a-mostly-complete-6502-standard-instruction-set-reference/</loc>
+            <lastmod>2026-07-20T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/self-hosting/building-a-bbs-in-2026/</loc>
-            <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-      <url>
-            <loc>http://localhost:1313/posts/</loc>
-            <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+            <loc>https://blog.coeus.icu/</loc>
+            <lastmod>2026-07-20T00:00:00+00:00</lastmod>
           </url>
     
   
     
   
     
+      <url>
+            <loc>https://blog.coeus.icu/posts/</loc>
+            <lastmod>2026-07-20T00:00:00+00:00</lastmod>
+          </url>
+    
   
     
   
@@ -43,14 +35,29 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/emulation/syncing-saves-between-retroarch-instances/</loc>
+            <loc>https://blog.coeus.icu/posts/self-hosting/building-a-bbs-in-2026/</loc>
+            <lastmod>2026-07-13T00:00:00+00:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://blog.coeus.icu/posts/emulation/syncing-saves-between-retroarch-instances/</loc>
             <lastmod>2026-05-31T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/how-i-prepared-for-a-cruise-and-what-i-learned/</loc>
+            <loc>https://blog.coeus.icu/posts/how-i-prepared-for-a-cruise-and-what-i-learned/</loc>
             <lastmod>2026-05-15T00:00:00+00:00</lastmod>
           </url>
     
@@ -61,7 +68,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</loc>
+            <loc>https://blog.coeus.icu/posts/software/a-city-built-on-lies---faking-a-year-of-github-activity/</loc>
             <lastmod>2026-05-12T00:00:00+00:00</lastmod>
           </url>
     
@@ -70,7 +77,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/post-of-shame/</loc>
+            <loc>https://blog.coeus.icu/posts/post-of-shame/</loc>
             <lastmod>2026-05-12T00:00:00+00:00</lastmod>
           </url>
     
@@ -79,14 +86,14 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/ft8---a-beginners-guide/</loc>
+            <loc>https://blog.coeus.icu/posts/ft8---a-beginners-guide/</loc>
             <lastmod>2025-08-12T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/ham-radio/ft8---a-beginners-guide/</loc>
+            <loc>https://blog.coeus.icu/posts/ham-radio/ft8---a-beginners-guide/</loc>
             <lastmod>2025-08-12T00:00:00+00:00</lastmod>
           </url>
     
@@ -97,7 +104,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/back-from-the-dead/</loc>
+            <loc>https://blog.coeus.icu/posts/back-from-the-dead/</loc>
             <lastmod>2025-08-03T00:00:00+00:00</lastmod>
           </url>
     
@@ -106,28 +113,28 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/space/taking-pictures-of-space/</loc>
+            <loc>https://blog.coeus.icu/posts/space/taking-pictures-of-space/</loc>
             <lastmod>2025-03-28T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/taking-pictures-of-space/</loc>
+            <loc>https://blog.coeus.icu/posts/taking-pictures-of-space/</loc>
             <lastmod>2025-03-28T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/getting-started-with-neovim/</loc>
+            <loc>https://blog.coeus.icu/posts/getting-started-with-neovim/</loc>
             <lastmod>2025-03-05T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/software/getting-started-with-neovim/</loc>
+            <loc>https://blog.coeus.icu/posts/software/getting-started-with-neovim/</loc>
             <lastmod>2025-03-05T00:00:00+00:00</lastmod>
           </url>
     
@@ -140,14 +147,14 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/disabling-background-scanning-on-networkmanager-when-connected/</loc>
+            <loc>https://blog.coeus.icu/posts/disabling-background-scanning-on-networkmanager-when-connected/</loc>
             <lastmod>2025-02-27T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</loc>
+            <loc>https://blog.coeus.icu/posts/software/disabling-background-scanning-on-networkmanager-when-connected/</loc>
             <lastmod>2025-02-27T00:00:00+00:00</lastmod>
           </url>
     
@@ -156,28 +163,28 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
+            <loc>https://blog.coeus.icu/posts/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
             <lastmod>2025-02-25T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
+            <loc>https://blog.coeus.icu/posts/software/a-mostly-exhaustive-list-of-keybinds-and-commands-for-vim/</loc>
             <lastmod>2025-02-25T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/blog-tweaks-pedantic-perils/</loc>
+            <loc>https://blog.coeus.icu/posts/blog-tweaks-pedantic-perils/</loc>
             <lastmod>2025-02-23T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/software/blog-tweaks-pedantic-perils/</loc>
+            <loc>https://blog.coeus.icu/posts/software/blog-tweaks-pedantic-perils/</loc>
             <lastmod>2025-02-23T00:00:00+00:00</lastmod>
           </url>
     
@@ -188,21 +195,21 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</loc>
+            <loc>https://blog.coeus.icu/posts/ham-radio/listening-to-the-police-scanner-with-sdr-trunk/</loc>
             <lastmod>2025-02-20T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/listening-to-the-police-scanner-with-sdr-trunk/</loc>
+            <loc>https://blog.coeus.icu/posts/listening-to-the-police-scanner-with-sdr-trunk/</loc>
             <lastmod>2025-02-20T00:00:00+00:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</loc>
+            <loc>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</loc>
             <lastmod>2025-02-20T00:00:00+00:00</lastmod>
           </url>
     

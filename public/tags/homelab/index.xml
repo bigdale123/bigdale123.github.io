@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Homelab on bigdale123&#39;s Blog</title>
-		<link>http://localhost:1313/tags/homelab/</link>
+		<link>https://blog.coeus.icu/tags/homelab/</link>
 		<description>Recent content in Homelab on bigdale123&#39;s Blog</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,26 +12,26 @@
 		
 			<lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://blog.coeus.icu/tags/homelab/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Building a BBS in 2026</title>
-				<link>http://localhost:1313/posts/self-hosting/building-a-bbs-in-2026/</link>
+				<link>https://blog.coeus.icu/posts/self-hosting/building-a-bbs-in-2026/</link>
 				<pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/self-hosting/building-a-bbs-in-2026/</guid>
+				<guid>https://blog.coeus.icu/posts/self-hosting/building-a-bbs-in-2026/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Syncing Saves Between RetroArch Instances</title>
-				<link>http://localhost:1313/posts/emulation/syncing-saves-between-retroarch-instances/</link>
+				<link>https://blog.coeus.icu/posts/emulation/syncing-saves-between-retroarch-instances/</link>
 				<pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/emulation/syncing-saves-between-retroarch-instances/</guid>
+				<guid>https://blog.coeus.icu/posts/emulation/syncing-saves-between-retroarch-instances/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>First Post! Learning how to use Hugo to host Obsidian files</title>
-				<link>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
+				<link>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</link>
 				<pubDate>Wed, 19 Feb 2025 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
+				<guid>https://blog.coeus.icu/posts/first-post-learning-how-to-use-hugo-to-host-obsidian-files/</guid>
 				<description></description>
 			</item>
 	</channel>
